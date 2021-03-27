@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Погнали</title>
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
+      </a>
+      <nav class="menu">
+        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list"
+          aria-label="Открыть окно"></button>
+        <ul class="menu__list" id="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">О сервисе</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Направления</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Попутчики</a>
+          </li>
+        </ul>
+        <div class="menu__activity">
+          <a class="menu__button button" href="#"><span class="visually-hidden">Позвонить</span></a>
+          <a class="menu__button button" href="#"><span class="visually-hidden">Написать письмо</span></a>
+          <a class="menu__button button" href="sign-in.html">Авторизация</a>
+        </div>
+        <b class="visually-hidden">Наши контакты</b>
+        <dl class="contact-list menu__contact-list">
+          <dt class="contact-list__term contact-list__icon contact-list__icon--phone">
+            <span class="visually-hidden">Телефон</span>
+          </dt>
+          <dd class="contact-list__details">
+            <a class="contact-list__link" href="tel:+78005558628">8 800 555-86-28</a>
+          </dd>
+          <dt class="contact-list__term contact-list__icon contact-list__icon--email">
+            <span class="visually-hidden">Электронная почта</span>
+          </dt>
+          <dd class="contact-list__details">
+            <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </dd>
+        </dl>
+        <b class="visually-hidden">Наши социальные сети</b>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__button social-list__button--fb" href="#"><span
+                class="visually-hidden">Facebook</span></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__button social-list__button--vk" href="#"><span
+                class="visually-hidden">ВКонтакте</span></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__button social-list__button--ig" href="#"><span
+                class="visually-hidden">Instagram</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main">
+    <div class="page__bar">
+      <div class="container">
+        <h1 class="page__title">Направления</h1>
+      </div>
+    </div>
+    <section class="profile">
+      <h2 class="visually-hidden">Мой профиль</h2>
+      <div class="container">
+        <form class="profile-form">
+          <div class="level profile-form__level">80</div>
+          <img class="avatar profile-form__avatar" src="img/user-petya.jpg" alt="Аватар путешественника Петя Демин">
+          <label class="profile-form__file-button file-button">
+            <span class="hide-on-desktop">Сменить </span>фото
+            <input class="visually-hidden" type="file" name="avatar">
+          </label>
+          <fieldset class="profile-form__tags user-fieldset">
+            <label class="user-fieldset__legend" for="tags">Тэги</label>
+            <textarea class="user-fieldset__textarea" id="tags" name="tags" cols="30" rows="1"
+              placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+          </fieldset>
+          <fieldset class="profile-form__transports user-fieldset">
+            <legend class="user-fieldset__legend">Транспорт</legend>
+            <div class="tooltip tooltip--checkbox tooltip--avia tooltip--active">
+              <label class="tooltip__text">Авиаперелет
+                <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="Авиаперелет"
+                  checked>
+              </label>
+            </div>
+            <div class="tooltip tooltip--checkbox tooltip--auto tooltip--active">
+              <label class="tooltip__text">Автотранспорт
+                <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="Автотранспорт"
+                  checked>
+              </label>
+            </div>
+            <div class="tooltip tooltip--checkbox tooltip--bike">
+              <label class="tooltip__text">Велосипед
+                <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="Велосипед">
+              </label>
+            </div>
+            <div class="tooltip tooltip--checkbox tooltip--hike tooltip--active">
+              <label class="tooltip__text">Пешком
+                <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="Пешком" checked>
+              </label>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <section class="my-road-map">
+      <div class="container">
+        <h2 class="heading">Мои планы:</h2>
+        <ol class="road-map">
+          <li class="road-map__item">
+            <b class="road-map__countries">Франция, Италия</b>
+            <span class="road-map__fellows">3 попутчика</span>
+            <span class="road-map__date">26 мар — 29 мар</span>
+            <a class="link" href="#" aria-label="Изменить дату">Изменить</a>
+          </li>
+          <li class="road-map__item">
+            <b class="road-map__countries">Таиланд, Индонезия</b>
+            <span class="road-map__fellows">1 попутчик</span>
+            <span class="road-map__date">1 июл — 15 июл</span>
+            <a class="link" href="#" aria-label="Изменить дату">Изменить</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="add-road-map">
+      <div class="container">
+        <h2 class="heading">Добавить план:</h2>
+        <form class="progress-form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <div class="progress-form__step progress-form__step--active">
+            <h3 class="heading">Шаг 1. Даты пребывания</h3>
+            <p class="paragraph">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку,
+              и ее предполагаемую длительность.</p>
+            <div class="number-input">
+              <label class="number-input__label" for="fellows-number">Ищу попутчиков:</label>
+              <span class="number-input__term">Чел.</span>
+              <div class="number-input__wrapper">
+                <button class="number-input__button number-input__button--minus" type="button"
+                  aria-label="минус 1"></button>
+                <input class="number-input__input" id="fellows-number" type="number" name="fellows-number" min="1"
+                  value="2">
+                <button class="number-input__button number-input__button--plus" type="button"
+                  aria-label="плюс 1"></button>
+              </div>
+            </div>
+            <div class="number-input">
+              <label class="number-input__label" for="trip-days">Длительность:</label>
+              <span class="number-input__term">Дн.</span>
+              <div class="number-input__wrapper">
+                <button class="number-input__button number-input__button--minus" type="button"
+                  aria-label="минус 1"></button>
+                <input class="number-input__input" id="trip-days" type="number" name="trip-days" min="1" value="3">
+                <button class="number-input__button number-input__button--plus" type="button"
+                  aria-label="плюс 1"></button>
+              </div>
+            </div>
+            <label class="checkbox">
+              Можно с детьми
+              <input class="checkbox__input" type="checkbox" name="with-kids" checked>
+            </label>
+            <div class="date-input">
+              <label class="date-input__label visually-hidden">Дата начала путешествия:
+                <input class="date-input__input" type="date" value="2019-03-26" name="travel-date" readonly
+                  tabindex="-1">
+              </label>
+              <div class="date-input__month">
+                <button class="date-input__month-control date-input__month-control--prev" type="button"
+                  aria-label="Предыдущий месяц"></button>
+                <span class="date-input__month-name" tabindex="0">Март 2019</span>
+                <button class="date-input__month-control date-input__month-control--next" type="button"
+                  aria-label="Следующий месяц"></button>
+              </div>
+              <div class="date-input__week" aria-hidden="true">
+                <span class="date-input__weekday">П<span class="hide-on-tablet">н</span></span>
+                <span class="date-input__weekday">В<span class="hide-on-tablet">т</span></span>
+                <span class="date-input__weekday">С<span class="hide-on-tablet">р</span></span>
+                <span class="date-input__weekday">Ч<span class="hide-on-tablet">т</span></span>
+                <span class="date-input__weekday">П<span class="hide-on-tablet">т</span></span>
+                <span class="date-input__weekday date-input__weekday--weekend">С<span
+                    class="hide-on-tablet">б</span></span>
+                <span class="date-input__weekday date-input__weekday--weekend">В<span
+                    class="hide-on-tablet">с</span></span>
+              </div>
+              <div class="date-input__days">
+                <span class="date-input__day date-input__day--past" aria-hidden="true">23</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">24</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">25</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">26</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">27</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">28</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">1<span
+                    class="date-input__month-tag">мар</span></span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">2</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">3</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">4</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">5</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">6</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">7</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">8</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">9</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">10</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">11</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">12</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">13</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">14</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">15</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">16</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">17</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">18</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">19</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">20</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">21</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">22</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">23</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">24</span>
+                <span class="date-input__day date-input__day--past" aria-hidden="true">25</span>
+                <span class="date-input__day date-input__day--selected date-input__day--checkin" tabindex="0">26</span>
+                <span class="date-input__day date-input__day--selected" tabindex="0">27</span>
+                <span class="date-input__day date-input__day--selected date-input__day--checkout" tabindex="0">28</span>
+                <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">29</span>
+                <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">30</span>
+                <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">1<span
+                    class="date-input__month-tag">апр</span></span>
+                <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">2</span>
+                <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">3</span>
+                <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">4</span>
+                <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">5</span>
+              </div>
+            </div>
+            <button class="button" type="button">Следующий шаг</button>
+          </div>
+          <div class="progress-form__step">
+            <h3 class="heading">Шаг 2. Маршрут</h3>
+            <p class="paragraph">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+            </p>
+            <div class="input-select">
+              <label class="input-select__label">Выберите страну
+                <input class="input-select__input visually-hidden" type="button" name="country-select"
+                  value="Босния и Герцеговина" />
+              </label>
+              <div class="input-select__dropdown">
+                <div class="input-select__tablist" role="tablist" aria-label="Список стран" tabindex="0">
+                  <span class="input-select__tab" role="tab" aria-selected="true" aria-controls="panel-001" id="tab-001"
+                    tabindex="0">А</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" aria-controls="panel-002"
+                    id="tab-002" tabindex="0">Б</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" aria-controls="panel-003"
+                    id="tab-003" tabindex="0">Ч</span>
+                </div>
+                <div class="input-select__list" id="panel-001" role="tabpanel" aria-labelledby="tab-001" tabindex="0">
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Афганистан</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Албания</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Алжир</span>
+                </div>
+                <div class="input-select__list" id="panel-002" role="tabpanel" aria-labelledby="tab-002" hidden>
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Багамские острова</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Бангладеш</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Босния и Герцеговина</span>
+                </div>
+                <div class="input-select__list" id="panel-003" role="tabpanel" aria-labelledby="tab-003" hidden>
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Чехия</span>
+                </div>
+              </div>
+              <div class="input-select__result-icon input-select__result-icon--ba"></div>
+              <button class="input-select__delete-button" type="button" aria-label="Удалить выбор"></button>
+            </div>
+            <div class="input-select">
+              <label class="input-select__label">Выберите страну
+                <input class="input-select__input visually-hidden" type="button" name="country-select" value="Чехия" />
+              </label>
+              <div class="input-select__dropdown" hidden>
+                <div class="input-select__tablist" role="tablist" aria-label="Список стран" tabindex="0">
+                  <span class="input-select__tab" role="tab" aria-selected="true" aria-controls="panel-004" id="tab-004"
+                    tabindex="0">А</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" aria-controls="panel-005"
+                    id="tab-005" tabindex="0">Б</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" aria-controls="panel-006"
+                    id="tab-006" tabindex="0">Ч</span>
+                </div>
+                <div class="input-select__list" id="panel-004" role="tabpanel" aria-labelledby="tab-004" tabindex="0">
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Афганистан</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Албания</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Алжир</span>
+                </div>
+                <div class="input-select__list" id="panel-005" role="tabpanel" aria-labelledby="tab-005" hidden>
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Багамские острова</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Бангладеш</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Босния и Герцеговина</span>
+                </div>
+                <div class="input-select__list" id="panel-006" role="tabpanel" aria-labelledby="tab-006" hidden>
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Чехия</span>
+                </div>
+              </div>
+              <div class="input-select__result-icon input-select__result-icon--ba"></div>
+              <button class="input-select__delete-button" type="button" aria-label="Удалить выбор"></button>
+            </div>
+            <div class="input-select">
+              <label class="input-select__label">Выберите страну
+                <input class="input-select__input visually-hidden" type="button" name="country-select" value=" " />
+              </label>
+              <div class="input-select__dropdown">
+                <div class="input-select__tablist" role="tablist" aria-label="Список стран" tabindex="0">
+                  <span class="input-select__tab" role="tab" aria-selected="true" aria-controls="panel-007" id="tab-007"
+                    tabindex="0">А</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" aria-controls="panel-008"
+                    id="tab-008" tabindex="0">Б</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" aria-controls="panel-009"
+                    id="tab-009" tabindex="0">Ч</span>
+                </div>
+                <div class="input-select__list" id="panel-007" role="tabpanel" aria-labelledby="tab-007" tabindex="0">
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Афганистан</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Албания</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Алжир</span>
+                </div>
+                <div class="input-select__list" id="panel-008" role="tabpanel" aria-labelledby="tab-008">
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Багамские острова</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Бангладеш</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Босния и Герцеговина</span>
+                </div>
+                <div class="input-select__list" id="panel-009" role="tabpanel" aria-labelledby="tab-009">
+                  <span class="input-select__item" role="checkbox" aria-checked="false">Чехия</span>
+                </div>
+              </div>
+              <div class="input-select__result-icon input-select__result-icon--ba"></div>
+              <button class="input-select__delete-button" type="button" aria-label="Удалить выбор"></button>
+            </div>
+            <button class="add-select-button">Добавить страну</button>
+            <button class="button">Следующий шаг</button>
+            <button class="button">На шаг назад</button>
+          </div>
+          <div class="progress-form__step">
+            <h3 class="heading">Шаг 3. Развлечения</h3>
+            <p class="paragraph">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и
+              ставить тэги.
+            </p>
+            <div class="textarea">
+              <label class="textarea__label textarea__flag textarea__flag--ba" for="road-map-1">Босния и
+                Герцеговина</label>
+              <textarea class="textarea__input" id="road-map-1" name="road-map" cols="30" rows="3"
+                placeholder="План действий"></textarea>
+            </div>
+            <div class="textarea">
+              <label class="textarea__label textarea__flag textarea__flag--cz" for="road-map-2">Чехия</label>
+              <textarea class="textarea__input" id="road-map-2" name="road-map" cols="30" rows="3"
+                placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            </div>
+            <button class="button" type="submit">Отправить</button>
+            <button class="button" type="button">На шаг назад</button>
+          </div>
+          <div class="progress-form__dots">
+            <div class="progress-form__dot progress-form__dot--active">
+              <span class="progress-form__text">Даты</span>
+            </div>
+            <div class="progress-form__dot">
+              <span class="progress-form__text">Маршрут</span>
+            </div>
+            <div class="progress-form__dot">
+              <span class="progress-form__text">Развлечения</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
+      </a>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__button social-list__button--fb" href="#"><span
+              class="visually-hidden">Facebook</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__button social-list__button--vk" href="#"><span
+              class="visually-hidden">ВКонтакте</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__button social-list__button--ig" href="#"><span
+              class="visually-hidden">Instagram</span></a>
+        </li>
+      </ul>
+      <div class="copyright page-footer__copyright">
+        <a class="copyright__text" href="#">Разработано</a>
+        <a class="copyright__logo" href="#">
+          <img class="copyright__image" src="img/htmlacademy.svg" alt="Логотип компании «HTML Academy»" width="27"
+            height="34">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
