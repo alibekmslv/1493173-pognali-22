@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Погнали</title>
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
+      </a>
+      <nav class="menu">
+        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list"
+          aria-label="Открыть окно"></button>
+        <ul class="menu__list" id="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">О сервисе</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="form.html">Направления</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Попутчики</a>
+          </li>
+        </ul>
+        <div class="menu__activity">
+          <a class="menu__button button" href="#"><span class="visually-hidden">Позвонить</span></a>
+          <a class="menu__button button" href="#"><span class="visually-hidden">Написать письмо</span></a>
+          <a class="menu__button button" href="sign-in.html">Авторизация</a>
+        </div>
+        <b class="visually-hidden">Наши контакты</b>
+        <dl class="contact-list menu__contact-list">
+          <dt class="contact-list__term contact-list__icon contact-list__icon--phone">
+            <span class="visually-hidden">Телефон</span>
+          </dt>
+          <dd class="contact-list__details">
+            <a class="contact-list__link" href="tel:+78005558628">8 800 555-86-28</a>
+          </dd>
+          <dt class="contact-list__term contact-list__icon contact-list__icon--email">
+            <span class="visually-hidden">Электронная почта</span>
+          </dt>
+          <dd class="contact-list__details">
+            <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </dd>
+        </dl>
+        <b class="visually-hidden">Наши социальные сети</b>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__button social-list__button--fb" href="#"><span
+                class="visually-hidden">Facebook</span></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__button social-list__button--vk" href="#"><span
+                class="visually-hidden">ВКонтакте</span></a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__button social-list__button--ig" href="#"><span
+                class="visually-hidden">Instagram</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main">
+    <div class="page__bar">
+      <div class="container">
+        <h1 class="page__title">Попутчики</h1>
+        <a class="page__back-link" href="index.html">На главную</a>
+      </div>
+    </div>
+    <section class="country-filter">
+      <div class="country-filter__bar">
+        <div class="container country-filter__header">
+          <h2 class="heading">Фильтрация по странам:</h2>
+          <ul class="country-filter__world-part-list">
+            <li class="country-filter__world-part"><a class="country-filter__world-link" href="/europe.html">Европа</a>
+            </li>
+            <li class="country-filter__world-part"><a class="country-filter__world-link" href="/asia.html">Азия</a></li>
+            <li class="country-filter__world-part"><a class="country-filter__world-link"
+                href="/amerika.html">Америка</a>
+            </li>
+            <li class="country-filter__world-part"><a class="country-filter__world-link"
+                href="/islands.html">Острова</a>
+            </li>
+          </ul>
+          <button class="country-filter__button">Показать все</button>
+        </div>
+        <div class="country-filter__dropdown">
+          <div class="country-filter__tablist">
+            <span class="country-filter__tab">А</span>
+            <span class="country-filter__tab">Б</span>
+          </div>
+          <div class="country-filter__list-wrapper">
+            <div class="country-filter__tabpanel country-filter__tabpanel--active">
+              <span class="show-on-desktop">А</span>
+              <ul class="country-filter__list">
+                <li class="country-filter__item"><a class="country-filter__link" href="#">Австралия</a></li>
+                <li class="country-filter__item"><a class="country-filter__link" href="#">Австрия</a></li>
+                <li class="country-filter__item"><a class="country-filter__link" href="#">Азербайджан</a></li>
+              </ul>
+            </div>
+            <div class="country-filter__tabpanel">
+              <span class="show-on-desktop">Б</span>
+              <ul class="country-filter__list">
+                <li class="country-filter__item"><a class="country-filter__link" href="#">Багамские острова</a></li>
+                <li class="country-filter__item"><a class="country-filter__link" href="#">Бангладеш</a></li>
+                <li class="country-filter__item"><a class="country-filter__link" href="#">Барбадос</a></li>
+              </ul>
+            </div>
+          </div>
+          <button class="button">Свернуть</button>
+        </div>
+      </div>
+    </section>
+    <section class="traveler-filter">
+      <h2 class="heading">Подберите идеального попутчика</h2>
+      <form class="filter-form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
+          <legend class="fieldset-dropdown__legend">Хобби <span class="show-on-tablet">:</span></legend>
+          <div class="fieldset-dropdown__dropdown">
+            <label class="checkbox">
+              Спортзал
+              <input class="checkbox__input" type="checkbox" name="hobby" value="gym" checked>
+            </label>
+            <label class="checkbox">
+              Кальян
+              <input class="checkbox__input" type="checkbox" name="hobby" value="hookah">
+            </label>
+            <label class="checkbox">
+              Диван
+              <input class="checkbox__input" type="checkbox" name="hobby" value="coach">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
+          <legend class="fieldset-dropdown__legend">Музыка <span class="show-on-tablet">:</span></legend>
+          <div class="fieldset-dropdown__dropdown">
+            <label class="checkbox">
+              Тяжелый рок
+              <input class="checkbox__input" type="checkbox" name="music" value="hard-rock" checked>
+            </label>
+            <label class="checkbox">
+              Русский рэп
+              <input class="checkbox__input" type="checkbox" name="music" value="russian-rap" checked>
+            </label>
+            <label class="checkbox">
+              Евроденс
+              <input class="checkbox__input" type="checkbox" name="music" value="eurodance">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
+          <legend class="fieldset-dropdown__legend">Еда <span class="show-on-tablet">:</span></legend>
+          <div class="fieldset-dropdown__dropdown">
+            <label class="checkbox">
+              Мясоед
+              <input class="checkbox__input" type="checkbox" name="food" value="meet-lover" checked>
+            </label>
+            <label class="checkbox">
+              Сидит на ПП
+              <input class="checkbox__input" type="checkbox" name="food" value="healthy-food">
+            </label>
+            <label class="checkbox">
+              Веган-сыроед
+              <input class="checkbox__input" type="checkbox" name="food" value="vegan">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="user-fieldset fieldset-dropdown fieldset-dropdown--tablet-off">
+          <legend class="user-fieldset__legend">Транспорт <span class="show-on-tablet">:</span></legend>
+          <div class="tooltip tooltip--checkbox tooltip--avia tooltip--active">
+            <label class="tooltip__text">Авиаперелет
+              <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="avia" checked>
+            </label>
+          </div>
+          <div class="tooltip tooltip--checkbox tooltip--auto tooltip--active">
+            <label class="tooltip__text">Автотранспорт
+              <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="auto" checked>
+            </label>
+          </div>
+          <div class="tooltip tooltip--checkbox tooltip--bike">
+            <label class="tooltip__text">Велосипед
+              <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="bike">
+            </label>
+          </div>
+          <div class="tooltip tooltip--checkbox tooltip--hike tooltip--active">
+            <label class="tooltip__text">Пешком
+              <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="hike" checked>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
+          <legend class="fieldset-dropdown__legend">Левел <span class="show-on-tablet">:</span></legend>
+          <div class="fieldset-dropdown__dropdown">
+            <div class="range-filter">
+              <div class="range-filter__controls">
+                <div class="range-filter__scale">
+                  <div class="range-filter__bar" style="width: 70%; margin-left: 30%"></div>
+                </div>
+                <button class="range-filter__toggle range-filter__toggle--min" type="button" style="left: 30%"
+                  aria-label="Диапазон цены от"></button>
+                <button class="range-filter__toggle range-filter__toggle--max" type="button" style="left: 100%"
+                  aria-label="Диапазон цены до"></button>
+              </div>
+              <div class="range-filter__number-inputs">
+                <label class="visually-hidden" for="price-number-min">От</label>
+                <input class="range-filter__input" type="number" id="price-number-min" min="0" max="99" value="30" />
+                –
+                <label class="visually-hidden" for="price-number-max">До</label>
+                <input class="range-filter__input" type="number" id="price-number-max" min="1" max="100" value="100" />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <button class="button button--white" type="submit">Показать</button>
+      </form>
+    </section>
+    <section class="travelers">
+      <h2 class="visually-hidden">Список путешественников</h2>
+      <ul class="travelers-list">
+        <li class="travelers-list__item traveler-card">
+          <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
+            href="users/tanya-firsova.html">Таня Фирсова</a>
+          <a class="link" href="users/tanya-firsova.html">
+            <img class="traveler-card__avatar" src="img/firsova-mobile.jpg" width="70" height="70"
+              alt="Аватар путешественника Таня Фирсова">
+          </a>
+          <button class="add-to-favourite add-to-favourite--added traveler-card__add-to-favourite"
+            aria-label="Добавить путешественника Таня Фирсова в избранное"></button>
+          <span class="traveler-card__subscribers-count">1,5 M</span>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term visually-hidden">Тэги:</dt>
+            <dd class="traveler-card__details traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term">Хочет посетить:</dt>
+            <dd class="traveler-card__details">
+              <ul class="visit-wish-list">
+                <li class="visit-wish-list__item visit-wish-list__item--sri-lanka">
+                  <span class="visit-wish-list__country-name">Шри-Ланка</span>
+                </li>
+                <li class="visit-wish-list__item visit-wish-list__item--thailand">
+                  <span class="visit-wish-list__country-name">Таиланд</span>
+                </li>
+                <li class="visit-wish-list__item visit-wish-list__item--seychelles">
+                  <span class="visit-wish-list__country-name">Сейшелы</span>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term">Транспорт:</dt>
+            <dd class="traveler-card__details traveler-card__transport">
+              <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
+              <div class="tooltip tooltip--auto"><span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+              </div>
+              <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
+              <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
+            </dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term visually-hidden">Левел:</dt>
+            <dd class="traveler-card__details level traveler-card__level">99</dd>
+          </dl>
+          <a class="button" href="#">Позвать!</a>
+        </li>
+        <li class="travelers-list__item traveler-card">
+          <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
+            href="users/mark-smolov.html">Петя Демин</a>
+          <a class="link" href="users/mark-smolov.html">
+            <img class="traveler-card__avatar" src="img/smolov-mobile.jpg" width="70" height="70"
+              alt="Аватар путешественника Петя Демин">
+          </a>
+          <button class="add-to-favourite traveler-card__add-to-favourite"
+            aria-label="Добавить путешественника Петя Демин в избранное"></button>
+          <span class="traveler-card__subscribers-count">170</span>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term visually-hidden">Тэги:</dt>
+            <dd class="traveler-card__details traveler-card__tags">#бургер #бар #футбол #концерт #крафт</dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term">Хочет посетить:</dt>
+            <dd class="traveler-card__details">
+              <ul class="visit-wish-list">
+                <li class="visit-wish-list__item visit-wish-list__item--belgium">
+                  <span class="visit-wish-list__country-name">Шри-Ланка</span>
+                </li>
+                <li class="visit-wish-list__item visit-wish-list__item--czech-republic">
+                  <span class="visit-wish-list__country-name">Чехия</span>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term">Транспорт:</dt>
+            <dd class="traveler-card__details traveler-card__transport">
+              <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
+              <div class="tooltip tooltip--auto tooltip--active"><span class="tooltip__text">Автотранспорт</span>
+              </div>
+              <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
+              <div class="tooltip tooltip--hike tooltip--active"><span class="tooltip__text">Пешком</span></div>
+            </dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term visually-hidden">Левел:</dt>
+            <dd class="traveler-card__details level traveler-card__level">80</dd>
+          </dl>
+          <a class="button" href="#">Позвать!</a>
+        </li>
+        <li class="travelers-list__item traveler-card">
+          <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
+            href="users/mark-smolov.html">Марк Смолов</a>
+          <a class="link" href="users/mark-smolov.html">
+            <img class="traveler-card__avatar" src="img/demin-mobile.jpg" width="70" height="70"
+              alt="Аватар путешественника Марк Смолов">
+          </a>
+          <button class="add-to-favourite traveler-card__add-to-favourite"
+            aria-label="Добавить путешественника Марк Смолов в избранное"></button>
+          <span class="traveler-card__subscribers-count">170</span>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term visually-hidden">Тэги:</dt>
+            <dd class="traveler-card__details traveler-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term">Хочет посетить:</dt>
+            <dd class="traveler-card__details">
+              <ul class="visit-wish-list">
+                <li class="visit-wish-list__item visit-wish-list__item--usa">
+                  <span class="visit-wish-list__country-name">США</span>
+                </li>
+                <li class="visit-wish-list__item visit-wish-list__item--australia">
+                  <span class="visit-wish-list__country-name">Австралия</span>
+                </li>
+                <li class="visit-wish-list__item visit-wish-list__item--dominica">
+                  <span class="visit-wish-list__country-name">Доминика</span>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term">Транспорт:</dt>
+            <dd class="traveler-card__details traveler-card__transport">
+              <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
+              <div class="tooltip tooltip--auto"><span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+              </div>
+              <div class="tooltip tooltip--bike tooltip--active"><span class="tooltip__text">Велосипед</span></div>
+              <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
+            </dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term visually-hidden">Левел:</dt>
+            <dd class="traveler-card__details level traveler-card__level">25</dd>
+          </dl>
+          <a class="button" href="#">Позвать!</a>
+        </li>
+        <li class="travelers-list__item traveler-card">
+          <a class="traveler-card__name traveler-card__status traveler-card__status--online"
+            href="users/larisa-rogovaya.html">Лариса Роговая</a>
+          <a class="link" href="users/larisa-rogovaya.html">
+            <img class="traveler-card__avatar" src="img/rogovaya-mobile.jpg" width="70" height="70"
+              alt="Аватар путешественника Лариса Роговая">
+          </a>
+          <button class="add-to-favourite traveler-card__add-to-favourite"
+            aria-label="Добавить путешественника Лариса Роговая в избранное"></button>
+          <span class="traveler-card__subscribers-count">23</span>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term visually-hidden">Тэги:</dt>
+            <dd class="traveler-card__details traveler-card__tags">#образование #карьера #учеба #линкедин</dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term">Хочет посетить:</dt>
+            <dd class="traveler-card__details">
+              <ul class="visit-wish-list">
+                <li class="visit-wish-list__item visit-wish-list__item--usa">
+                  <span class="visit-wish-list__country-name">Великобритания</span>
+                </li>
+                <li class="visit-wish-list__item visit-wish-list__item--australia">
+                  <span class="visit-wish-list__country-name">Германия</span>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term">Транспорт:</dt>
+            <dd class="traveler-card__details traveler-card__transport">
+              <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
+              <div class="tooltip tooltip--auto tooltip--active"><span class="tooltip__text">Автотранспорт</span></div>
+              <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
+              <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
+            </dd>
+          </dl>
+          <dl class="traveler-card__info">
+            <dt class="traveler-card__term visually-hidden">Левел:</dt>
+            <dd class="traveler-card__details level traveler-card__level">50</dd>
+          </dl>
+          <a class="button" href="#">Позвать!</a>
+        </li>
+      </ul>
+      <a class="link link--icon-plus" href="catalog/page.html">Показать еще</a>
+      <div class="pagination-controls">
+        <a class="pagination-controls__button pagination-controls__button-prev" aria-label="На страницу назад"
+          href="catalog/1.html"></a>
+        <a class="pagination-controls__button pagination-controls__button-next" aria-label="На страницу вперед"
+          href="catalog/3.html"></a>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
+      </a>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__button social-list__button--fb" href="#"><span
+              class="visually-hidden">Facebook</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__button social-list__button--vk" href="#"><span
+              class="visually-hidden">ВКонтакте</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__button social-list__button--ig" href="#"><span
+              class="visually-hidden">Instagram</span></a>
+        </li>
+      </ul>
+      <div class="copyright page-footer__copyright">
+        <a class="copyright__text" href="#">Разработано</a>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__image" src="img/htmlacademy.svg" alt="Логотип компании «HTML Academy»" width="27"
+            height="34">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
