@@ -1,0 +1,54 @@
+.button {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.button--secondary {
+  background-color: @color-secondary;
+}
+
+.button--secondary:hover {
+  background-color: @color-secondary-dark;
+}
+
+.button--secondary:active {
+  background-color: @color-secondary-dark;
+  color: fadeout(@color-primary, 70%);
+}
+
+
+.button--secondary-dark {
+  background-color: @color-secondary-dark;
+}
+
+.button--secondary-dark:hover {
+  background-color: @color-special-3;
+}
+
+.button--secondary-dark:active {
+  background-color: @color-special-3;
+
+  .button__icon {
+    opacity: 0.3;
+  }
+}
+
+
+.button--special-3 {
+  background-color: @color-special-3;
+}
+
+.button--special-3:hover {
+  background-color: @color-special-3-dark;
+}
+
+.button--special-3:active {
+  background-color: @color-special-3-dark;
+
+  .button__icon {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,32 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: @color-primary;
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+
+.page-header--on-scroll {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  background-color: @menu-background;
+  padding-top: 27px;
+  padding-bottom: 31px;
+}
+
+.page-header--on-scroll .menu__toggle {
+  top: 29px;
+
+  &::before,
+  &::after {
+    background-color: @menu-toggle;
+  }
+}
+
+.page-header--on-scroll .menu__activity {
+  display: none;
+}

@@ -3,62 +3,107 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Погнали</title>
 </head>
 
 <body class="page__body">
   <header class="page-header">
     <div class="container">
-      <a href="#" class="logo">
+      <a href="#" class="logo page-header__logo">
         <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
       </a>
       <nav class="menu">
-        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list"
-          aria-label="Открыть окно"></button>
+        <button class="menu__toggle button" type="button" aria-expanded="false" aria-controls="menu__list"
+          aria-label="Открыть меню"></button>
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
-            <a class="menu__link" href="#">О сервисе</a>
+            <a class="menu__link" href="#">
+              <span class="menu__link-hover" data-hover="О сервисе">О сервисе</span>
+            </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Направления</a>
+            <a class="menu__link" href="#">
+              <span class="menu__link-hover" data-hover="Направления">Направления</span>
+            </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Попутчики</a>
+            <a class="menu__link" href="#">
+              <span class="menu__link-hover" data-hover="Попутчики">Попутчики</span>
+            </a>
           </li>
         </ul>
         <div class="menu__activity">
-          <a class="menu__button button" href="#"><span class="visually-hidden">Позвонить</span></a>
-          <a class="menu__button button" href="#"><span class="visually-hidden">Написать письмо</span></a>
-          <a class="menu__button button" href="sign-in.html">Авторизация</a>
+          <a class="menu__icon-button button button--special-3" href="#">
+            <span class="visually-hidden">Позвонить</span>
+            <svg class="menu__icon button__icon" width="18" height="18">
+              <use class="menu__icon-sprite" xlink:href="img/sprite.svg#icon-call"></use>
+            </svg>
+          </a>
+          <a class="menu__icon-button button button--secondary-dark" href="#">
+            <span class="visually-hidden">Написать письмо</span>
+            <svg class="menu__icon button__icon" width="18" height="15.75">
+              <use class="menu__icon-sprite" href="img/sprite.svg#icon-email-2"></use>
+            </svg>
+          </a>
+          <a class="menu__show-button button button--secondary" href="sign-in.html">Авторизация</a>
         </div>
         <b class="visually-hidden">Наши контакты</b>
         <dl class="contact-list menu__contact-list">
-          <dt class="contact-list__term contact-list__icon contact-list__icon--phone">
-            <span class="visually-hidden">Телефон</span>
+          <dt class="contact-list__term visually-hidden">
+            Телефон
           </dt>
           <dd class="contact-list__details">
-            <a class="contact-list__link" href="tel:+78005558628">8 800 555-86-28</a>
+            <a class="contact-list__link contact-list__link--icon-phone" href="tel:+78005558628">
+              <span class="contact-list__icon-wrapper">
+                <svg class="contact-list__icon" width="18" height="17">
+                  <use class="contact-list__icon-sprite" href="img/sprite.svg#icon-telephone"></use>
+                </svg>
+              </span>
+              <span class="contact-list__text">
+                8 800 555-86-28
+              </span>
+            </a>
           </dd>
-          <dt class="contact-list__term contact-list__icon contact-list__icon--email">
-            <span class="visually-hidden">Электронная почта</span>
+          <dt class="contact-list__term visually-hidden">
+            Электронная почта
           </dt>
           <dd class="contact-list__details">
-            <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contact-list__link contact-list__link--icon-email" href="mailto:mail@htmlacademy.ru">
+              <span class="contact-list__icon-wrapper">
+                <svg class="contact-list__icon" width="23.5" height="25">
+                  <use class="contact-list__icon-sprite" href="img/sprite.svg#icon-email"></use>
+                </svg>
+              </span>
+              <span class="contact-list__text">
+                mail@htmlacademy.ru
+              </span>
+            </a>
           </dd>
         </dl>
         <b class="visually-hidden">Наши социальные сети</b>
-        <ul class="social-list">
+        <ul class="social-list menu__social-list">
           <li class="social-list__item">
-            <a class="social-list__button social-list__button--fb" href="#"><span
-                class="visually-hidden">Facebook</span></a>
+            <a class="social-list__button" href="#"><span class="visually-hidden">Facebook</span>
+              <svg class="social-list__icon" width="11" height="21">
+                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__button social-list__button--vk" href="#"><span
-                class="visually-hidden">ВКонтакте</span></a>
+            <a class="social-list__button" href="#"><span class="visually-hidden">ВКонтакте</span>
+              <svg class="social-list__icon" width="23" height="12">
+                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__button social-list__button--ig" href="#"><span
-                class="visually-hidden">Instagram</span></a>
+            <a class="social-list__button" href="#"><span class="visually-hidden">Instagram</span>
+              <svg class="social-list__icon" width="18" height="18">
+                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-ig"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </nav>
@@ -67,18 +112,20 @@
   <main class="page-main">
     <h1 class="visually-hidden">Главная страница сайта для путешествий «Погнали»</h1>
     <section class="promo">
-      <div class="container">
-        <h2 class="promo__heading">В путешествие с крутыми попутчиками!</h2>
-        <blockquote class="blockquote promo__blockquote">
-          <p class="blockquote__text">«Лучшее приложение, что я видел в жизни!»</p>
-          <cite class="blockquote__cite">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
-        </blockquote>
-        <ol class="gradient-stack">
-          <li class="gradient-stack__item">Выберите направление</li>
-          <li class="gradient-stack__item">Изучите идеи путешественников</li>
-          <li class="gradient-stack__item">Находите тех, кто похож на вас</li>
-          <li class="gradient-stack__item">Путешествуйте вместе!</li>
-        </ol>
+      <h2 class="promo__heading">В путешествие с крутыми попутчиками!</h2>
+      <div class="promo__wrapper promo__gradient-background">
+        <div class="container">
+          <blockquote class="blockquote promo__blockquote">
+            <p class="blockquote__text">«Лучшее приложение, что я видел в жизни!»</p>
+            <cite class="blockquote__cite">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+          </blockquote>
+          <ol class="gradient-stack promo__gradient-stack">
+            <li class="gradient-stack__item">Выберите<br>направление</li>
+            <li class="gradient-stack__item">Изучите идеи<br>путешественников</li>
+            <li class="gradient-stack__item">Находите тех,<br>кто похож на вас</li>
+            <li class="gradient-stack__item">Путешествуйте<br>вместе!</li>
+          </ol>
+        </div>
       </div>
     </section>
     <section class="about">
@@ -309,6 +356,7 @@
     </dl>
     <button class="button modal__button" aria-label="Закрыть окно Бизнес-тарифы">Закрыть окно</button>
   </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
