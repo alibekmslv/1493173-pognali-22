@@ -8,6 +8,7 @@
 
 .button--secondary {
   background-color: @color-secondary;
+  color: @color-primary;
 }
 
 .button--secondary:hover {
@@ -17,6 +18,10 @@
 .button--secondary:active {
   background-color: @color-secondary-dark;
   color: fadeout(@color-primary, 70%);
+
+  .button__icon {
+    opacity: 0.3;
+  }
 }
 
 
@@ -51,4 +56,11 @@
   .button__icon {
     opacity: 0.3;
   }
+}
+
+
+.button--polygon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

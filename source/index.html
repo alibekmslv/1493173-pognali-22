@@ -128,39 +128,69 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about stack stack--background-primary stack--bottom-round stack--back-neutral-lighter">
       <div class="container">
-        <h2 class="heading">О сервисе</h2>
-        <p class="paragraph paragraph--light">Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
+        <h2 class="heading about__heading">О сервисе</h2>
+        <p class="paragraph paragraph--light about__text">Любое путешествие веселее с попутчиками, которые на одной
+          волне с тобой!
           Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-        <p class="paragraph paragraph--light paragraph--bold">А если найдете кого-то близкого по духу — скорее зовите в
+        <p class="paragraph paragraph--light paragraph--bold about__text">А если найдете кого-то близкого по духу —
+          скорее зовите в
           совместный трип!</p>
-        <a class="button" href="#" aria-label="Подробнее о сервисе">Подробнее</a>
+        <a class="button hide-on-mobile" href="#" aria-label="Подробнее о сервисе">Подробнее</a>
       </div>
     </section>
-    <section class="directions">
+    <section class="directions stack stack--background-neutral-lighter stack--bottom-round stack--back-primary">
       <div class="container">
-        <h2 class="heading">Направления</h2>
-        <p class="paragraph">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы
-          отправиться и чем можно там заняться.</p>
+        <h2 class="heading directions__heading">Направления</h2>
+        <p class="paragraph directions__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
+          куда хотели бы отправиться и чем можно там заняться.</p>
         <ul class="country-stack directions__country-stack">
-          <li class="country-stack__item">
-            <b class="country-stack__name">Таиланд</b>
-            <span class="country-stack__slogan">Джунгли зовут!</span>
-            <span class="country-stack__visitors-number"><span class="visually-hidden">Посетили </span>18321</span>
+          <li class="country-stack__item country-stack__item--th">
+            <div class="country-stack__panel">
+              <b class="country-stack__name">Таиланд</b>
+              <span class="country-stack__slogan">Джунгли зовут!</span>
+              <div class="country-stack__visitors">
+                <svg class="country-stack__visitors-icon" width="14" height="14">
+                  <use class="country-stack__icon-sprite" href="img/sprite.svg#icon-user"></use>
+                </svg>
+                <span class="visually-hidden">Посетили </span><span class="country-stack__visitors-count">18321</span>
+              </div>
+            </div>
           </li>
-          <li class="country-stack__item">
-            <b class="country-stack__name">Франция</b>
-            <span class="country-stack__slogan">Трэ бьен, манифик!</span>
-            <span class="country-stack__visitors-number"><span class="visually-hidden">Посетили </span>12518</span>
+          <li class="country-stack__item country-stack__item--fr">
+            <div class="country-stack__panel">
+              <b class="country-stack__name">Франция</b>
+              <span class="country-stack__slogan">Трэ бьен, манифик!</span>
+              <div class="country-stack__visitors">
+                <svg class="country-stack__visitors-icon" width="14" height="14">
+                  <use class="country-stack__icon-sprite" href="img/sprite.svg#icon-user"></use>
+                </svg>
+                <span class="visually-hidden">Посетили </span>
+                <span class="country-stack__visitors-count">12518</span>
+              </div>
+            </div>
           </li>
-          <li class="country-stack__item">
-            <b class="country-stack__name">Чехия</b>
-            <span class="country-stack__slogan">Закоулки!</span>
-            <span class="country-stack__visitors-number"><span class="visually-hidden">Посетили </span>5326</span>
+          <li class="country-stack__item country-stack__item--cz">
+            <div class="country-stack__panel">
+              <b class="country-stack__name">Чехия</b>
+              <span class="country-stack__slogan">Закоулки старой<br>Европы</span>
+              <div class="country-stack__visitors">
+                <svg class="country-stack__visitors-icon" width="14" height="14">
+                  <use class="country-stack__icon-sprite" href="img/sprite.svg#icon-user"></use>
+                </svg>
+                <span class="visually-hidden">Посетили </span>
+                <span class="country-stack__visitors-count">5326</span>
+              </div>
+            </div>
           </li>
         </ul>
-        <a class="button" href="form.html" aria-label="Показать все направления">Показать все</a>
+        <a class="button button--secondary button--polygon directions__button" href="form.html"
+          aria-label="Показать все направления">Показать все
+          <svg class="button__icon" width="14" height="14">
+            <use class="button__icon-sprite" href="img/sprite.svg#polygon"></use>
+          </svg>
+        </a>
       </div>
     </section>
     <section class="fellow-travelers">
@@ -300,7 +330,7 @@
           </dd>
         </dl>
         <a class="button button--transparent" href="#">Проложить маршрут</a>
-        <iframe
+        <iframe hidden
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
           width="320" height="424" allowfullscreen title="Офис компании «Погнали» на карте"></iframe>
       </div>
