@@ -1,6 +1,5 @@
 .price-list {
   display: grid;
-  margin-left: 25px;
 }
 
 .price-list__item {
@@ -32,7 +31,7 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  color: @white
+  color: @white;
 }
 
 .price-list__item:nth-child(1)::after {
@@ -56,4 +55,10 @@
 
 .price-list__price {
   margin-left: 0;
+}
+
+.price-list--no-numbers {
+  .price-list__item::after {
+    display: none;
+  }
 }

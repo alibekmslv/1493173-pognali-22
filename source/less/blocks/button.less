@@ -64,3 +64,31 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.button--transparent {
+  color: @color-primary-light;
+  text-decoration: none;
+  background-color: transparent;
+  border-width: 3px;
+  border-style: solid;
+  border-color: @primary-background;
+  border-radius: 10px;
+}
+
+.button--transparent:hover {
+  color: @white;
+  background-color: @primary-background;
+
+  .button__icon {
+    fill: @white;
+  }
+}
+
+.button--transparent:active {
+  color: rgba(@white, 0.3);
+  background-color: @primary-background;
+
+  .button__icon {
+    fill: rgba(@white, 0.3);
+  }
+}

@@ -2,7 +2,9 @@ const menu = document.querySelector(".menu");
 const menuToggle = document.querySelector(".menu__toggle");
 const pageHeader = document.querySelector(".page-header");
 const logoImage = document.querySelector(".page-header__logo .logo__image");
-
+const modalTrigger = document.querySelector(".add-profile__link");
+const modalWindow = document.getElementById("business-rates");
+const modalCloseTrigger = document.querySelector(".modal__button");
 
 if (menuToggle) {
   menuToggle.addEventListener("click", function () {
@@ -29,3 +31,16 @@ window.addEventListener("scroll", function () {
     }
   }
 })
+
+if (modalTrigger) {
+  modalTrigger.addEventListener("click", function (e) {
+    e.preventDefault();
+    modalWindow.classList.add("modal--show");
+  })
+}
+
+if (modalCloseTrigger) {
+  modalCloseTrigger.addEventListener("click", function () {
+    modalWindow.classList.remove("modal--show");
+  })
+}
