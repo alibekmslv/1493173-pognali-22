@@ -8,9 +8,11 @@ const modalCloseTrigger = document.querySelector(".modal__button");
 
 if (menuToggle) {
   menuToggle.addEventListener("click", function () {
-    pageHeader.classList.toggle("menu--open");
-    menuToggle.classList.toggle("menu__toggle--open")
-    if (pageHeader.classList.contains("menu--open") || pageHeader.classList.contains("page-header--on-scroll")) {
+    pageHeader.classList.remove("page-header--on-scroll");
+    menu.classList.toggle("menu--open");
+    pageHeader.classList.toggle("page-header--expanded");
+    menuToggle.classList.toggle("menu__toggle--open");
+    if (pageHeader.classList.contains("page-header--expanded") || pageHeader.classList.contains("page-header--on-scroll")) {
       logoImage.src = "img/logo-mobile.png";
     } else {
       logoImage.src = "img/logo-mobile-light.png"
@@ -19,12 +21,12 @@ if (menuToggle) {
 }
 
 window.addEventListener("scroll", function () {
-  if (window.pageYOffset > 600) {
+  if (window.pageYOffset > 600 && !pageHeader.classList.contains("page-header--expanded")) {
     pageHeader.classList.add("page-header--on-scroll");
     logoImage.src = "img/logo-mobile.png";
   } else {
     pageHeader.classList.remove("page-header--on-scroll");
-    if (pageHeader.classList.contains("menu--open")) {
+    if (pageHeader.classList.contains("page-header--expanded")) {
       logoImage.src = "img/logo-mobile.png"
     } else {
       logoImage.src = "img/logo-mobile-light.png"
