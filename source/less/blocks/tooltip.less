@@ -1,0 +1,27 @@
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover {
+  .tooltip__text {
+    display: block;
+  }
+}
+
+.tooltip__text {
+  display: none;
+  max-width: 170px;
+  position: absolute;
+  z-index: 3;
+  bottom: -60px;
+  left: -75px;
+  color: @white;
+  background-color: @tooltip;
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 4px;
+}

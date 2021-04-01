@@ -193,15 +193,18 @@
         </a>
       </div>
     </section>
-    <section class="fellow-travelers">
+    <section class="fellow-travelers stack stack--bottom-round stack--background-primary stack--back-neutral">
       <div class="container">
-        <h2 class="heading">Попутчики</h2>
-        <p class="paragraph paragraph--light">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному
+        <h2 class="heading fellow-travelers__heading">Попутчики</h2>
+        <p class="paragraph paragraph--light fellow-travelers__text">Все мы индивидуальны и у каждого свой взгляд на
+          идеальный отдых. Одному
           нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <p class="paragraph paragraph--light paragraph--bold">Теперь можно легко найти единомышленников!</p>
-        <ul class="travelers-list">
-          <li class="travelers-list__item traveler-card traveler-card--width-static">
-            <b class="traveler-card__name"><a class="traveler-card__link" href="#">Таня Фирсова</a></b>
+        <p class="paragraph paragraph--light paragraph--bold fellow-travelers__text">Теперь можно легко найти
+          единомышленников!</p>
+        <ul class="travelers-list fellow-travelers__travelers-list">
+          <li class="travelers-list__item traveler-card traveler-card--static">
+            <a class="traveler-card__name traveler-card__status traveler-card__status--offline" href="#">Таня
+              Фирсова</a>
             <img class="traveler-card__avatar" src="img/user-tanya.jpg" width="270" height="270"
               alt="Аватар путешественника Таня Фирсова">
             <dl class="traveler-card__info">
@@ -210,34 +213,56 @@
               <dt class="traveler-card__term visually-hidden">Хочет посетить:</dt>
               <dd class="traveler-card__details">
                 <ul class="visit-wish-list">
-                  <li
-                    class="visit-wish-list__item visit-wish-list__item--sri-lanka tooltip tooltip--country tooltip--sri-lanka">
-                    <span class="visit-wish-list__country-name tooltip__text">Шри-Ланка</span>
+                  <li class="visit-wish-list__item visit-wish-list__item--lk tooltip">
+                    <span class="visit-wish-list__country-name tooltip__text">Шри&nbsp;-Ланка</span>
                   </li>
-                  <li
-                    class="visit-wish-list__item visit-wish-list__item--thailand tooltip tooltip--country tooltip--thailand">
+                  <li class="visit-wish-list__item visit-wish-list__item--th tooltip">
                     <span class="visit-wish-list__country-name tooltip__text">Таиланд</span>
                   </li>
-                  <li
-                    class="visit-wish-list__item visit-wish-list__item--seychelles tooltip tooltip--country tooltip--seychelles">
+                  <li class="visit-wish-list__item visit-wish-list__item--sc tooltip">
                     <span class="visit-wish-list__country-name tooltip__text">Сейшелы</span>
                   </li>
                 </ul>
               </dd>
               <dt class="traveler-card__term visually-hidden">Транспорт:</dt>
-              <dd class="traveler-card__details traveler-card__transport">
-                <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
-                <div class="tooltip tooltip--auto tooltip--active"><span class="tooltip__text">Автотранспорт</span>
+              <dd class="traveler-card__details traveler-card__transports">
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="20.83" height="21.12">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
+                  </svg>
+                  <span class="tooltip__text">Авиаперелет</span>
                 </div>
-                <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
-                <div class="tooltip tooltip--hike tooltip--active"><span class="tooltip__text">Пешком</span></div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="18" height="20">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
+                  </svg>
+                  <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+                </div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="23.67" height="24">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
+                  </svg>
+                  <span class="tooltip__text" aria-hidden="true">Велосипед</span>
+                </div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="20.65" height="23.04">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
+                  </svg>
+                  <span class="tooltip__text">Пешком</span>
+                </div>
               </dd>
               <dt class="traveler-card__term visually-hidden">Левел:</dt>
-              <dd class="traveler-card__details level traveler-card__level">80</dd>
+              <dd class="traveler-card__details level level--back level--text traveler-card__level">
+                <svg class="level__progress-ring" width="60" height="60">
+                  <circle class="level__circle level__circle--99" r="28" cx="30" cy="30" stroke-width="4"
+                    stroke="#FF8D30" fill="transparent" />
+                </svg>
+                <span class="level__value">99</span>
+              </dd>
             </dl>
           </li>
           <li class="travelers-list__item traveler-card traveler-card--static">
-            <b class="traveler-card__name"><a class="traveler-card__link" href="#">Петя Демин</a></b>
+            <a class="traveler-card__name traveler-card__status traveler-card__status--online" href="#">Петя Демин</a>
             <img class="traveler-card__avatar" src="img/user-petya.jpg" width="270" height="270"
               alt="Аватар путешественника Петя Демин">
             <dl class="traveler-card__info">
@@ -246,34 +271,64 @@
               <dt class="traveler-card__term visually-hidden">Хочет посетить:</dt>
               <dd class="traveler-card__details">
                 <ul class="visit-wish-list">
-                  <li class="visit-wish-list__item tooltip tooltip--country tooltip--belgium">
+                  <li class="visit-wish-list__item visit-wish-list__item--be tooltip">
                     <span class="visit-wish-list__country-name tooltip__text">Бельгия</span>
                   </li>
-                  <li class="visit-wish-list__item tooltip tooltip--country tooltip--czech-republic">
+                  <li class="visit-wish-list__item visit-wish-list__item--cz tooltip">
                     <span class="visit-wish-list__country-name tooltip__text">Чехия</span>
                   </li>
                 </ul>
               </dd>
               <dt class="traveler-card__term visually-hidden">Транспорт:</dt>
-              <dd class="traveler-card__details traveler-card__transport">
-                <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
-                <div class="tooltip tooltip--auto"><span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+              <dd class="traveler-card__details traveler-card__transports">
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="20.83" height="21.12">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
+                  </svg>
+                  <span class="tooltip__text">Авиаперелет</span>
                 </div>
-                <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
-                <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="18" height="20">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
+                  </svg>
+                  <span class="tooltip__text">Автотранспорт</span>
+                </div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="23.67" height="24">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
+                  </svg>
+                  <span class="tooltip__text" aria-hidden="true">Велосипед</span>
+                </div>
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="20.65" height="23.04">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
+                  </svg>
+                  <span class="tooltip__text">Пешком</span>
+                </div>
               </dd>
               <dt class="traveler-card__term visually-hidden">Левел:</dt>
-              <dd class="traveler-card__details level traveler-card__level">99</dd>
+              <dd class="traveler-card__details level level--back level--text traveler-card__level">
+                <svg class="level__progress-ring" width="60" height="60">
+                  <circle class="level__circle level__circle--80" r="28" cx="30" cy="30" stroke-width="4"
+                    stroke="#FF8D30" fill="transparent" />
+                </svg>
+                <span class="level__value">80</span>
+              </dd>
             </dl>
           </li>
         </ul>
-        <a class="button" href="catalog.html" aria-label="Показать всех попутчиков">Показать всех</a>
+        <a class="button button--secondary button--polygon fellow-travelers__button" href="catalog.html"
+          aria-label="Показать всех попутчиков">Показать всех
+          <svg class="button__icon" width="14" height="14">
+            <use class="button__icon-sprite" href="img/sprite.svg#polygon"></use>
+          </svg>
+        </a>
       </div>
     </section>
-    <section class="add-profile">
+    <section class="add-profile stack stack--bottom-round stack--background-neutral stack--back-primary">
       <div class="container">
-        <h2 class="heading">Добавьте свой профиль</h2>
-        <dl class="price-list">
+        <h2 class="heading add-profile__heading">Добавьте свой профиль</h2>
+        <dl class="price-list add-profile__price-list">
           <div class="price-list__item">
             <dt class="price-list__term">Базовое размещение</dt>
             <dd class="price-list__price">Бесплатно</dd>
@@ -287,8 +342,8 @@
             <dd class="price-list__price">59 руб./мес</dd>
           </div>
         </dl>
-        <a class="link" href="#business-rates" aria-label="Показать все тарифа для бизнеса">Показать тарифы для
-          бизнеса</a>
+        <a class="add-profile__link" href="#business-rates" aria-label="Показать все тарифа для бизнеса">Показать тарифы
+          для бизнеса</a>
       </div>
     </section>
     <section class="register">
