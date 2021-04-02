@@ -3,69 +3,115 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Погнали</title>
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header page-header--no-activity">
     <div class="container">
-      <a href="index.html" class="logo">
+      <a href="#" class="logo page-header__logo">
         <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
       </a>
       <nav class="menu">
-        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list"
-          aria-label="Открыть окно"></button>
+        <button class="menu__toggle button" type="button" aria-expanded="false" aria-controls="menu__list"
+          aria-label="Открыть меню"></button>
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
-            <a class="menu__link" href="index.html">О сервисе</a>
+            <a class="menu__link" href="index.html">
+              <span class="menu__link-hover" data-hover="О сервисе">О сервисе</span>
+            </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Направления</a>
+            <a class="menu__link" href="#">
+              <span class="menu__link-hover" data-hover="Направления">Направления</span>
+            </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Попутчики</a>
+            <a class="menu__link" href="catalog.html">
+              <span class="menu__link-hover" data-hover="Попутчики">Попутчики</span>
+            </a>
           </li>
         </ul>
         <div class="menu__activity">
-          <a class="menu__button button" href="#"><span class="visually-hidden">Позвонить</span></a>
-          <a class="menu__button button" href="#"><span class="visually-hidden">Написать письмо</span></a>
-          <a class="menu__button button" href="sign-in.html">Авторизация</a>
+          <a class="menu__icon-button button button--special-3" href="#">
+            <span class="visually-hidden">Позвонить</span>
+            <svg class="menu__icon button__icon" width="18" height="18">
+              <use class="menu__icon-sprite" href="img/sprite.svg#icon-call"></use>
+            </svg>
+          </a>
+          <a class="menu__icon-button button button--secondary-dark" href="#">
+            <span class="visually-hidden">Написать письмо</span>
+            <svg class="menu__icon button__icon" width="18" height="15.75">
+              <use class="menu__icon-sprite" href="img/sprite.svg#icon-email-2"></use>
+            </svg>
+          </a>
+          <a class="menu__show-button button button--secondary" href="sign-in.html">Авторизация</a>
         </div>
         <b class="visually-hidden">Наши контакты</b>
         <dl class="contact-list menu__contact-list">
-          <dt class="contact-list__term contact-list__icon contact-list__icon--phone">
-            <span class="visually-hidden">Телефон</span>
+          <dt class="contact-list__term visually-hidden">
+            Телефон
           </dt>
           <dd class="contact-list__details">
-            <a class="contact-list__link" href="tel:+78005558628">8 800 555-86-28</a>
+            <a class="contact-list__link contact-list__link--icon-phone" href="tel:+78005558628">
+              <span class="contact-list__icon-wrapper">
+                <svg class="contact-list__icon" width="18" height="17">
+                  <use class="contact-list__icon-sprite" href="img/sprite.svg#icon-telephone"></use>
+                </svg>
+              </span>
+              <span class="contact-list__text">
+                8 800 555-86-28
+              </span>
+            </a>
           </dd>
-          <dt class="contact-list__term contact-list__icon contact-list__icon--email">
-            <span class="visually-hidden">Электронная почта</span>
+          <dt class="contact-list__term visually-hidden">
+            Электронная почта
           </dt>
           <dd class="contact-list__details">
-            <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contact-list__link contact-list__link--icon-email" href="mailto:mail@htmlacademy.ru">
+              <span class="contact-list__icon-wrapper">
+                <svg class="contact-list__icon" width="23.5" height="25">
+                  <use class="contact-list__icon-sprite" href="img/sprite.svg#icon-email"></use>
+                </svg>
+              </span>
+              <span class="contact-list__text">
+                mail@htmlacademy.ru
+              </span>
+            </a>
           </dd>
         </dl>
         <b class="visually-hidden">Наши социальные сети</b>
-        <ul class="social-list">
+        <ul class="social-list menu__social-list">
           <li class="social-list__item">
-            <a class="social-list__button social-list__button--fb" href="#"><span
-                class="visually-hidden">Facebook</span></a>
+            <a class="social-list__button" href="#"><span class="visually-hidden">Facebook</span>
+              <svg class="social-list__icon" width="11" height="21">
+                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__button social-list__button--vk" href="#"><span
-                class="visually-hidden">ВКонтакте</span></a>
+            <a class="social-list__button" href="#"><span class="visually-hidden">ВКонтакте</span>
+              <svg class="social-list__icon" width="23" height="12">
+                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__button social-list__button--ig" href="#"><span
-                class="visually-hidden">Instagram</span></a>
+            <a class="social-list__button" href="#"><span class="visually-hidden">Instagram</span>
+              <svg class="social-list__icon" width="18" height="18">
+                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-ig"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
   <main class="page-main">
-    <div class="page__bar">
+    <div
+      class="page__bar stack stack--bottom-third-round stack--background-header stack--back-secondary stack--back-showed">
       <div class="container">
         <h1 class="page__title">Направления</h1>
       </div>
@@ -74,98 +120,124 @@
       <h2 class="visually-hidden">Мой профиль</h2>
       <div class="container">
         <form class="profile-form">
-          <div class="level profile-form__level">80</div>
-          <img class="avatar profile-form__avatar" src="img/user-petya.jpg" alt="Аватар путешественника Петя Демин">
+          <div class="level level--size-100 profile-form__level">
+            <svg class="level__progress-ring" width="100" height="100">
+              <circle class="level__circle level__circle--80" r="48" cx="50" cy="50" stroke-width="3" stroke="#FF8D30"
+                fill="transparent" />
+            </svg>
+            <span class="level__value">80</span>
+          </div>
+          <img class="avatar profile-form__avatar" src="img/user-petya.jpg" alt="Аватар путешественника Петя Демин"
+            width="270" height="270">
           <label class="profile-form__file-button file-button">
             <span class="hide-on-desktop">Сменить </span>фото
             <input class="visually-hidden" type="file" name="avatar">
           </label>
           <fieldset class="profile-form__tags user-fieldset">
             <label class="user-fieldset__legend" for="tags">Тэги</label>
-            <textarea class="user-fieldset__textarea" id="tags" name="tags" cols="30" rows="1"
+            <textarea class="user-fieldset__textarea" id="tags" name="tags" cols="30" rows="2"
               placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
           </fieldset>
           <fieldset class="profile-form__transports user-fieldset">
             <legend class="user-fieldset__legend">Транспорт</legend>
-            <div class="tooltip tooltip--checkbox tooltip--avia tooltip--active">
-              <label class="tooltip__text">Авиаперелет
-                <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="Авиаперелет"
-                  checked>
+            <div class="user-fieldset__checkboxarea">
+              <label class="user-fieldset__checkbox tooltip">
+                <span class="tooltip__text" id="label-avia">Авиаперелёт</span>
+                <input class="user-fieldset__checkbox-input visually-hidden" aria-labelledby="label-avia"
+                  type="checkbox" name="transport" value="Авиаперелет" checked>
+                <svg class="user-fieldset__checkbox-icon" width="17" height="16">
+                  <use class="user-fieldset__icon-sprite" href="img/sprite.svg#icon-avia"></use>
+                </svg>
               </label>
-            </div>
-            <div class="tooltip tooltip--checkbox tooltip--auto tooltip--active">
-              <label class="tooltip__text">Автотранспорт
-                <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="Автотранспорт"
-                  checked>
+              <label class="user-fieldset__checkbox tooltip">
+                <span class="tooltip__text" id="label-auto">Автотранспорт</span>
+                <input class="user-fieldset__checkbox-input visually-hidden" aria-labelledby="label-auto"
+                  type="checkbox" name="transport" value="Автотранспорт" checked>
+                <svg class="user-fieldset__checkbox-icon" width="17" height="16">
+                  <use class="user-fieldset__icon-sprite" href="img/sprite.svg#icon-auto"></use>
+                </svg>
               </label>
-            </div>
-            <div class="tooltip tooltip--checkbox tooltip--bike">
-              <label class="tooltip__text">Велосипед
-                <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="Велосипед">
+              <label class="user-fieldset__checkbox tooltip">
+                <span class="tooltip__text" id="label-bike">Велосипед</span>
+                <input class="user-fieldset__checkbox-input visually-hidden" aria-labelledby="label-bike"
+                  type="checkbox" name="transport" value="Велосипед">
+                <svg class="user-fieldset__checkbox-icon" width="17" height="16">
+                  <use class="user-fieldset__icon-sprite" href="img/sprite.svg#icon-bike"></use>
+                </svg>
               </label>
-            </div>
-            <div class="tooltip tooltip--checkbox tooltip--hike tooltip--active">
-              <label class="tooltip__text">Пешком
-                <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="Пешком" checked>
+              <label class="user-fieldset__checkbox tooltip">
+                <span class="tooltip__text" id="label-hike">Пешком</span>
+                <input class="user-fieldset__checkbox-input visually-hidden" aria-labelledby="label-hike"
+                  type="checkbox" name="transport" value="Пешком" checked>
+                <svg class="user-fieldset__checkbox-icon" width="17" height="16">
+                  <use class="user-fieldset__icon-sprite" href="img/sprite.svg#icon-hike"></use>
+                </svg>
               </label>
             </div>
           </fieldset>
         </form>
       </div>
     </section>
-    <section class="my-road-map">
+    <section class="my-road-map stack stack--top-round stack--background-neutral-light stack--back-neutral-lighter">
       <div class="container">
-        <h2 class="heading">Мои планы:</h2>
+        <h2 class="heading my-road-map__heading">Мои планы:</h2>
         <ol class="road-map">
           <li class="road-map__item">
             <b class="road-map__countries">Франция, Италия</b>
             <span class="road-map__fellows">3 попутчика</span>
-            <span class="road-map__date">26 мар — 29 мар</span>
-            <a class="link" href="#" aria-label="Изменить дату">Изменить</a>
+            <span class="road-map__date">26 мар &horbar; 29 мар</span>
+            <a class="road-map__link" href="#" aria-label="Изменить дату">Изменить</a>
           </li>
           <li class="road-map__item">
             <b class="road-map__countries">Таиланд, Индонезия</b>
             <span class="road-map__fellows">1 попутчик</span>
-            <span class="road-map__date">1 июл — 15 июл</span>
-            <a class="link" href="#" aria-label="Изменить дату">Изменить</a>
+            <span class="road-map__date">1 июл &horbar; 15 июл</span>
+            <a class="road-map__link" href="#" aria-label="Изменить дату">Изменить</a>
           </li>
         </ol>
       </div>
     </section>
-    <section class="add-road-map">
+    <section class="add-road-map stack stack--top-round stack--background-neutral-saturated stack--back-neutral-light">
       <div class="container">
-        <h2 class="heading">Добавить план:</h2>
+        <h2 class="heading add-road-map__heading">Добавить план:</h2>
         <form class="progress-form" action="https://echo.htmlacademy.ru/courses" method="post">
           <div class="progress-form__step progress-form__step--active">
-            <h3 class="heading">Шаг 1. Даты пребывания</h3>
-            <p class="paragraph">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку,
-              и ее предполагаемую длительность.</p>
-            <div class="number-input">
+            <h3 class="heading heading--medium add-road-map__heading add-road-map__heading--medium">Шаг 1.<br>Даты
+              пребывания</h3>
+            <p class="paragraph paragraph--special progress-form__paragraph">Укажите предпочтительное количество
+              попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+            <div class="number-input progress-form__number-input">
               <label class="number-input__label" for="fellows-number">Ищу попутчиков:</label>
               <span class="number-input__term">Чел.</span>
               <div class="number-input__wrapper">
-                <button class="number-input__button number-input__button--minus" type="button"
+                <button class="button number-input__button number-input__button--minus" type="button"
                   aria-label="минус 1"></button>
                 <input class="number-input__input" id="fellows-number" type="number" name="fellows-number" min="1"
                   value="2">
-                <button class="number-input__button number-input__button--plus" type="button"
+                <button class="button number-input__button number-input__button--plus" type="button"
                   aria-label="плюс 1"></button>
               </div>
             </div>
-            <div class="number-input">
+            <div class="number-input progress-form__number-input">
               <label class="number-input__label" for="trip-days">Длительность:</label>
               <span class="number-input__term">Дн.</span>
               <div class="number-input__wrapper">
-                <button class="number-input__button number-input__button--minus" type="button"
+                <button class="button number-input__button number-input__button--minus" type="button"
                   aria-label="минус 1"></button>
                 <input class="number-input__input" id="trip-days" type="number" name="trip-days" min="1" value="3">
-                <button class="number-input__button number-input__button--plus" type="button"
+                <button class="button number-input__button number-input__button--plus" type="button"
                   aria-label="плюс 1"></button>
               </div>
             </div>
-            <label class="checkbox">
+            <label class="checkbox progress-form__checkbox">
+              <svg class="checkbox__box" width="26" height="26">
+                <use class="checkbox__icon" href="img/sprite.svg#icon-checkbox"></use>
+              </svg>
+              <input class="checkbox__input visually-hidden" type="checkbox" name="with-kids" checked>
+              <svg class="checkbox__checkmark" width="13" height="26">
+                <use class="checkbox__icon" href="img/sprite.svg#icon-checkmark"></use>
+              </svg>
               Можно с детьми
-              <input class="checkbox__input" type="checkbox" name="with-kids" checked>
             </label>
             <div class="date-input">
               <label class="date-input__label visually-hidden">Дата начала путешествия:
@@ -399,6 +471,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

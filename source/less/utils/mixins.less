@@ -1,3 +1,19 @@
 .primary-font {
   font-family: "Blogger Sans", "Arial", sans-serif;
 }
+
+.fieldset-area(@p-top: 25px, @p-bottom: 25px) {
+  background-color: @color-neutral-lighter;
+  .primary-font();
+  color: rgba(@color-special-1, 0.6);
+  font-size: 1em;
+  line-height: 1.125rem;
+  padding-top: @p-top;
+  padding-right: 25px;
+  padding-bottom: @p-bottom;
+  padding-left: 25px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @fieldset-border;
+  border-radius: 10px;
+}
