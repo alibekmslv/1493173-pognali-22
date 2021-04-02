@@ -1,0 +1,57 @@
+.level {
+  line-height: 0;
+}
+
+.level--back {
+  background-color: rgba(@black, 0.6);
+  border-radius: 50%;
+}
+
+.level--text::before {
+  content: "";
+  position: absolute;
+  top: 36px;
+  left: 15px;
+  width: 30px;
+  height: 1px;
+  background-color: rgba(@white, 0.3);
+}
+
+.level--text::after {
+  content: "level";
+  position: absolute;
+  bottom: 7px;
+  left: 17px;
+  font-size: 0.875em;
+  line-height: 0.875rem;
+  color: @white;
+}
+
+.level__circle {
+  stroke-dasharray: 172 172;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.level__circle--99 {
+  stroke-dashoffset: calc(172 - 99 / 100 * 172);
+}
+
+.level__circle--80 {
+  stroke-dashoffset: calc(172 - 80 / 100 * 172);
+}
+
+.level__wrapper {
+  position: relative;
+}
+
+.level__value {
+  display: block;
+  position: absolute;
+  font-size: 1.5em;
+  line-height: 1.5rem;
+  color: @white;
+  top: 15px;
+  left: 17px;
+}

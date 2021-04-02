@@ -1,0 +1,94 @@
+.button {
+  .primary-font();
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.button--secondary {
+  background-color: @color-secondary;
+  color: @color-primary;
+}
+
+.button--secondary:hover {
+  background-color: @color-secondary-dark;
+}
+
+.button--secondary:active {
+  background-color: @color-secondary-dark;
+  color: fadeout(@color-primary, 70%);
+
+  .button__icon {
+    opacity: 0.3;
+  }
+}
+
+
+.button--secondary-dark {
+  background-color: @color-secondary-dark;
+}
+
+.button--secondary-dark:hover {
+  background-color: @color-special-3;
+}
+
+.button--secondary-dark:active {
+  background-color: @color-special-3;
+
+  .button__icon {
+    opacity: 0.3;
+  }
+}
+
+
+.button--special-3 {
+  background-color: @color-special-3;
+}
+
+.button--special-3:hover {
+  background-color: @color-special-3-dark;
+}
+
+.button--special-3:active {
+  background-color: @color-special-3-dark;
+
+  .button__icon {
+    opacity: 0.3;
+  }
+}
+
+
+.button--polygon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button--transparent {
+  color: @color-primary-light;
+  text-decoration: none;
+  background-color: transparent;
+  border-width: 3px;
+  border-style: solid;
+  border-color: @primary-background;
+  border-radius: 10px;
+}
+
+.button--transparent:hover {
+  color: @white;
+  background-color: @primary-background;
+
+  .button__icon {
+    fill: @white;
+  }
+}
+
+.button--transparent:active {
+  color: rgba(@white, 0.3);
+  background-color: @primary-background;
+
+  .button__icon {
+    fill: rgba(@white, 0.3);
+  }
+}

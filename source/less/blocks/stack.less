@@ -1,0 +1,56 @@
+.stack {
+  position: relative;
+}
+
+.stack::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.stack--background-primary {
+  background-color: @primary-background;
+}
+
+.stack--background-neutral {
+  background-color: @color-neutral;
+}
+
+.stack--background-neutral-lighter {
+  background-color: @color-neutral-lighter;
+}
+
+.stack--background-secondary {
+  background-color: @color-secondary;
+}
+
+.stack--bottom-round {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.stack--top-round {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.stack--back-primary::before {
+  background-color: @primary-background;
+}
+
+.stack--back-neutral::before {
+  background-color: @color-neutral;
+}
+
+.stack--back-neutral-lighter::before {
+  background-color: @color-neutral-lighter;
+}
+
+.stack--back-secondary::before {
+  background-color: @color-secondary;
+}

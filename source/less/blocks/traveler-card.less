@@ -1,0 +1,119 @@
+.traveler-card {
+  background-color: @white;
+  border-radius: 10px;
+}
+
+.traveler-card__details {
+  margin-left: 0;
+}
+
+.traveler-card__status::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 11px;
+}
+
+.traveler-card__status--offline::before {
+  background-color: @color-special-2;
+}
+
+.traveler-card__status--online::before {
+  background-color: @online-status;
+}
+
+.traveler-card--static {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  max-width: 270px;
+  position: relative;
+  transition: transform 0.3s;
+
+  &:hover {
+    box-shadow: 0 4px 9px rgba(@black, 0.16);
+    transform: scale(1.01);
+  }
+
+  .traveler-card__info {
+    margin-top: 15px;
+  }
+
+  .traveler-card__avatar {
+    grid-row: ~"1 / 2";
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .traveler-card__name {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    line-height: 21px;
+    font-weight: 700;
+    text-decoration: none;
+    color: @color-primary-light;
+    margin-top: 27px;
+    justify-self: center;
+    margin-left: -16px;
+  }
+
+  .traveler-card__tags {
+    max-width: 188px;
+    font-size: 1em;
+    line-height: 1.125rem;
+    text-align: center;
+    color: @color-special-1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.875rem;
+  }
+
+  .visit-wish-list {
+    display: flex;
+    position: absolute;
+    top: 259px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .visit-wish-list__item:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  .traveler-card__transports {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .traveler-card__level {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+  }
+}
+
+.traveler-card__name:hover {
+  opacity: 0.7;
+}
+
+.traveler-card__name:active {
+  opacity: 0.3;
+}
+
+.traveler-card__transport-icon {
+  fill: @color-primary-light;
+  fill-opacity: 0.15;
+}
+
+.traveler-card__transport--active {
+  .traveler-card__transport-icon {
+    fill: @tooltip;
+    fill-opacity: 1;
+  }
+}

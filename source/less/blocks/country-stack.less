@@ -1,0 +1,106 @@
+.country-stack {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.country-stack__item {
+  max-width: 460px;
+  min-height: 190px;
+  position: relative;
+  border-radius: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.country-stack__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 35px;
+  height: 24px;
+  top: 87px;
+  left: 25px;
+  z-index: 1;
+  background-size: contain;
+  border-radius: 3px;
+}
+
+.country-stack__item:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.country-stack__item--th {
+  background-image: url("../img/thailand-mobile.jpg");
+}
+
+.country-stack__item--th::before {
+  background-image: url("../img/flag-th.jpg");
+}
+
+.country-stack__item--fr {
+  background-image: url("../img/france-mobile.jpg");
+}
+
+.country-stack__item--fr::before {
+  background-image: url("../img/flag-fr.jpg");
+}
+
+.country-stack__item--cz {
+  background-image: url("../img/czech-mobile.jpg");
+}
+
+.country-stack__item--cz::before {
+  background-image: url("../img/flag-cz.jpg");
+}
+
+.country-stack__panel {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 26px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 6px;
+  border-radius: 10px;
+  background-color: @white;
+}
+
+.country-stack__name {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.country-stack__slogan,
+.country-stack__visitors {
+  font-size: 1em;
+  line-height: 18px;
+  font-weight: 500;
+  color: fadeout(@color-special-1, 70%);
+}
+
+.country-stack__slogan {
+  min-height: 36px;
+}
+
+.country-stack__visitors {
+  grid-column: ~"2/3";
+  grid-row: ~"1/2";
+  display: flex;
+  padding-top: 4px;
+}
+
+.country-stack__visitors-icon {
+  fill: @primary-background;
+}
+
+.country-stack__visitors-count {
+  min-width: 42px;
+  padding-left: 7px;
+}

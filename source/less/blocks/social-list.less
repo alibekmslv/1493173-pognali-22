@@ -1,0 +1,39 @@
+.social-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.social-list--colored {
+  .social-list__button {
+    background-color: @color-secondary;
+  }
+
+  .social-list__button:hover,
+  .social-list__button:active {
+    background-color: @color-secondary-dark;
+  }
+}
+
+.social-list__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 44.27px;
+  border-radius: 50%;
+}
+
+.social-list__icon {
+  fill: @menu-link;
+}
+
+.social-list__button:hover .social-list__icon {
+  opacity: 0.6;
+}
+
+.social-list__button:active .social-list__icon {
+  opacity: 0.3;
+}
