@@ -8,7 +8,7 @@
   border-radius: 10px;
 }
 
-.progress-form__step:nth-child(2) {
+.progress-form__step:not(:first-of-type) {
   padding-bottom: 8px;
 }
 
@@ -68,4 +68,50 @@
 
 .progress-form__add-select-button {
   margin-bottom: 24px;
+}
+
+.progress-form__textarea {
+  margin-top: 19px;
+  margin-bottom: 23px;
+}
+
+.progress-form__dots {
+  display: flex;
+  position: absolute;
+  top: 39px;
+  right: 27px;
+}
+
+.progress-form__dot {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.progress-form__dot::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(@color-primary-light, 0.3);
+  border-radius: 50%;
+}
+
+.progress-form__dot--active {
+  .progress-form__dot-text {
+    color: @black;
+  }
+
+  &::before {
+    background-color: @color-primary-light;
+  }
+}
+
+.progress-form__dot-text {
+  display: none;
+  font-size: 1.25em;
+  line-height: 1.5rem;
+  letter-spacing: 0.1em;
+  color: rgba(@black, 0.6);
+  text-transform: uppercase;
 }

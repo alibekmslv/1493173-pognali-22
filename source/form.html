@@ -11,7 +11,7 @@
 <body class="page__body">
   <header class="page-header page-header--no-activity">
     <div class="container">
-      <a href="#" class="logo page-header__logo">
+      <a href="index.html" class="logo page-header__logo">
         <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
       </a>
       <nav class="menu">
@@ -329,10 +329,10 @@
               <label class="input-select__label input-select__select">Босния и Герцеговина
                 <input class="input-select__input visually-hidden" type="button" name="country-select"
                   value="Босния и Герцеговина" />
-                <svg class="input-select__arrow" width="12" height="16">
+                <svg class="input-select__dropdown-button" width="12" height="16">
                   <use class="input-select__arrow-down" href="img/sprite.svg#arrow-down"></use>
                   <use class="input-select__arrow-down--wide" href="img/sprite.svg#icon-arrow"></use>
-                  <use class="input-select__icon-close" href="img/sprite.svg#icon-close"></use>
+                  <use class="input-select__icon-cross" href="img/sprite.svg#input-select-cross"></use>
                 </svg>
               </label>
               <div class="input-select__dropdown">
@@ -372,10 +372,10 @@
             <div class="input-select input-select--decoration input-select--selected">
               <label class="input-select__label input-select__select">Чехия
                 <input class="input-select__input visually-hidden" type="button" name="country-select" value="Чехия" />
-                <svg class="input-select__arrow" width="12" height="16">
+                <svg class="input-select__dropdown-button" width="12" height="16">
                   <use class="input-select__arrow-down" href="img/sprite.svg#arrow-down"></use>
                   <use class="input-select__arrow-down--wide" href="img/sprite.svg#icon-arrow"></use>
-                  <use class="input-select__icon-close" href="img/sprite.svg#icon-close"></use>
+                  <use class="input-select__icon-cross" href="img/sprite.svg#input-select-cross"></use>
                 </svg>
               </label>
               <div class="input-select__dropdown" hidden>
@@ -412,13 +412,13 @@
                 <use class="input-select__next-icon" href="img/sprite.svg#small-arrow"></use>
               </svg>
             </div>
-            <div class="input-select input-select--decoration">
+            <div class="input-select input-select--decoration input-select--open">
               <label class="input-select__label input-select__select">Выберите страну
                 <input class="input-select__input visually-hidden" type="button" name="country-select" value=" " />
                 <svg class="input-select__dropdown-button" width="12" height="16">
                   <use class="input-select__arrow-down" href="img/sprite.svg#arrow-down"></use>
                   <use class="input-select__arrow-down--wide" href="img/sprite.svg#icon-arrow"></use>
-                  <use class="input-select__icon-close" href="img/sprite.svg#icon-close"></use>
+                  <use class="input-select__icon-cross" href="img/sprite.svg#input-select-cross"></use>
                 </svg>
               </label>
               <div class="input-select__dropdown">
@@ -488,63 +488,83 @@
               назад</button>
           </div>
           <div class="progress-form__step">
-            <h3 class="heading">Шаг 3. Развлечения</h3>
+            <h3 class="heading heading--medium progress-form__heading progress-form__heading--medium">Шаг 3.
+              <br>Развлечения
+            </h3>
             <p class="paragraph">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и
               ставить тэги.
             </p>
-            <div class="textarea">
-              <label class="textarea__label textarea__flag textarea__flag--ba" for="road-map-1">Босния и
+            <div class="textarea textarea--country progress-form__textarea">
+              <label class="textarea__label" for="road-map-1">Босния и
                 Герцеговина</label>
-              <textarea class="textarea__input" id="road-map-1" name="road-map" cols="30" rows="3"
+              <div class="textarea__flag textarea__flag--ba"></div>
+              <textarea class="textarea__input" id="road-map-1" name="road-map" cols="30" rows="14"
                 placeholder="План действий"></textarea>
+              <svg class="textarea__line" width="17" height="287">
+                <use class="textarea__line-mobile" href="img/sprite.svg#textarea-mobile"></use>
+              </svg>
             </div>
-            <div class="textarea">
-              <label class="textarea__label textarea__flag textarea__flag--cz" for="road-map-2">Чехия</label>
-              <textarea class="textarea__input" id="road-map-2" name="road-map" cols="30" rows="3"
+            <div class="textarea textarea--country progress-form__textarea">
+              <label class="textarea__label" for="road-map-2">Чехия</label>
+              <div class="textarea__flag textarea__flag--cz"></div>
+              <textarea class="textarea__input" id="road-map-2" name="road-map" cols="30" rows="14"
                 placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              <svg class="textarea__line" width="17" height="287">
+                <use class="textarea__line-mobile" href="img/sprite.svg#textarea-mobile"></use>
+              </svg>
             </div>
-            <button class="button" type="submit">Отправить</button>
-            <button class="button" type="button">На шаг назад</button>
+            <button class="button button--secondary progress-form__button" type="submit">Отправить</button>
+            <button class="button progress-form__button progress-form__button--step-back" type="button">На шаг
+              назад</button>
           </div>
           <div class="progress-form__dots">
             <div class="progress-form__dot progress-form__dot--active">
-              <span class="progress-form__text">Даты</span>
+              <span class="progress-form__dot-text">Даты</span>
             </div>
             <div class="progress-form__dot">
-              <span class="progress-form__text">Маршрут</span>
+              <span class="progress-form__dot-text">Маршрут</span>
             </div>
             <div class="progress-form__dot">
-              <span class="progress-form__text">Развлечения</span>
+              <span class="progress-form__dot-text">Развлечения</span>
             </div>
           </div>
         </form>
       </div>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--low-margin stack stack--top-round">
     <div class="container">
-      <a class="logo" href="index.html">
-        <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
+      <a class="logo page-footer__logo" href="index.html">
+        <img class="logo__image" src="img/logo-mobile.png" alt="Логотип компании «Погнали»" width="100" height="15">
       </a>
-      <ul class="social-list">
+      <ul class="social-list social-list--colored page-footer__social-list">
         <li class="social-list__item">
-          <a class="social-list__button social-list__button--fb" href="#"><span
-              class="visually-hidden">Facebook</span></a>
+          <a class="social-list__button" href="#"><span class="visually-hidden">Facebook</span>
+            <svg class="social-list__icon" width="11" height="21">
+              <use class="social-list__icon-sprite" href="img/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__button social-list__button--vk" href="#"><span
-              class="visually-hidden">ВКонтакте</span></a>
+          <a class="social-list__button" href="#"><span class="visually-hidden">ВКонтакте</span>
+            <svg class="social-list__icon" width="23" height="12">
+              <use class="social-list__icon-sprite" href="img/sprite.svg#icon-vk"></use>
+            </svg>
+          </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__button social-list__button--ig" href="#"><span
-              class="visually-hidden">Instagram</span></a>
+          <a class="social-list__button" href="#"><span class="visually-hidden">Instagram</span>
+            <svg class="social-list__icon" width="18" height="18">
+              <use class="social-list__icon-sprite" href="img/sprite.svg#icon-ig"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <div class="copyright page-footer__copyright">
-        <a class="copyright__text" href="#">Разработано</a>
-        <a class="copyright__logo" href="#">
-          <img class="copyright__image" src="img/htmlacademy.svg" alt="Логотип компании «HTML Academy»" width="27"
-            height="34">
+        <a class="copyright__text copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+        <a class="copyright__logo copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__image" src="img/htmlacademy.svg" alt="Логотип компании «HTML Academy»" width="40"
+            height="40">
         </a>
       </div>
     </div>
