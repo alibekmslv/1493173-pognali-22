@@ -21,17 +21,34 @@
   background-color: @color-neutral;
 }
 
+.stack--background-neutral-light {
+  background-color: @color-neutral-light;
+}
+
 .stack--background-neutral-lighter {
   background-color: @color-neutral-lighter;
+}
+
+.stack--background-neutral-saturated {
+  background-color: @color-neutral-saturated;
 }
 
 .stack--background-secondary {
   background-color: @color-secondary;
 }
 
+.stack--background-header {
+  background-color: @color-header;
+}
+
 .stack--bottom-round {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+.stack--bottom-third-round {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .stack--top-round {
@@ -47,10 +64,18 @@
   background-color: @color-neutral;
 }
 
+.stack--back-neutral-light::before {
+  background-color: @color-neutral-light;
+}
+
 .stack--back-neutral-lighter::before {
   background-color: @color-neutral-lighter;
 }
 
 .stack--back-secondary::before {
   background-color: @color-secondary;
+}
+
+.stack--back-showed::before {
+  margin-bottom: -4px;
 }

@@ -2,9 +2,13 @@
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: @color-primary;
   padding-top: 19px;
   padding-bottom: 19px;
+  z-index: 1;
+}
+
+.page-header--no-activity .menu__activity {
+  display: none;
 }
 
 .page-header--expanded {
@@ -17,6 +21,10 @@
   padding-top: 27px;
   padding-bottom: 0;
   z-index: 2;
+
+  .menu__activity {
+    display: grid;
+  }
 }
 
 .page-header--on-scroll {

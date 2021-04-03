@@ -2,3 +2,30 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   margin: 0;
 }
+
+.page__bar {
+  padding-top: 95px;
+  padding-bottom: 12px;
+  margin-bottom: 4px;
+}
+
+.page__title {
+  font-size: 2.25em;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: @white;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.page__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 25px;
+  width: 215px;
+  height: 5px;
+  border-radius: 4px;
+  background-color: @color-special-3;
+}

@@ -1,0 +1,40 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 0.938em;
+  line-height: 0.938rem;
+}
+
+.checkbox:hover {
+  .checkbox__box {
+    stroke: @custom-input-hover;
+  }
+}
+
+.checkbox:active {
+  .checkbox__box {
+    fill: @custom-checkbox-background;
+    stroke: @custom-checkbox-background;
+  }
+}
+
+.checkbox__box {
+  fill: transparent;
+  stroke: @input-border;
+  margin-right: 0.813rem;
+}
+
+.checkbox__checkmark {
+  position: absolute;
+  left: 7px;
+  fill: transparent;
+}
+
+.checkbox__input:checked + .checkbox__checkmark {
+  fill: @color-primary;
+}
+
+.checkbox__input:checked:active + .checkbox__checkmark {
+  fill: rgba(@color-primary, 0.3);
+}

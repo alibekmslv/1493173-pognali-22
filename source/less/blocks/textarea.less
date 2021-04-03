@@ -1,0 +1,105 @@
+.textarea {
+  display: grid;
+  row-gap: 14px;
+}
+
+.textarea--country {
+  grid-template-columns: 1fr min-content;
+  position: relative;
+}
+
+.textarea--country:last-of-type {
+  .textarea__line {
+    display: none;
+  }
+}
+
+.textarea--country::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 10px;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: @color-primary-light;
+}
+
+.textarea__label {
+  position: relative;
+  grid-column: ~"1 / 2";
+  align-self: center;
+  font-size: 1.125em;
+  line-height: 1.125rem;
+  font-weight: 500;
+  color: @color-primary-light;
+  padding-left: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+.textarea__label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -14px;
+  right: 0;
+  bottom: -14px;
+  box-shadow: inset -12px 0 8px 13px  rgb(@white);
+}
+
+.textarea__flag {
+  grid-column: ~"2 / -1";
+  width: 35px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &--ba {
+    background-image: url("../img/flag-ba.jpg");
+  }
+
+  &--cz {
+    background-image: url("../img/flag-cz.jpg");
+  }
+}
+
+.textarea__input {
+  height: 198px;
+  grid-column: ~"1 / -1";
+  .primary-font();
+  font-size: 1em;
+  line-height: 1.375em;
+  color: @color-special-1;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @input-border;
+  border-radius: 4px;
+  padding-left: 0.825rem;
+  padding-top: 0.625rem;
+  padding-right: 0.825rem;
+  padding-bottom: 0.625rem;
+  resize: none;
+
+  &::placeholder {
+    color: rgb(@color-special-1, 0.3);
+  }
+
+  &:hover {
+    border-color: @custom-input-hover;
+  }
+
+  &:active {
+    border-color: @color-primary;
+  }
+}
+
+
+.textarea__line {
+  position: absolute;
+  top: 10px;
+  left: -14px;
+  z-index: 1;
+}

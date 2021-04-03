@@ -1,0 +1,292 @@
+.input-select {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  margin-bottom: 22px;
+}
+
+.input-select--decoration::after {
+  position: absolute;
+  right: 50px;
+  top: 16px;
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @input-border;
+}
+
+.input-select--selected {
+  .input-select__label {
+    grid-column: ~"1 / 2";
+  }
+
+  .input-select__result {
+    display: block;
+  }
+
+  &::after {
+    border-color: @color-primary-light;
+    background-color: @color-primary-light;
+  }
+}
+
+.input-select--open {
+  .input-select__select {
+    letter-spacing: 0.02em;
+    color: @white;
+    background-color: @color-primary-light;
+    padding-left: 1rem;
+    border-color: @color-primary-light;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .input-select__label::after {
+    box-shadow: none;
+  }
+
+  .input-select__dropdown-button {
+    top: 16px;
+    right: 16px;
+    width: 9px;
+    height: 8px;
+  }
+
+  .input-select__arrow-down {
+    display: none;
+  }
+
+  .input-select__icon-cross {
+    display: block;
+  }
+
+  .input-select__delete-button {
+    display: none;
+  }
+
+  .input-select__dropdown {
+    display: block;
+  }
+
+  &::after {
+    border-color: @color-primary-light;
+  }
+}
+
+.input-select__select {
+  .primary-font();
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875em;
+  line-height: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: @color-primary-light;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-top: 12px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.input-select__label {
+  grid-column: ~"1 / -1";
+  border-color: @input-border;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.input-select__label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  right: 0;
+  bottom: -10px;
+  box-shadow: inset -20px 0 8px 20px rgb(@white);
+}
+
+.input-select__label:hover {
+  border-color: @custom-input-hover;
+}
+
+.input-select__dropdown-button {
+  position: absolute;
+  right: 12px;
+  z-index: 1;
+}
+
+.input-select__arrow-down {
+  opacity: 0.3;
+  fill: @black;
+}
+
+.input-select__arrow-down--wide {
+  display: none;
+}
+
+.input-select__icon-cross {
+  display: none;
+  stroke: @white;
+}
+
+.input-select__dropdown {
+  width: 100%;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 42px;
+}
+
+.input-select__tablist {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(5, 40px);
+  row-gap: 1px;
+  column-gap: 1px;
+  border-left-width: 1px;
+  border-top-width: 0;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: @input-border;
+  background-color: @input-border;
+}
+
+.input-select__tab {
+  font-size: 0.875em;
+  line-height: 1.125rem;
+  font-weight: 500;
+  color: @color-primary-light;
+  text-align: center;
+  padding-top: 10px;
+  background-color: @white;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.input-select__tab:hover {
+  border-color: @custom-input-hover;
+  margin-left: -1px;
+  margin-top: -1px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+
+.input-select__tab:active {
+  background-color: @color-neutral-lighter;
+}
+
+.input-select__tab--active {
+  background-color: @color-neutral-lighter;
+  margin-bottom: -1px;
+}
+
+.input-select__list {
+  display: none;
+  padding-left: 19px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: @white;
+  border-left-width: 1px;
+  border-top-width: 0;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: @input-border;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.input-select__list--active {
+  display: block;
+}
+
+.input-select__item {
+  display: block;
+  font-size: 1em;
+  line-height: 1.375rem;
+  margin-bottom: 4px;
+  color: @color-special-1;
+  cursor: pointer;
+}
+
+.input-select__item:nth-child(odd) {
+  margin-bottom: 3px;
+}
+
+.input-select__item:last-of-type {
+  margin-bottom: 0;
+}
+
+.input-select__item:hover {
+  color: @color-primary-light;
+}
+
+.input-select__item:active {
+  color: rgba(@color-primary-light, 0.3);
+}
+
+.input-select__result {
+  display: none;
+  grid-column: ~"2 / -1";
+  padding-left: 9px;
+  padding-top: 8px;
+  padding-right: 9px;
+  padding-bottom: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @input-border;
+  border-radius: 4px;
+  margin-left: -1px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 24px;
+    background-size: contain;
+  }
+
+  &--ba::before {
+    background-image: url("../img/flag-ba.jpg");
+  }
+
+  &--cz::before {
+    background-image: url("../img/flag-cz.jpg");
+  }
+}
+
+.input-select__delete-button {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 21px;
+  height: 21px;
+  background-color: @color-neutral-lighter;
+  border-radius: 50%;
+}
+
+.input-select__delete-icon {
+  stroke: @delete-cross;
+  margin-top: 3px;
+}
+
+.input-select__next-arrow {
+  position: absolute;
+  right: 50px;
+  bottom: -16px;
+  fill: @input-border;
+}

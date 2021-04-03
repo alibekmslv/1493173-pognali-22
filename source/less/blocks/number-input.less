@@ -1,0 +1,110 @@
+.number-input {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 0.5rem;
+}
+
+.number-input__label {
+  font-size: 1em;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: @color-primary-light;
+}
+
+.number-input__term {
+  justify-self: end;
+  font-size: 1em;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(@color-primary-light, 0.3);
+}
+
+.number-input__wrapper {
+  grid-column: ~"1 / -1";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 13px;
+  padding-top: 13px;
+  padding-right: 13px;
+  padding-bottom: 12px;
+  border-width: 1px;
+  border-color: @input-border;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+.number-input__wrapper:hover {
+  border-color: @custom-input-hover;
+}
+
+.number-input__wrapper:active {
+  border-color: @color-primary;
+}
+
+.number-input__button {
+  position: relative;
+  width: 0.875rem;
+  height: 0.875rem;
+  cursor: pointer;
+}
+
+.number-input__button:hover {
+  &::before,
+  &::after {
+    background-color: @button-control-hover;
+  }
+}
+
+.number-input__button:active {
+  &::before,
+  &::after {
+    background-color: @button-control-active;
+  }
+}
+
+
+.number-input__button::before {
+  content: "";
+  display: block;
+  width: 0.875rem;
+  height: 0.125rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: @button-control;
+}
+
+.number-input__button--plus::after {
+  content: "";
+  display: block;
+  width: 0.125rem;
+  height: 0.875rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: @button-control;
+}
+
+.number-input__input {
+  .primary-font();
+  font-size: 0.929em;
+  line-height: 0.875rem;
+  font-weight: 500;
+  color: @color-primary-light;
+  text-align: center;
+  border-width: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  appearance: textfield;
+}
+
+.number-input__input::-webkit-outer-spin-button,
+.number-input__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
