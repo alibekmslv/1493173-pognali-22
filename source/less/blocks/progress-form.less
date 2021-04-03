@@ -2,10 +2,25 @@
   padding-left: 25px;
   padding-top: 24px;
   padding-right: 25px;
-  padding-bottom: 23px;
+  padding-bottom: 22px;
+  margin-bottom: 10px;
   background-color: @white;
   border-radius: 10px;
 }
+
+.progress-form__step:nth-child(2) {
+  padding-bottom: 8px;
+}
+
+.progress-form__heading {
+  color: @color-primary-light;
+  margin-top: 0;
+}
+
+.progress-form__heading--medium {
+  margin-bottom: 1rem;
+}
+
 
 .progress-form__paragraph {
   margin-top: 0;
@@ -17,5 +32,40 @@
 }
 
 .progress-form__checkbox {
-  margin-bottom: 1.563rem;
+  margin-bottom: 23px;
+}
+
+.progress-form__date-input {
+  margin-bottom: 22px;
+}
+
+.progress-form__button {
+  width: 100%;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @color-primary-light;
+  padding-top: 7px;
+  padding-bottom: 4px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.progress-form__button--step-back {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 12px;
+}
+
+.progress-form__button--step-back:hover {
+  color: rgba(@color-primary-light, 0.7);
+}
+
+.progress-form__button--step-back:active {
+  color: rgba(@color-primary-light, 0.3);
+}
+
+.progress-form__add-select-button {
+  margin-bottom: 24px;
 }

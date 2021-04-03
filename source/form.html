@@ -202,7 +202,7 @@
         <h2 class="heading add-road-map__heading">Добавить план:</h2>
         <form class="progress-form" action="https://echo.htmlacademy.ru/courses" method="post">
           <div class="progress-form__step progress-form__step--active">
-            <h3 class="heading heading--medium add-road-map__heading add-road-map__heading--medium">Шаг 1.<br>Даты
+            <h3 class="heading heading--medium progress-form__heading progress-form__heading--medium">Шаг 1.<br>Даты
               пребывания</h3>
             <p class="paragraph paragraph--special progress-form__paragraph">Укажите предпочтительное количество
               попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
@@ -239,28 +239,36 @@
               </svg>
               Можно с детьми
             </label>
-            <div class="date-input">
+            <div class="date-input progress-form__date-input">
               <label class="date-input__label visually-hidden">Дата начала путешествия:
                 <input class="date-input__input" type="date" value="2019-03-26" name="travel-date" readonly
                   tabindex="-1">
               </label>
               <div class="date-input__month">
-                <button class="date-input__month-control date-input__month-control--prev" type="button"
-                  aria-label="Предыдущий месяц"></button>
+                <button class="date-input__month-control date-input__month-control--prev button" type="button"
+                  aria-label="Предыдущий месяц">
+                  <svg class="date-input__arrow" width="15" height="21">
+                    <use class="date-input__icon" href="img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
                 <span class="date-input__month-name" tabindex="0">Март 2019</span>
-                <button class="date-input__month-control date-input__month-control--next" type="button"
-                  aria-label="Следующий месяц"></button>
+                <button class="date-input__month-control date-input__month-control--next button" type="button"
+                  aria-label="Следующий месяц">
+                  <svg class="date-input__arrow" width="15" height="21">
+                    <use class="date-input__icon" href="img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </button>
               </div>
               <div class="date-input__week" aria-hidden="true">
-                <span class="date-input__weekday">П<span class="hide-on-tablet">н</span></span>
-                <span class="date-input__weekday">В<span class="hide-on-tablet">т</span></span>
-                <span class="date-input__weekday">С<span class="hide-on-tablet">р</span></span>
-                <span class="date-input__weekday">Ч<span class="hide-on-tablet">т</span></span>
-                <span class="date-input__weekday">П<span class="hide-on-tablet">т</span></span>
+                <span class="date-input__weekday">П<span class="hide-on-mobile">н</span></span>
+                <span class="date-input__weekday">В<span class="hide-on-mobile">т</span></span>
+                <span class="date-input__weekday">С<span class="hide-on-mobile">р</span></span>
+                <span class="date-input__weekday">Ч<span class="hide-on-mobile">т</span></span>
+                <span class="date-input__weekday">П<span class="hide-on-mobile">т</span></span>
                 <span class="date-input__weekday date-input__weekday--weekend">С<span
-                    class="hide-on-tablet">б</span></span>
+                    class="hide-on-mobile">б</span></span>
                 <span class="date-input__weekday date-input__weekday--weekend">В<span
-                    class="hide-on-tablet">с</span></span>
+                    class="hide-on-mobile">с</span></span>
               </div>
               <div class="date-input__days">
                 <span class="date-input__day date-input__day--past" aria-hidden="true">23</span>
@@ -300,6 +308,7 @@
                 <span class="date-input__day date-input__day--selected date-input__day--checkout" tabindex="0">28</span>
                 <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">29</span>
                 <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">30</span>
+                <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">31</span>
                 <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">1<span
                     class="date-input__month-tag">апр</span></span>
                 <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">2</span>
@@ -308,16 +317,23 @@
                 <span class="date-input__day" role="checkbox" aria-checked="false" tabindex="0">5</span>
               </div>
             </div>
-            <button class="button" type="button">Следующий шаг</button>
+            <button class="button button--secondary progress-form__button" type="button">Следующий шаг</button>
           </div>
           <div class="progress-form__step">
-            <h3 class="heading">Шаг 2. Маршрут</h3>
-            <p class="paragraph">Укажите страны, которые вы хотели бы посетить. Это может быть одна или сразу несколько.
+            <h3 class="heading heading--medium progress-form__heading progress-form__heading--medium">Шаг 2.<br>Маршрут
+            </h3>
+            <p class="paragraph paragraph--special progress-form__paragraph">Укажите страны, которые вы хотели бы
+              посетить. Это может быть одна или сразу несколько.
             </p>
-            <div class="input-select">
-              <label class="input-select__label">Выберите страну
+            <div class="input-select input-select--decoration input-select--selected">
+              <label class="input-select__label input-select__select">Босния и Герцеговина
                 <input class="input-select__input visually-hidden" type="button" name="country-select"
                   value="Босния и Герцеговина" />
+                <svg class="input-select__arrow" width="12" height="16">
+                  <use class="input-select__arrow-down" href="img/sprite.svg#arrow-down"></use>
+                  <use class="input-select__arrow-down--wide" href="img/sprite.svg#icon-arrow"></use>
+                  <use class="input-select__icon-close" href="img/sprite.svg#icon-close"></use>
+                </svg>
               </label>
               <div class="input-select__dropdown">
                 <div class="input-select__tablist" role="tablist" aria-label="Список стран" tabindex="0">
@@ -342,12 +358,25 @@
                   <span class="input-select__item" role="checkbox" aria-checked="false">Чехия</span>
                 </div>
               </div>
-              <div class="input-select__result-icon input-select__result-icon--ba"></div>
-              <button class="input-select__delete-button" type="button" aria-label="Удалить выбор"></button>
+              <div class="input-select__result input-select__result--ba">
+              </div>
+              <button class="input-select__delete-button button" type="button" aria-label="Удалить выбор">
+                <svg class="input-select__delete-icon" width="9" height="9">
+                  <use class="input-select__icon" href="img/sprite.svg#icon-cross"></use>
+                </svg>
+              </button>
+              <svg class="input-select__next-arrow" width="8" height="11">
+                <use class="input-select__next-icon" href="img/sprite.svg#small-arrow"></use>
+              </svg>
             </div>
-            <div class="input-select">
-              <label class="input-select__label">Выберите страну
+            <div class="input-select input-select--decoration input-select--selected">
+              <label class="input-select__label input-select__select">Чехия
                 <input class="input-select__input visually-hidden" type="button" name="country-select" value="Чехия" />
+                <svg class="input-select__arrow" width="12" height="16">
+                  <use class="input-select__arrow-down" href="img/sprite.svg#arrow-down"></use>
+                  <use class="input-select__arrow-down--wide" href="img/sprite.svg#icon-arrow"></use>
+                  <use class="input-select__icon-close" href="img/sprite.svg#icon-close"></use>
+                </svg>
               </label>
               <div class="input-select__dropdown" hidden>
                 <div class="input-select__tablist" role="tablist" aria-label="Список стран" tabindex="0">
@@ -372,42 +401,91 @@
                   <span class="input-select__item" role="checkbox" aria-checked="false">Чехия</span>
                 </div>
               </div>
-              <div class="input-select__result-icon input-select__result-icon--ba"></div>
-              <button class="input-select__delete-button" type="button" aria-label="Удалить выбор"></button>
+              <div class="input-select__result input-select__result--cz">
+              </div>
+              <button class="input-select__delete-button button" type="button" aria-label="Удалить выбор">
+                <svg class="input-select__delete-icon" width="9" height="9">
+                  <use class="input-select__icon" href="img/sprite.svg#icon-cross"></use>
+                </svg>
+              </button>
+              <svg class="input-select__next-arrow" width="8" height="11">
+                <use class="input-select__next-icon" href="img/sprite.svg#small-arrow"></use>
+              </svg>
             </div>
-            <div class="input-select">
-              <label class="input-select__label">Выберите страну
+            <div class="input-select input-select--decoration">
+              <label class="input-select__label input-select__select">Выберите страну
                 <input class="input-select__input visually-hidden" type="button" name="country-select" value=" " />
+                <svg class="input-select__dropdown-button" width="12" height="16">
+                  <use class="input-select__arrow-down" href="img/sprite.svg#arrow-down"></use>
+                  <use class="input-select__arrow-down--wide" href="img/sprite.svg#icon-arrow"></use>
+                  <use class="input-select__icon-close" href="img/sprite.svg#icon-close"></use>
+                </svg>
               </label>
               <div class="input-select__dropdown">
                 <div class="input-select__tablist" role="tablist" aria-label="Список стран" tabindex="0">
-                  <span class="input-select__tab" role="tab" aria-selected="true" aria-controls="panel-007" id="tab-007"
-                    tabindex="0">А</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" aria-controls="panel-008"
-                    id="tab-008" tabindex="0">Б</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" aria-controls="panel-009"
-                    id="tab-009" tabindex="0">Ч</span>
+                  <span class="input-select__tab input-select__tab--active" role="tab" aria-selected="true"
+                    aria-controls="panel-007" id="tab-007" tabindex="0">А</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-008" tabindex="0">Б</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-009" tabindex="0">В</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-010" tabindex="0">Г</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-011" tabindex="0">Д</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-012" tabindex="0">E</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-013" tabindex="0">З</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-014" tabindex="0">И</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-015" tabindex="0">К</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-016" tabindex="0">Л</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-017" tabindex="0">М</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-018" tabindex="0">Н</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-019" tabindex="0">О</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-020" tabindex="0">П</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-021" tabindex="0">Р</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-022" tabindex="0">С</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-023" tabindex="0">Т</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-024" tabindex="0">У</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-025" tabindex="0">Ф</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-026" tabindex="0">Х</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-027" tabindex="0">Ч</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-028" tabindex="0">Ш</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-029" tabindex="0">Э</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-030" tabindex="0">Ю</span>
+                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-031" tabindex="0">Я</span>
                 </div>
-                <div class="input-select__list" id="panel-007" role="tabpanel" aria-labelledby="tab-007" tabindex="0">
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Афганистан</span>
+                <div class="input-select__list input-select__list--active" id="panel-007" role="tabpanel"
+                  aria-labelledby="tab-007" tabindex="0">
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Австралия</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Австрия</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Азербайджан</span>
                   <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Албания</span>
                   <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Алжир</span>
-                </div>
-                <div class="input-select__list" id="panel-008" role="tabpanel" aria-labelledby="tab-008">
-                  <span class="input-select__item" role="checkbox" aria-checked="false">Багамские острова</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false">Бангладеш</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false">Босния и Герцеговина</span>
-                </div>
-                <div class="input-select__list" id="panel-009" role="tabpanel" aria-labelledby="tab-009">
-                  <span class="input-select__item" role="checkbox" aria-checked="false">Чехия</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Ангола</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Андорра</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Антигуа и
+                    Барбуда</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Аргентина</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Армения</span>
+                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Афганистан</span>
                 </div>
               </div>
-              <div class="input-select__result-icon input-select__result-icon--ba"></div>
-              <button class="input-select__delete-button" type="button" aria-label="Удалить выбор"></button>
+              <div class="input-select__result-icon"></div>
+              <button class="input-select__delete-button button" type="button" aria-label="Удалить выбор">
+                <svg class="input-select__delete-icon" width="9" height="9">
+                  <use class="input-select__icon" href="img/sprite.svg#icon-cross"></use>
+                </svg>
+              </button>
+              <svg class="input-select__next-arrow" width="8" height="11">
+                <use class="input-select__next-icon" href="img/sprite.svg#small-arrow"></use>
+              </svg>
             </div>
-            <button class="add-select-button">Добавить страну</button>
-            <button class="button">Следующий шаг</button>
-            <button class="button">На шаг назад</button>
+            <button
+              class="add-select-button progress-form__add-select-button input-select__select input-select--decoration"
+              type="button">Добавить страну
+              <svg class="add-select-button__plus" width="14" height="14">
+                <use class="add-select-button__icon" href="img/sprite.svg#icon-plus"></use>
+              </svg>
+            </button>
+            <button class="button button--secondary progress-form__button" type="button">Следующий шаг</button>
+            <button class="button progress-form__button progress-form__button--step-back" type="button">На шаг
+              назад</button>
           </div>
           <div class="progress-form__step">
             <h3 class="heading">Шаг 3. Развлечения</h3>

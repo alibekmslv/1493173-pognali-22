@@ -33,13 +33,13 @@
   padding-right: 13px;
   padding-bottom: 12px;
   border-width: 1px;
-  border-color: @fieldset-border;
+  border-color: @input-border;
   border-style: solid;
   border-radius: 4px;
 }
 
 .number-input__wrapper:hover {
-  border-color: @number-input-hover;
+  border-color: @custom-input-hover;
 }
 
 .number-input__wrapper:active {
@@ -100,4 +100,11 @@
   border-width: 0;
   padding-top: 0;
   padding-bottom: 0;
+  appearance: textfield;
+}
+
+.number-input__input::-webkit-outer-spin-button,
+.number-input__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
