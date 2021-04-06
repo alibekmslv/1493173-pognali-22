@@ -1,0 +1,65 @@
+.fieldset-dropdown {
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fieldset-dropdown--open {
+  .fieldset-dropdown__dropdown {
+    display: block;
+  }
+
+  .fieldset-dropdown__custom-checkbox-area {
+    display: flex;
+  }
+
+  .fieldset-dropdown__legend::after {
+    transform: scaleY(-1);
+  }
+}
+
+.fieldset-dropdown__legend {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  line-height: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @color-primary-light;
+  padding-top: 12px;
+  padding-right: 0;
+  padding-bottom: 8px;
+  padding-left: 0;
+  border-top-width: 1px;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-style: solid;
+  border-color: @fieldset-border;
+  cursor: pointer;
+}
+
+.fieldset-dropdown__legend::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 5L0.669872 0.5L9.33013 0.5L5 5Z' fill='%23192144'/%3E%3C/svg%3E%0A");
+  margin-left: auto;
+}
+
+.fieldset-dropdown__dropdown {
+  display: none;
+  margin-top: 4px;
+  margin-bottom: 21px;
+}
+
+.fieldset-dropdown .fieldset-dropdown__checkbox:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.fieldset-dropdown__custom-checkbox-area .user-fieldset__checkbox {
+  margin-right: 1px;
+}

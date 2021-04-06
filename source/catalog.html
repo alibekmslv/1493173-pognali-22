@@ -3,410 +3,559 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Погнали</title>
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header page-header--no-activity">
     <div class="container">
-      <a href="#" class="logo">
+      <a href="index.html" class="logo page-header__logo">
         <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
       </a>
       <nav class="menu">
-        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list"
-          aria-label="Открыть окно"></button>
+        <button class="menu__toggle button" type="button" aria-expanded="false" aria-controls="menu__list"
+          aria-label="Открыть меню"></button>
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
-            <a class="menu__link" href="index.html">О сервисе</a>
+            <a class="menu__link" href="index.html">
+              <span class="menu__link-hover" data-hover="О сервисе">О сервисе</span>
+            </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="form.html">Направления</a>
+            <a class="menu__link" href="form.html">
+              <span class="menu__link-hover" data-hover="Направления">Направления</span>
+            </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">Попутчики</a>
+            <a class="menu__link" href="#">
+              <span class="menu__link-hover" data-hover="Попутчики">Попутчики</span>
+            </a>
           </li>
         </ul>
         <div class="menu__activity">
-          <a class="menu__button button" href="#"><span class="visually-hidden">Позвонить</span></a>
-          <a class="menu__button button" href="#"><span class="visually-hidden">Написать письмо</span></a>
-          <a class="menu__button button" href="sign-in.html">Авторизация</a>
+          <a class="menu__icon-button button button--special-3" href="#">
+            <span class="visually-hidden">Позвонить</span>
+            <svg class="menu__icon button__icon" width="18" height="18">
+              <use class="menu__icon-sprite" href="img/sprite.svg#icon-call"></use>
+            </svg>
+          </a>
+          <a class="menu__icon-button button button--secondary-dark" href="#">
+            <span class="visually-hidden">Написать письмо</span>
+            <svg class="menu__icon button__icon" width="18" height="15.75">
+              <use class="menu__icon-sprite" href="img/sprite.svg#icon-email-2"></use>
+            </svg>
+          </a>
+          <a class="menu__show-button button button--secondary" href="sign-in.html">Авторизация</a>
         </div>
         <b class="visually-hidden">Наши контакты</b>
         <dl class="contact-list menu__contact-list">
-          <dt class="contact-list__term contact-list__icon contact-list__icon--phone">
-            <span class="visually-hidden">Телефон</span>
+          <dt class="contact-list__term visually-hidden">
+            Телефон
           </dt>
           <dd class="contact-list__details">
-            <a class="contact-list__link" href="tel:+78005558628">8 800 555-86-28</a>
+            <a class="contact-list__link contact-list__link--icon-phone" href="tel:+78005558628">
+              <span class="contact-list__icon-wrapper">
+                <svg class="contact-list__icon" width="18" height="17">
+                  <use class="contact-list__icon-sprite" href="img/sprite.svg#icon-telephone"></use>
+                </svg>
+              </span>
+              <span class="contact-list__text">
+                8 800 555-86-28
+              </span>
+            </a>
           </dd>
-          <dt class="contact-list__term contact-list__icon contact-list__icon--email">
-            <span class="visually-hidden">Электронная почта</span>
+          <dt class="contact-list__term visually-hidden">
+            Электронная почта
           </dt>
           <dd class="contact-list__details">
-            <a class="contact-list__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contact-list__link contact-list__link--icon-email" href="mailto:mail@htmlacademy.ru">
+              <span class="contact-list__icon-wrapper">
+                <svg class="contact-list__icon" width="23.5" height="25">
+                  <use class="contact-list__icon-sprite" href="img/sprite.svg#icon-email"></use>
+                </svg>
+              </span>
+              <span class="contact-list__text">
+                mail@htmlacademy.ru
+              </span>
+            </a>
           </dd>
         </dl>
         <b class="visually-hidden">Наши социальные сети</b>
-        <ul class="social-list">
+        <ul class="social-list menu__social-list">
           <li class="social-list__item">
-            <a class="social-list__button social-list__button--fb" href="#"><span
-                class="visually-hidden">Facebook</span></a>
+            <a class="social-list__button" href="#"><span class="visually-hidden">Facebook</span>
+              <svg class="social-list__icon" width="11" height="21">
+                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__button social-list__button--vk" href="#"><span
-                class="visually-hidden">ВКонтакте</span></a>
+            <a class="social-list__button" href="#"><span class="visually-hidden">ВКонтакте</span>
+              <svg class="social-list__icon" width="23" height="12">
+                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item">
-            <a class="social-list__button social-list__button--ig" href="#"><span
-                class="visually-hidden">Instagram</span></a>
+            <a class="social-list__button" href="#"><span class="visually-hidden">Instagram</span>
+              <svg class="social-list__icon" width="18" height="18">
+                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-ig"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
-  <main class="page-main">
-    <div class="page__bar">
+  <main class="page-main page-catalog">
+    <div
+      class="page__bar page__bar--filter stack stack--bottom-third-round stack--background-header stack--back-filter">
       <div class="container">
         <h1 class="page__title">Попутчики</h1>
-        <a class="page__back-link" href="index.html">На главную</a>
+        <a href="index.html" class="page__back-link hide-on-mobile">На главную</a>
       </div>
     </div>
-    <section class="country-filter">
-      <div class="country-filter__bar">
-        <div class="container country-filter__header">
-          <h2 class="heading">Фильтрация по странам:</h2>
-          <ul class="country-filter__world-part-list">
-            <li class="country-filter__world-part"><a class="country-filter__world-link" href="/europe.html">Европа</a>
+    <section class="country-filter stack stack--bottom-third-round stack--background-filter">
+      <div class="container country-filter__panel">
+        <h2 class="country-filter__heading">
+          <svg class="country-filter__heading-icon" width="16" height="10">
+            <use class="country-filter__icon-filter " href="img/sprite.svg#icon-filter"></use>
+          </svg>
+          Фильтрация по странам:
+        </h2>
+        <ul class="country-filter__world-part-list">
+          <li class="country-filter__world-part"><a
+              class="country-filter__world-link country-filter__world-link--active" href="/europe.html">Европа</a>
+          </li>
+          <li class="country-filter__world-part"><a class="country-filter__world-link" href="/asia.html">Азия</a></li>
+          <li class="country-filter__world-part"><a class="country-filter__world-link" href="/amerika.html">Америка</a>
+          </li>
+          <li class="country-filter__world-part"><a class="country-filter__world-link" href="/islands.html">Острова</a>
+          </li>
+        </ul>
+        <button class="country-filter__expand-button button"><span
+            class="country-filter__expand-text hide-on-mobile">Показать
+            все</span>
+          <svg class="country-filter__icon-expand" width="17" height="3">
+            <use class="country-filter__icon-dots" href="img/sprite.svg#icon-dots"></use>
+            <use class="country-filter__icon-close" href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="container country-filter__dropdown">
+        <div class="alphabet-tablist country-filter__alphabet-tablist" role="tablist" aria-label="Список стран"
+          tabindex="0">
+          <span class="alphabet-tablist__tab alphabet-tablist__tab--active" role="tab" aria-selected="true"
+            aria-controls="panel-007" id="tab-007" tabindex="0">А</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-008" tabindex="0">Б</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-009" tabindex="0">В</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-010" tabindex="0">Г</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-011" tabindex="0">Д</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-012" tabindex="0">E</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-013" tabindex="0">З</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-014" tabindex="0">И</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-015" tabindex="0">К</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-016" tabindex="0">Л</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-017" tabindex="0">М</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-018" tabindex="0">Н</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-019" tabindex="0">О</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-020" tabindex="0">П</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-021" tabindex="0">Р</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-022" tabindex="0">С</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-023" tabindex="0">Т</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-024" tabindex="0">У</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-025" tabindex="0">Ф</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-026" tabindex="0">Х</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-027" tabindex="0">Ч</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-028" tabindex="0">Ш</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-029" tabindex="0">Э</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-030" tabindex="0">Ю</span>
+          <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-031" tabindex="0">Я</span>
+        </div>
+        <div class="country-filter__tabpanel-wrapper">
+          <ul class="country-tabpanel country-tabpanel--active country-filter__country-tabpanel" id="panel-007"
+            aria-labelledby="tab-007">
+            <li class="show-on-desktop">А</li>
+            <li class="country-tabpanel__item"><a class="country-filter__link"
+                href="europe/australia.html">Австралия</a></li>
+            <li class="country-tabpanel__item"><a class="country-filter__link" href="europe/australia.html">Австрия</a>
             </li>
-            <li class="country-filter__world-part"><a class="country-filter__world-link" href="/asia.html">Азия</a></li>
-            <li class="country-filter__world-part"><a class="country-filter__world-link"
-                href="/amerika.html">Америка</a>
+            <li class="country-tabpanel__item"><a class="country-filter__link"
+                href="europe/australia.html">Азербайджан</a></li>
+            <li class="country-tabpanel__item"><a class="country-filter__link" href="europe/australia.html">Албания</a>
             </li>
-            <li class="country-filter__world-part"><a class="country-filter__world-link"
-                href="/islands.html">Острова</a>
+            <li class="country-tabpanel__item"><a class="country-filter__link" href="europe/australia.html">Алжир</a>
             </li>
+            <li class="country-tabpanel__item"><a class="country-filter__link" href="europe/australia.html">Ангола</a>
+            </li>
+            <li class="country-tabpanel__item"><a class="country-filter__link" href="europe/australia.html">Андорра</a>
+            </li>
+            <li class="country-tabpanel__item"><a class="country-filter__link" href="europe/australia.html">Антигуа</a>
+              и
+              Барбуда</li>
+            <li class="country-tabpanel__item"><a class="country-filter__link"
+                href="europe/australia.html">Аргентина</a></li>
+            <li class="country-tabpanel__item"><a class="country-filter__link" href="europe/australia.html">Армения</a>
+            </li>
+            <li class="country-tabpanel__item"><a class="country-filter__link"
+                href="europe/australia.html">Афганистан</a></li>
           </ul>
-          <button class="country-filter__button">Показать все</button>
         </div>
-        <div class="country-filter__dropdown">
-          <div class="country-filter__tablist">
-            <span class="country-filter__tab">А</span>
-            <span class="country-filter__tab">Б</span>
-          </div>
-          <div class="country-filter__list-wrapper">
-            <div class="country-filter__tabpanel country-filter__tabpanel--active">
-              <span class="show-on-desktop">А</span>
-              <ul class="country-filter__list">
-                <li class="country-filter__item"><a class="country-filter__link" href="#">Австралия</a></li>
-                <li class="country-filter__item"><a class="country-filter__link" href="#">Австрия</a></li>
-                <li class="country-filter__item"><a class="country-filter__link" href="#">Азербайджан</a></li>
-              </ul>
-            </div>
-            <div class="country-filter__tabpanel">
-              <span class="show-on-desktop">Б</span>
-              <ul class="country-filter__list">
-                <li class="country-filter__item"><a class="country-filter__link" href="#">Багамские острова</a></li>
-                <li class="country-filter__item"><a class="country-filter__link" href="#">Бангладеш</a></li>
-                <li class="country-filter__item"><a class="country-filter__link" href="#">Барбадос</a></li>
-              </ul>
-            </div>
-          </div>
-          <button class="button">Свернуть</button>
-        </div>
+        <button class="button country-filter__collapse-button">
+          <svg class="country-filter__collapse-icon" width="14" height="14">
+            <use class="country-filter__icon-cross" href="img/sprite.svg#icon-cross"></use>
+          </svg>
+          Свернуть
+        </button>
       </div>
     </section>
-    <section class="traveler-filter">
-      <h2 class="heading">Подберите идеального попутчика</h2>
-      <form class="filter-form" action="https://echo.htmlacademy.ru/courses" method="post">
-        <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
-          <legend class="fieldset-dropdown__legend">Хобби <span class="show-on-tablet">:</span></legend>
-          <div class="fieldset-dropdown__dropdown">
-            <label class="checkbox">
-              Спортзал
-              <input class="checkbox__input" type="checkbox" name="hobby" value="gym" checked>
-            </label>
-            <label class="checkbox">
-              Кальян
-              <input class="checkbox__input" type="checkbox" name="hobby" value="hookah">
-            </label>
-            <label class="checkbox">
-              Диван
-              <input class="checkbox__input" type="checkbox" name="hobby" value="coach">
-            </label>
-          </div>
-        </fieldset>
-        <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
-          <legend class="fieldset-dropdown__legend">Музыка <span class="show-on-tablet">:</span></legend>
-          <div class="fieldset-dropdown__dropdown">
-            <label class="checkbox">
-              Тяжелый рок
-              <input class="checkbox__input" type="checkbox" name="music" value="hard-rock" checked>
-            </label>
-            <label class="checkbox">
-              Русский рэп
-              <input class="checkbox__input" type="checkbox" name="music" value="russian-rap" checked>
-            </label>
-            <label class="checkbox">
-              Евроденс
-              <input class="checkbox__input" type="checkbox" name="music" value="eurodance">
-            </label>
-          </div>
-        </fieldset>
-        <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
-          <legend class="fieldset-dropdown__legend">Еда <span class="show-on-tablet">:</span></legend>
-          <div class="fieldset-dropdown__dropdown">
-            <label class="checkbox">
-              Мясоед
-              <input class="checkbox__input" type="checkbox" name="food" value="meet-lover" checked>
-            </label>
-            <label class="checkbox">
-              Сидит на ПП
-              <input class="checkbox__input" type="checkbox" name="food" value="healthy-food">
-            </label>
-            <label class="checkbox">
-              Веган-сыроед
-              <input class="checkbox__input" type="checkbox" name="food" value="vegan">
-            </label>
-          </div>
-        </fieldset>
-        <fieldset class="user-fieldset fieldset-dropdown fieldset-dropdown--tablet-off">
-          <legend class="user-fieldset__legend">Транспорт <span class="show-on-tablet">:</span></legend>
-          <div class="tooltip tooltip--checkbox tooltip--avia tooltip--active">
-            <label class="tooltip__text">Авиаперелет
-              <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="avia" checked>
-            </label>
-          </div>
-          <div class="tooltip tooltip--checkbox tooltip--auto tooltip--active">
-            <label class="tooltip__text">Автотранспорт
-              <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="auto" checked>
-            </label>
-          </div>
-          <div class="tooltip tooltip--checkbox tooltip--bike">
-            <label class="tooltip__text">Велосипед
-              <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="bike">
-            </label>
-          </div>
-          <div class="tooltip tooltip--checkbox tooltip--hike tooltip--active">
-            <label class="tooltip__text">Пешком
-              <input class="tooltip__input visually-hidden" type="checkbox" name="transport" value="hike" checked>
-            </label>
-          </div>
-        </fieldset>
-        <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
-          <legend class="fieldset-dropdown__legend">Левел <span class="show-on-tablet">:</span></legend>
-          <div class="fieldset-dropdown__dropdown">
-            <div class="range-filter">
-              <div class="range-filter__controls">
-                <div class="range-filter__scale">
-                  <div class="range-filter__bar" style="width: 70%; margin-left: 30%"></div>
+    <div class="page-catalog__wrapper">
+      <aside class="traveler-filter">
+        <h2 class="heading traveler-filter__heading">Подберите идеального попутчика</h2>
+        <form class="traveler-filter__form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
+            <legend class="fieldset-dropdown__legend">Хобби<span class="show-on-tablet">:</span></legend>
+            <div class="fieldset-dropdown__dropdown">
+              <label class="checkbox checkbox--right-filter fieldset-dropdown__checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="hobby" value="gym" checked>
+                <svg class="checkbox__icon" width="18" height="18">
+                  <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
+                  <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
+                </svg>
+                Спортзал
+              </label>
+              <label class="checkbox checkbox--right-filter fieldset-dropdown__checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="hobby" value="hookah">
+                <svg class="checkbox__icon" width="18" height="18">
+                  <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
+                  <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
+                </svg>
+                Кальян
+              </label>
+              <label class="checkbox checkbox--right-filter fieldset-dropdown__checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="hobby" value="coach">
+                <svg class="checkbox__icon" width="18" height="18">
+                  <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
+                  <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
+                </svg>
+                Диван
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off fieldset-dropdown--open">
+            <legend class="fieldset-dropdown__legend">Музыка<span class="show-on-tablet">:</span></legend>
+            <div class="fieldset-dropdown__dropdown">
+              <label class="checkbox checkbox--right-filter fieldset-dropdown__checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="music" value="hard-rock" checked>
+                <svg class="checkbox__icon" width="18" height="18">
+                  <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
+                  <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
+                </svg>
+                Тяжелый рок
+              </label>
+              <label class="checkbox checkbox--right-filter fieldset-dropdown__checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="music" value="russian-rap" checked>
+                <svg class="checkbox__icon" width="18" height="18">
+                  <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
+                  <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
+                </svg>
+                Русский рэп
+              </label>
+              <label class="checkbox checkbox--right-filter fieldset-dropdown__checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="music" value="eurodance">
+                <svg class="checkbox__icon" width="18" height="18">
+                  <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
+                  <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
+                </svg>
+                Евроденс
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
+            <legend class="fieldset-dropdown__legend">Еда<span class="show-on-tablet">:</span></legend>
+            <div class="fieldset-dropdown__dropdown">
+              <label class="checkbox checkbox--right-filter fieldset-dropdown__checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="food" value="meet-lover" checked>
+                <svg class="checkbox__icon" width="18" height="18">
+                  <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
+                  <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
+                </svg>
+                Мясоед
+              </label>
+              <label class="checkbox checkbox--right-filter fieldset-dropdown__checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="food" value="healthy-food">
+                <svg class="checkbox__icon" width="18" height="18">
+                  <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
+                  <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
+                </svg>
+                Сидит на ПП
+              </label>
+              <label class="checkbox checkbox--right-filter fieldset-dropdown__checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="food" value="vegan">
+                <svg class="checkbox__icon" width="18" height="18">
+                  <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
+                  <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
+                </svg>
+                Веган-сыроед
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="user-fieldset fieldset-dropdown fieldset-dropdown--tablet-off fieldset-dropdown--open">
+            <legend class="fieldset-dropdown__legend">Транспорт<span class="show-on-tablet">:</span></legend>
+            <div class="fieldset-dropdown__dropdown fieldset-dropdown__custom-checkbox-area">
+              <label class="user-fieldset__checkbox tooltip">
+                <span class="tooltip__text" id="label-avia">Авиаперелёт</span>
+                <input class="user-fieldset__checkbox-input visually-hidden" aria-labelledby="label-avia"
+                  type="checkbox" name="transport" value="Авиаперелет" checked>
+                <svg class="user-fieldset__checkbox-icon" width="17" height="16">
+                  <use class="user-fieldset__icon-sprite" href="img/sprite.svg#icon-avia"></use>
+                </svg>
+              </label>
+              <label class="user-fieldset__checkbox tooltip">
+                <span class="tooltip__text" id="label-auto">Автотранспорт</span>
+                <input class="user-fieldset__checkbox-input visually-hidden" aria-labelledby="label-auto"
+                  type="checkbox" name="transport" value="Автотранспорт" checked>
+                <svg class="user-fieldset__checkbox-icon" width="17" height="16">
+                  <use class="user-fieldset__icon-sprite" href="img/sprite.svg#icon-auto"></use>
+                </svg>
+              </label>
+              <label class="user-fieldset__checkbox tooltip">
+                <span class="tooltip__text" id="label-bike">Велосипед</span>
+                <input class="user-fieldset__checkbox-input visually-hidden" aria-labelledby="label-bike"
+                  type="checkbox" name="transport" value="Велосипед">
+                <svg class="user-fieldset__checkbox-icon" width="17" height="16">
+                  <use class="user-fieldset__icon-sprite" href="img/sprite.svg#icon-bike"></use>
+                </svg>
+              </label>
+              <label class="user-fieldset__checkbox tooltip">
+                <span class="tooltip__text" id="label-hike">Пешком</span>
+                <input class="user-fieldset__checkbox-input visually-hidden" aria-labelledby="label-hike"
+                  type="checkbox" name="transport" value="Пешком" checked>
+                <svg class="user-fieldset__checkbox-icon" width="17" height="16">
+                  <use class="user-fieldset__icon-sprite" href="img/sprite.svg#icon-hike"></use>
+                </svg>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off fieldset-dropdown--open">
+            <legend class="fieldset-dropdown__legend">Левел<span class="show-on-tablet">:</span></legend>
+            <div class="fieldset-dropdown__dropdown">
+              <div class="range-filter">
+                <div class="range-filter__number-inputs">
+                  <label class="visually-hidden" for="price-number-min">От</label>
+                  <input class="range-filter__input" type="number" id="price-number-min" min="0" max="99" value="30" />
+                  <label class="visually-hidden" for="price-number-max">До</label>
+                  <input class="range-filter__input" type="number" id="price-number-max" min="1" max="100"
+                    value="100" />
                 </div>
-                <button class="range-filter__toggle range-filter__toggle--min" type="button" style="left: 30%"
-                  aria-label="Диапазон цены от"></button>
-                <button class="range-filter__toggle range-filter__toggle--max" type="button" style="left: 100%"
-                  aria-label="Диапазон цены до"></button>
-              </div>
-              <div class="range-filter__number-inputs">
-                <label class="visually-hidden" for="price-number-min">От</label>
-                <input class="range-filter__input" type="number" id="price-number-min" min="0" max="99" value="30" />
-                –
-                <label class="visually-hidden" for="price-number-max">До</label>
-                <input class="range-filter__input" type="number" id="price-number-max" min="1" max="100" value="100" />
+                <div class="range-filter__controls">
+                  <div class="range-filter__scale">
+                    <div class="range-filter__bar" style="width: 65%; margin-left: 35%"></div>
+                  </div>
+                  <button class="range-filter__toggle range-filter__toggle--min" type="button"
+                    style="left: calc(35% - 10px)" aria-label="Диапазон цены от"></button>
+                  <button class="range-filter__toggle range-filter__toggle--max" type="button"
+                    style="left: calc(100% - 10px)" aria-label="Диапазон цены до"></button>
+                </div>
               </div>
             </div>
-          </div>
-        </fieldset>
-        <button class="button button--white" type="submit">Показать</button>
-      </form>
-    </section>
-    <section class="travelers">
-      <h2 class="visually-hidden">Список путешественников</h2>
-      <ul class="travelers-list">
-        <li class="travelers-list__item traveler-card">
-          <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
-            href="users/tanya-firsova.html">Таня Фирсова</a>
-          <a class="link" href="users/tanya-firsova.html">
-            <img class="traveler-card__avatar" src="img/firsova-mobile.jpg" width="70" height="70"
-              alt="Аватар путешественника Таня Фирсова">
-          </a>
-          <button class="add-to-favourite add-to-favourite--added traveler-card__add-to-favourite"
-            aria-label="Добавить путешественника Таня Фирсова в избранное"></button>
-          <span class="traveler-card__subscribers-count">1,5 M</span>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term visually-hidden">Тэги:</dt>
-            <dd class="traveler-card__details traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term">Хочет посетить:</dt>
-            <dd class="traveler-card__details">
-              <ul class="visit-wish-list">
-                <li class="visit-wish-list__item visit-wish-list__item--sri-lanka">
-                  <span class="visit-wish-list__country-name">Шри-Ланка</span>
-                </li>
-                <li class="visit-wish-list__item visit-wish-list__item--thailand">
-                  <span class="visit-wish-list__country-name">Таиланд</span>
-                </li>
-                <li class="visit-wish-list__item visit-wish-list__item--seychelles">
-                  <span class="visit-wish-list__country-name">Сейшелы</span>
-                </li>
-              </ul>
-            </dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term">Транспорт:</dt>
-            <dd class="traveler-card__details traveler-card__transport">
-              <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
-              <div class="tooltip tooltip--auto"><span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
-              </div>
-              <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
-              <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
-            </dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term visually-hidden">Левел:</dt>
-            <dd class="traveler-card__details level traveler-card__level">99</dd>
-          </dl>
-          <a class="button" href="#">Позвать!</a>
-        </li>
-        <li class="travelers-list__item traveler-card">
-          <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
-            href="users/mark-smolov.html">Петя Демин</a>
-          <a class="link" href="users/mark-smolov.html">
-            <img class="traveler-card__avatar" src="img/smolov-mobile.jpg" width="70" height="70"
-              alt="Аватар путешественника Петя Демин">
-          </a>
-          <button class="add-to-favourite traveler-card__add-to-favourite"
-            aria-label="Добавить путешественника Петя Демин в избранное"></button>
-          <span class="traveler-card__subscribers-count">170</span>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term visually-hidden">Тэги:</dt>
-            <dd class="traveler-card__details traveler-card__tags">#бургер #бар #футбол #концерт #крафт</dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term">Хочет посетить:</dt>
-            <dd class="traveler-card__details">
-              <ul class="visit-wish-list">
-                <li class="visit-wish-list__item visit-wish-list__item--belgium">
-                  <span class="visit-wish-list__country-name">Шри-Ланка</span>
-                </li>
-                <li class="visit-wish-list__item visit-wish-list__item--czech-republic">
-                  <span class="visit-wish-list__country-name">Чехия</span>
-                </li>
-              </ul>
-            </dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term">Транспорт:</dt>
-            <dd class="traveler-card__details traveler-card__transport">
-              <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
-              <div class="tooltip tooltip--auto tooltip--active"><span class="tooltip__text">Автотранспорт</span>
-              </div>
-              <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
-              <div class="tooltip tooltip--hike tooltip--active"><span class="tooltip__text">Пешком</span></div>
-            </dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term visually-hidden">Левел:</dt>
-            <dd class="traveler-card__details level traveler-card__level">80</dd>
-          </dl>
-          <a class="button" href="#">Позвать!</a>
-        </li>
-        <li class="travelers-list__item traveler-card">
-          <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
-            href="users/mark-smolov.html">Марк Смолов</a>
-          <a class="link" href="users/mark-smolov.html">
-            <img class="traveler-card__avatar" src="img/demin-mobile.jpg" width="70" height="70"
-              alt="Аватар путешественника Марк Смолов">
-          </a>
-          <button class="add-to-favourite traveler-card__add-to-favourite"
-            aria-label="Добавить путешественника Марк Смолов в избранное"></button>
-          <span class="traveler-card__subscribers-count">170</span>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term visually-hidden">Тэги:</dt>
-            <dd class="traveler-card__details traveler-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term">Хочет посетить:</dt>
-            <dd class="traveler-card__details">
-              <ul class="visit-wish-list">
-                <li class="visit-wish-list__item visit-wish-list__item--usa">
-                  <span class="visit-wish-list__country-name">США</span>
-                </li>
-                <li class="visit-wish-list__item visit-wish-list__item--australia">
-                  <span class="visit-wish-list__country-name">Австралия</span>
-                </li>
-                <li class="visit-wish-list__item visit-wish-list__item--dominica">
-                  <span class="visit-wish-list__country-name">Доминика</span>
-                </li>
-              </ul>
-            </dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term">Транспорт:</dt>
-            <dd class="traveler-card__details traveler-card__transport">
-              <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
-              <div class="tooltip tooltip--auto"><span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
-              </div>
-              <div class="tooltip tooltip--bike tooltip--active"><span class="tooltip__text">Велосипед</span></div>
-              <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
-            </dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term visually-hidden">Левел:</dt>
-            <dd class="traveler-card__details level traveler-card__level">25</dd>
-          </dl>
-          <a class="button" href="#">Позвать!</a>
-        </li>
-        <li class="travelers-list__item traveler-card">
-          <a class="traveler-card__name traveler-card__status traveler-card__status--online"
-            href="users/larisa-rogovaya.html">Лариса Роговая</a>
-          <a class="link" href="users/larisa-rogovaya.html">
-            <img class="traveler-card__avatar" src="img/rogovaya-mobile.jpg" width="70" height="70"
-              alt="Аватар путешественника Лариса Роговая">
-          </a>
-          <button class="add-to-favourite traveler-card__add-to-favourite"
-            aria-label="Добавить путешественника Лариса Роговая в избранное"></button>
-          <span class="traveler-card__subscribers-count">23</span>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term visually-hidden">Тэги:</dt>
-            <dd class="traveler-card__details traveler-card__tags">#образование #карьера #учеба #линкедин</dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term">Хочет посетить:</dt>
-            <dd class="traveler-card__details">
-              <ul class="visit-wish-list">
-                <li class="visit-wish-list__item visit-wish-list__item--usa">
-                  <span class="visit-wish-list__country-name">Великобритания</span>
-                </li>
-                <li class="visit-wish-list__item visit-wish-list__item--australia">
-                  <span class="visit-wish-list__country-name">Германия</span>
-                </li>
-              </ul>
-            </dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term">Транспорт:</dt>
-            <dd class="traveler-card__details traveler-card__transport">
-              <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
-              <div class="tooltip tooltip--auto tooltip--active"><span class="tooltip__text">Автотранспорт</span></div>
-              <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
-              <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
-            </dd>
-          </dl>
-          <dl class="traveler-card__info">
-            <dt class="traveler-card__term visually-hidden">Левел:</dt>
-            <dd class="traveler-card__details level traveler-card__level">50</dd>
-          </dl>
-          <a class="button" href="#">Позвать!</a>
-        </li>
-      </ul>
-      <a class="link link--icon-plus" href="catalog/page.html">Показать еще</a>
-      <div class="pagination-controls">
-        <a class="pagination-controls__button pagination-controls__button-prev" aria-label="На страницу назад"
-          href="catalog/1.html"></a>
-        <a class="pagination-controls__button pagination-controls__button-next" aria-label="На страницу вперед"
-          href="catalog/3.html"></a>
-      </div>
-    </section>
+          </fieldset>
+          <button class="button button--white traveler-filter__submit" type="submit">Показать</button>
+        </form>
+      </aside>
+      <section class="travelers">
+        <h2 class="visually-hidden">Список путешественников</h2>
+        <ul class="travelers-list">
+          <li class="travelers-list__item traveler-card">
+            <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
+              href="users/tanya-firsova.html">Таня Фирсова</a>
+            <a class="link" href="users/tanya-firsova.html">
+              <img class="traveler-card__avatar" src="img/firsova-mobile.jpg" width="70" height="70"
+                alt="Аватар путешественника Таня Фирсова">
+            </a>
+            <button class="add-to-favourite add-to-favourite--added traveler-card__add-to-favourite"
+              aria-label="Добавить путешественника Таня Фирсова в избранное"></button>
+            <span class="traveler-card__subscribers-count">1,5 M</span>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term visually-hidden">Тэги:</dt>
+              <dd class="traveler-card__details traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term">Хочет посетить:</dt>
+              <dd class="traveler-card__details">
+                <ul class="visit-wish-list">
+                  <li class="visit-wish-list__item visit-wish-list__item--sri-lanka">
+                    <span class="visit-wish-list__country-name">Шри-Ланка</span>
+                  </li>
+                  <li class="visit-wish-list__item visit-wish-list__item--thailand">
+                    <span class="visit-wish-list__country-name">Таиланд</span>
+                  </li>
+                  <li class="visit-wish-list__item visit-wish-list__item--seychelles">
+                    <span class="visit-wish-list__country-name">Сейшелы</span>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term">Транспорт:</dt>
+              <dd class="traveler-card__details traveler-card__transport">
+                <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
+                <div class="tooltip tooltip--auto"><span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+                </div>
+                <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
+                <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
+              </dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term visually-hidden">Левел:</dt>
+              <dd class="traveler-card__details level traveler-card__level">99</dd>
+            </dl>
+            <a class="button" href="#">Позвать!</a>
+          </li>
+          <li class="travelers-list__item traveler-card">
+            <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
+              href="users/mark-smolov.html">Петя Демин</a>
+            <a class="link" href="users/mark-smolov.html">
+              <img class="traveler-card__avatar" src="img/smolov-mobile.jpg" width="70" height="70"
+                alt="Аватар путешественника Петя Демин">
+            </a>
+            <button class="add-to-favourite traveler-card__add-to-favourite"
+              aria-label="Добавить путешественника Петя Демин в избранное"></button>
+            <span class="traveler-card__subscribers-count">170</span>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term visually-hidden">Тэги:</dt>
+              <dd class="traveler-card__details traveler-card__tags">#бургер #бар #футбол #концерт #крафт</dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term">Хочет посетить:</dt>
+              <dd class="traveler-card__details">
+                <ul class="visit-wish-list">
+                  <li class="visit-wish-list__item visit-wish-list__item--belgium">
+                    <span class="visit-wish-list__country-name">Шри-Ланка</span>
+                  </li>
+                  <li class="visit-wish-list__item visit-wish-list__item--czech-republic">
+                    <span class="visit-wish-list__country-name">Чехия</span>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term">Транспорт:</dt>
+              <dd class="traveler-card__details traveler-card__transport">
+                <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
+                <div class="tooltip tooltip--auto tooltip--active"><span class="tooltip__text">Автотранспорт</span>
+                </div>
+                <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
+                <div class="tooltip tooltip--hike tooltip--active"><span class="tooltip__text">Пешком</span></div>
+              </dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term visually-hidden">Левел:</dt>
+              <dd class="traveler-card__details level traveler-card__level">80</dd>
+            </dl>
+            <a class="button" href="#">Позвать!</a>
+          </li>
+          <li class="travelers-list__item traveler-card">
+            <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
+              href="users/mark-smolov.html">Марк Смолов</a>
+            <a class="link" href="users/mark-smolov.html">
+              <img class="traveler-card__avatar" src="img/demin-mobile.jpg" width="70" height="70"
+                alt="Аватар путешественника Марк Смолов">
+            </a>
+            <button class="add-to-favourite traveler-card__add-to-favourite"
+              aria-label="Добавить путешественника Марк Смолов в избранное"></button>
+            <span class="traveler-card__subscribers-count">170</span>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term visually-hidden">Тэги:</dt>
+              <dd class="traveler-card__details traveler-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term">Хочет посетить:</dt>
+              <dd class="traveler-card__details">
+                <ul class="visit-wish-list">
+                  <li class="visit-wish-list__item visit-wish-list__item--usa">
+                    <span class="visit-wish-list__country-name">США</span>
+                  </li>
+                  <li class="visit-wish-list__item visit-wish-list__item--australia">
+                    <span class="visit-wish-list__country-name">Австралия</span>
+                  </li>
+                  <li class="visit-wish-list__item visit-wish-list__item--dominica">
+                    <span class="visit-wish-list__country-name">Доминика</span>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term">Транспорт:</dt>
+              <dd class="traveler-card__details traveler-card__transport">
+                <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
+                <div class="tooltip tooltip--auto"><span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+                </div>
+                <div class="tooltip tooltip--bike tooltip--active"><span class="tooltip__text">Велосипед</span></div>
+                <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
+              </dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term visually-hidden">Левел:</dt>
+              <dd class="traveler-card__details level traveler-card__level">25</dd>
+            </dl>
+            <a class="button" href="#">Позвать!</a>
+          </li>
+          <li class="travelers-list__item traveler-card">
+            <a class="traveler-card__name traveler-card__status traveler-card__status--online"
+              href="users/larisa-rogovaya.html">Лариса Роговая</a>
+            <a class="link" href="users/larisa-rogovaya.html">
+              <img class="traveler-card__avatar" src="img/rogovaya-mobile.jpg" width="70" height="70"
+                alt="Аватар путешественника Лариса Роговая">
+            </a>
+            <button class="add-to-favourite traveler-card__add-to-favourite"
+              aria-label="Добавить путешественника Лариса Роговая в избранное"></button>
+            <span class="traveler-card__subscribers-count">23</span>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term visually-hidden">Тэги:</dt>
+              <dd class="traveler-card__details traveler-card__tags">#образование #карьера #учеба #линкедин</dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term">Хочет посетить:</dt>
+              <dd class="traveler-card__details">
+                <ul class="visit-wish-list">
+                  <li class="visit-wish-list__item visit-wish-list__item--usa">
+                    <span class="visit-wish-list__country-name">Великобритания</span>
+                  </li>
+                  <li class="visit-wish-list__item visit-wish-list__item--australia">
+                    <span class="visit-wish-list__country-name">Германия</span>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term">Транспорт:</dt>
+              <dd class="traveler-card__details traveler-card__transport">
+                <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
+                <div class="tooltip tooltip--auto tooltip--active"><span class="tooltip__text">Автотранспорт</span>
+                </div>
+                <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
+                <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
+              </dd>
+            </dl>
+            <dl class="traveler-card__info">
+              <dt class="traveler-card__term visually-hidden">Левел:</dt>
+              <dd class="traveler-card__details level traveler-card__level">50</dd>
+            </dl>
+            <a class="button" href="#">Позвать!</a>
+          </li>
+        </ul>
+        <a class="link link--icon-plus" href="catalog/page.html">Показать еще</a>
+        <div class="pagination-controls">
+          <a class="pagination-controls__button pagination-controls__button-prev" aria-label="На страницу назад"
+            href="catalog/1.html"></a>
+          <a class="pagination-controls__button pagination-controls__button-next" aria-label="На страницу вперед"
+            href="catalog/3.html"></a>
+        </div>
+      </section>
+    </div>
   </main>
   <footer class="page-footer">
     <div class="container">
@@ -436,6 +585,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

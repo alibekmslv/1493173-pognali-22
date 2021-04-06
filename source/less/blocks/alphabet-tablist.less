@@ -1,0 +1,42 @@
+.alphabet-tablist {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: repeat(5, 40px);
+  row-gap: 1px;
+  column-gap: 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @input-border;
+  background-color: @input-border;
+}
+
+.alphabet-tablist__tab {
+  font-size: 0.875em;
+  line-height: 1.125rem;
+  font-weight: 500;
+  color: @color-primary-light;
+  text-align: center;
+  padding-top: 10px;
+  background-color: @white;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.alphabet-tablist__tab:hover {
+  border-color: @custom-input-hover;
+  margin-left: -1px;
+  margin-top: -1px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+}
+
+.alphabet-tablist__tab:active {
+  background-color: @color-neutral-lighter;
+}
+
+.alphabet-tablist__tab--active {
+  background-color: @color-neutral-lighter;
+  margin-bottom: -1px;
+}
