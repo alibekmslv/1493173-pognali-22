@@ -368,21 +368,28 @@
       <section class="travelers">
         <h2 class="visually-hidden">Список путешественников</h2>
         <ul class="travelers-list">
-          <li class="travelers-list__item traveler-card">
+          <li class="travelers-list__item traveler-card traveler-card--dynamic">
             <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
-              href="users/tanya-firsova.html">Таня Фирсова</a>
-            <a class="link" href="users/tanya-firsova.html">
-              <img class="traveler-card__avatar" src="img/firsova-mobile.jpg" width="70" height="70"
+              href="users/tanya-firsova.html">
+              <span class="traveler-card__name-limiter">Таня Фирсова</span>
+            </a>
+            <a class="link traveler-card__avatar" href="users/tanya-firsova.html">
+              <img class="traveler-card__avatar-img" src="img/firsova-mobile.jpg" width="70" height="70"
                 alt="Аватар путешественника Таня Фирсова">
             </a>
-            <button class="add-to-favourite add-to-favourite--added traveler-card__add-to-favourite"
-              aria-label="Добавить путешественника Таня Фирсова в избранное"></button>
-            <span class="traveler-card__subscribers-count">1,5 M</span>
-            <dl class="traveler-card__info">
+            <button class="like-button like-button--liked traveler-card__like-button"
+              aria-label="Поставить лайк путешественнику Таня Фирсова">
+              <svg class="like-button__icon" width="12" height="12">
+                <use class="like-button__icon-heart" href="img/sprite.svg#icon-heart"></use>
+                <use class="like-button__icon-heart-fill" href="img/sprite.svg#icon-heart-fill"></use>
+              </svg>
+            </button>
+            <span class="traveler-card__likes-count">1,5 M</span>
+            <dl class="traveler-card__info traveler-card__tags-cell">
               <dt class="traveler-card__term visually-hidden">Тэги:</dt>
               <dd class="traveler-card__details traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</dd>
             </dl>
-            <dl class="traveler-card__info">
+            <dl class="traveler-card__info traveler-card__visit-cell">
               <dt class="traveler-card__term">Хочет посетить:</dt>
               <dd class="traveler-card__details">
                 <ul class="visit-wish-list">
@@ -398,7 +405,7 @@
                 </ul>
               </dd>
             </dl>
-            <dl class="traveler-card__info">
+            <dl class="traveler-card__info traveler-card__transport-cell">
               <dt class="traveler-card__term">Транспорт:</dt>
               <dd class="traveler-card__details traveler-card__transport">
                 <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
@@ -412,7 +419,7 @@
               <dt class="traveler-card__term visually-hidden">Левел:</dt>
               <dd class="traveler-card__details level traveler-card__level">99</dd>
             </dl>
-            <a class="button" href="#">Позвать!</a>
+            <a class="button traveler-card__invite-button" href="#">Позвать!</a>
           </li>
           <li class="travelers-list__item traveler-card">
             <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
@@ -451,11 +458,11 @@
                 <div class="tooltip tooltip--hike tooltip--active"><span class="tooltip__text">Пешком</span></div>
               </dd>
             </dl>
-            <dl class="traveler-card__info">
+            <dl class="traveler-card__info traveler-card__level-cell">
               <dt class="traveler-card__term visually-hidden">Левел:</dt>
               <dd class="traveler-card__details level traveler-card__level">80</dd>
             </dl>
-            <a class="button" href="#">Позвать!</a>
+            <a class="button traveler-card__invite-button" href="#">Позвать!</a>
           </li>
           <li class="travelers-list__item traveler-card">
             <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
