@@ -8,7 +8,7 @@
   <title>HTML Academy: Погнали</title>
 </head>
 
-<body class="page__body">
+<body class="page__body no-js">
   <header class="page-header page-header--no-activity">
     <div class="container">
       <a href="index.html" class="logo page-header__logo">
@@ -373,8 +373,8 @@
               href="users/tanya-firsova.html">
               <span class="traveler-card__name-limiter">Таня Фирсова</span>
             </a>
-            <a class="link traveler-card__avatar" href="users/tanya-firsova.html">
-              <img class="traveler-card__avatar-img" src="img/firsova-mobile.jpg" width="70" height="70"
+            <a class="traveler-card__avatar" href="users/tanya-firsova.html">
+              <img class="traveler-card__avatar-image" src="img/firsova-mobile.jpg" width="70" height="70"
                 alt="Аватар путешественника Таня Фирсова">
             </a>
             <button class="like-button like-button--liked traveler-card__like-button"
@@ -389,205 +389,347 @@
               <dt class="traveler-card__term visually-hidden">Тэги:</dt>
               <dd class="traveler-card__details traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</dd>
             </dl>
-            <dl class="traveler-card__info traveler-card__visit-cell">
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__visit-cell">
               <dt class="traveler-card__term">Хочет посетить:</dt>
               <dd class="traveler-card__details">
-                <ul class="visit-wish-list">
-                  <li class="visit-wish-list__item visit-wish-list__item--sri-lanka">
+                <ul class="visit-wish-list traveler-card__visit-wish-list">
+                  <li class="visit-wish-list__item visit-wish-list__item--lk">
                     <span class="visit-wish-list__country-name">Шри-Ланка</span>
                   </li>
-                  <li class="visit-wish-list__item visit-wish-list__item--thailand">
+                  <li class="visit-wish-list__item visit-wish-list__item--th">
                     <span class="visit-wish-list__country-name">Таиланд</span>
                   </li>
-                  <li class="visit-wish-list__item visit-wish-list__item--seychelles">
+                  <li class="visit-wish-list__item visit-wish-list__item--sc">
                     <span class="visit-wish-list__country-name">Сейшелы</span>
                   </li>
                 </ul>
               </dd>
             </dl>
-            <dl class="traveler-card__info traveler-card__transport-cell">
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__transport-cell">
               <dt class="traveler-card__term">Транспорт:</dt>
-              <dd class="traveler-card__details traveler-card__transport">
-                <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
-                <div class="tooltip tooltip--auto"><span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+              <dd class="traveler-card__details traveler-card__transports">
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
+                  </svg>
+                  <span class="tooltip__text">Авиаперелет</span>
                 </div>
-                <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
-                <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
+                  </svg>
+                  <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+                </div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
+                  </svg>
+                  <span class="tooltip__text" aria-hidden="true">Велосипед</span>
+                </div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
+                  </svg>
+                  <span class="tooltip__text">Пешком</span>
+                </div>
               </dd>
             </dl>
-            <dl class="traveler-card__info">
-              <dt class="traveler-card__term visually-hidden">Левел:</dt>
-              <dd class="traveler-card__details level traveler-card__level">99</dd>
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__level-cell">
+              <dt class="traveler-card__term">Левел:</dt>
+              <dd class="traveler-card__details level level--small-on-mobile level--text traveler-card__level">
+                <svg class="level__progress-ring" width="45" height="45">
+                  <circle class="level__circle level__circle--99" r="20.5" cx="22.5" cy="22.5" stroke-width="4"
+                    stroke="#FF8D30" fill="transparent" />
+                </svg>
+                <span class="level__value">99</span>
+              </dd>
             </dl>
             <a class="button traveler-card__invite-button" href="#">Позвать!</a>
           </li>
-          <li class="travelers-list__item traveler-card">
+          <li class="travelers-list__item traveler-card traveler-card--dynamic">
             <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
-              href="users/mark-smolov.html">Петя Демин</a>
-            <a class="link" href="users/mark-smolov.html">
-              <img class="traveler-card__avatar" src="img/smolov-mobile.jpg" width="70" height="70"
+              href="users/petya-demin.html">
+              <span class="traveler-card__name-limiter">Петя Демин</span>
+            </a>
+            <a class="traveler-card__avatar" href="users/petya-demin.html">
+              <img class="traveler-card__avatar-image" src="img/demin-mobile.jpg" width="70" height="70"
                 alt="Аватар путешественника Петя Демин">
             </a>
-            <button class="add-to-favourite traveler-card__add-to-favourite"
-              aria-label="Добавить путешественника Петя Демин в избранное"></button>
-            <span class="traveler-card__subscribers-count">170</span>
-            <dl class="traveler-card__info">
+            <button class="like-button traveler-card__like-button"
+              aria-label="Поставить лайк путешественнику Петя Демин">
+              <svg class="like-button__icon" width="12" height="12">
+                <use class="like-button__icon-heart" href="img/sprite.svg#icon-heart"></use>
+                <use class="like-button__icon-heart-fill" href="img/sprite.svg#icon-heart-fill"></use>
+              </svg>
+            </button>
+            <span class="traveler-card__likes-count">1500</span>
+            <dl class="traveler-card__info traveler-card__tags-cell">
               <dt class="traveler-card__term visually-hidden">Тэги:</dt>
               <dd class="traveler-card__details traveler-card__tags">#бургер #бар #футбол #концерт #крафт</dd>
             </dl>
-            <dl class="traveler-card__info">
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__visit-cell">
               <dt class="traveler-card__term">Хочет посетить:</dt>
-              <dd class="traveler-card__details">
-                <ul class="visit-wish-list">
-                  <li class="visit-wish-list__item visit-wish-list__item--belgium">
-                    <span class="visit-wish-list__country-name">Шри-Ланка</span>
+              <dd class="traveler-card__details ">
+                <ul class="visit-wish-list traveler-card__visit-wish-list">
+                  <li class="visit-wish-list__item visit-wish-list__item--be">
+                    <span class="visit-wish-list__country-name">Бельгия</span>
                   </li>
-                  <li class="visit-wish-list__item visit-wish-list__item--czech-republic">
+                  <li class="visit-wish-list__item visit-wish-list__item--cz">
                     <span class="visit-wish-list__country-name">Чехия</span>
                   </li>
                 </ul>
               </dd>
             </dl>
-            <dl class="traveler-card__info">
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__transport-cell">
               <dt class="traveler-card__term">Транспорт:</dt>
-              <dd class="traveler-card__details traveler-card__transport">
-                <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
-                <div class="tooltip tooltip--auto tooltip--active"><span class="tooltip__text">Автотранспорт</span>
+              <dd class="traveler-card__details traveler-card__transports">
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
+                  </svg>
+                  <span class="tooltip__text">Авиаперелет</span>
                 </div>
-                <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
-                <div class="tooltip tooltip--hike tooltip--active"><span class="tooltip__text">Пешком</span></div>
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
+                  </svg>
+                  <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+                </div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
+                  </svg>
+                  <span class="tooltip__text" aria-hidden="true">Велосипед</span>
+                </div>
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
+                  </svg>
+                  <span class="tooltip__text">Пешком</span>
+                </div>
               </dd>
             </dl>
-            <dl class="traveler-card__info traveler-card__level-cell">
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__level-cell">
               <dt class="traveler-card__term visually-hidden">Левел:</dt>
-              <dd class="traveler-card__details level traveler-card__level">80</dd>
+              <dd class="traveler-card__details level level--small-on-mobile level--text traveler-card__level">
+                <svg class="level__progress-ring" width="45" height="45">
+                  <circle class="level__circle level__circle--80" r="20.5" cx="22.5" cy="22.5" stroke-width="4"
+                    stroke="#FF8D30" fill="transparent" />
+                </svg>
+                <span class="level__value">80</span>
+              </dd>
             </dl>
             <a class="button traveler-card__invite-button" href="#">Позвать!</a>
           </li>
-          <li class="travelers-list__item traveler-card">
+          <li class="travelers-list__item traveler-card traveler-card--dynamic">
             <a class="traveler-card__name traveler-card__status traveler-card__status--offline"
-              href="users/mark-smolov.html">Марк Смолов</a>
-            <a class="link" href="users/mark-smolov.html">
-              <img class="traveler-card__avatar" src="img/demin-mobile.jpg" width="70" height="70"
+              href="users/mark-smolov.html">
+              <span class="traveler-card__name-limiter">Марк Смолов</span>
+            </a>
+            <a class="traveler-card__avatar" href="users/mark-smolov.html">
+              <img class="traveler-card__avatar-image" src="img/smolov-mobile.jpg" width="70" height="70"
                 alt="Аватар путешественника Марк Смолов">
             </a>
-            <button class="add-to-favourite traveler-card__add-to-favourite"
-              aria-label="Добавить путешественника Марк Смолов в избранное"></button>
-            <span class="traveler-card__subscribers-count">170</span>
-            <dl class="traveler-card__info">
+            <button class="like-button traveler-card__like-button"
+              aria-label="Поставить лайк путешественнику Марк Смолов">
+              <svg class="like-button__icon" width="12" height="12">
+                <use class="like-button__icon-heart" href="img/sprite.svg#icon-heart"></use>
+                <use class="like-button__icon-heart-fill" href="img/sprite.svg#icon-heart-fill"></use>
+              </svg>
+            </button>
+            <span class="traveler-card__likes-count">170</span>
+            <dl class="traveler-card__info traveler-card__tags-cell">
               <dt class="traveler-card__term visually-hidden">Тэги:</dt>
               <dd class="traveler-card__details traveler-card__tags">#рэп #тату #хайпбист #кроссовки #суприм</dd>
             </dl>
-            <dl class="traveler-card__info">
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__visit-cell">
               <dt class="traveler-card__term">Хочет посетить:</dt>
               <dd class="traveler-card__details">
-                <ul class="visit-wish-list">
-                  <li class="visit-wish-list__item visit-wish-list__item--usa">
+                <ul class="visit-wish-list traveler-card__visit-wish-list">
+                  <li class="visit-wish-list__item visit-wish-list__item--us">
                     <span class="visit-wish-list__country-name">США</span>
                   </li>
-                  <li class="visit-wish-list__item visit-wish-list__item--australia">
+                  <li class="visit-wish-list__item visit-wish-list__item--au">
                     <span class="visit-wish-list__country-name">Австралия</span>
                   </li>
-                  <li class="visit-wish-list__item visit-wish-list__item--dominica">
+                  <li class="visit-wish-list__item visit-wish-list__item--dm">
                     <span class="visit-wish-list__country-name">Доминика</span>
                   </li>
                 </ul>
               </dd>
             </dl>
-            <dl class="traveler-card__info">
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__transport-cell">
               <dt class="traveler-card__term">Транспорт:</dt>
-              <dd class="traveler-card__details traveler-card__transport">
-                <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
-                <div class="tooltip tooltip--auto"><span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+              <dd class="traveler-card__details traveler-card__transports">
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
+                  </svg>
+                  <span class="tooltip__text">Авиаперелет</span>
                 </div>
-                <div class="tooltip tooltip--bike tooltip--active"><span class="tooltip__text">Велосипед</span></div>
-                <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
+                  </svg>
+                  <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+                </div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
+                  </svg>
+                  <span class="tooltip__text" aria-hidden="true">Велосипед</span>
+                </div>
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
+                  </svg>
+                  <span class="tooltip__text">Пешком</span>
+                </div>
               </dd>
             </dl>
-            <dl class="traveler-card__info">
-              <dt class="traveler-card__term visually-hidden">Левел:</dt>
-              <dd class="traveler-card__details level traveler-card__level">25</dd>
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__level-cell">
+              <dt class="traveler-card__term">Левел:</dt>
+              <dd class="traveler-card__details level level--small-on-mobile level--text traveler-card__level">
+                <svg class="level__progress-ring" width="45" height="45">
+                  <circle class="level__circle level__circle--25" r="20.5" cx="22.5" cy="22.5" stroke-width="4"
+                    stroke="#FF8D30" fill="transparent" />
+                </svg>
+                <span class="level__value">25</span>
+              </dd>
             </dl>
-            <a class="button" href="#">Позвать!</a>
+            <a class="button traveler-card__invite-button" href="#">Позвать!</a>
           </li>
-          <li class="travelers-list__item traveler-card">
+          <li class="travelers-list__item traveler-card traveler-card--dynamic">
             <a class="traveler-card__name traveler-card__status traveler-card__status--online"
-              href="users/larisa-rogovaya.html">Лариса Роговая</a>
-            <a class="link" href="users/larisa-rogovaya.html">
-              <img class="traveler-card__avatar" src="img/rogovaya-mobile.jpg" width="70" height="70"
+              href="users/larisa-rogovaya.html">
+              <span class="traveler-card__name-limiter">Лариса Роговая</span>
+            </a>
+            <a class="traveler-card__avatar" href="users/larisa-rogovaya.html">
+              <img class="traveler-card__avatar-image" src="img/rogovaya-mobile.jpg" width="70" height="70"
                 alt="Аватар путешественника Лариса Роговая">
             </a>
-            <button class="add-to-favourite traveler-card__add-to-favourite"
-              aria-label="Добавить путешественника Лариса Роговая в избранное"></button>
-            <span class="traveler-card__subscribers-count">23</span>
-            <dl class="traveler-card__info">
+            <button class="like-button traveler-card__like-button"
+              aria-label="Поставить лайк путешественнику Ларис Роговая ">
+              <svg class="like-button__icon" width="12" height="12">
+                <use class="like-button__icon-heart" href="img/sprite.svg#icon-heart"></use>
+                <use class="like-button__icon-heart-fill" href="img/sprite.svg#icon-heart-fill"></use>
+              </svg>
+            </button>
+            <span class="traveler-card__likes-count">23</span>
+            <dl class="traveler-card__info traveler-card__tags-cell">
               <dt class="traveler-card__term visually-hidden">Тэги:</dt>
               <dd class="traveler-card__details traveler-card__tags">#образование #карьера #учеба #линкедин</dd>
             </dl>
-            <dl class="traveler-card__info">
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__visit-cell">
               <dt class="traveler-card__term">Хочет посетить:</dt>
               <dd class="traveler-card__details">
-                <ul class="visit-wish-list">
-                  <li class="visit-wish-list__item visit-wish-list__item--usa">
+                <ul class="visit-wish-list traveler-card__visit-wish-list">
+                  <li class="visit-wish-list__item visit-wish-list__item--gb">
                     <span class="visit-wish-list__country-name">Великобритания</span>
                   </li>
-                  <li class="visit-wish-list__item visit-wish-list__item--australia">
+                  <li class="visit-wish-list__item visit-wish-list__item--de">
                     <span class="visit-wish-list__country-name">Германия</span>
                   </li>
                 </ul>
               </dd>
             </dl>
-            <dl class="traveler-card__info">
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__transport-cell">
               <dt class="traveler-card__term">Транспорт:</dt>
-              <dd class="traveler-card__details traveler-card__transport">
-                <div class="tooltip tooltip--avia tooltip--active"><span class="tooltip__text">Авиаперелет</span></div>
-                <div class="tooltip tooltip--auto tooltip--active"><span class="tooltip__text">Автотранспорт</span>
+              <dd class="traveler-card__details traveler-card__transports">
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
+                  </svg>
+                  <span class="tooltip__text">Авиаперелет</span>
                 </div>
-                <div class="tooltip tooltip--bike"><span class="tooltip__text" aria-hidden="true">Велосипед</span></div>
-                <div class="tooltip tooltip--hike"><span class="tooltip__text" aria-hidden="true">Пешком</span></div>
+                <div class="tooltip traveler-card__transport traveler-card__transport--active">
+                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
+                  </svg>
+                  <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
+                </div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
+                  </svg>
+                  <span class="tooltip__text" aria-hidden="true">Велосипед</span>
+                </div>
+                <div class="tooltip traveler-card__transport">
+                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                    <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
+                  </svg>
+                  <span class="tooltip__text">Пешком</span>
+                </div>
               </dd>
             </dl>
-            <dl class="traveler-card__info">
-              <dt class="traveler-card__term visually-hidden">Левел:</dt>
-              <dd class="traveler-card__details level traveler-card__level">50</dd>
+            <dl class="traveler-card__info traveler-card__info--legend traveler-card__level-cell">
+              <dt class="traveler-card__term">Левел:</dt>
+              <dd class="traveler-card__details level level--small-on-mobile level--text traveler-card__level">
+                <svg class="level__progress-ring" width="45" height="45">
+                  <circle class="level__circle level__circle--50" r="20.5" cx="22.5" cy="22.5" stroke-width="4"
+                    stroke="#FF8D30" fill="transparent" />
+                </svg>
+                <span class="level__value">50</span>
+              </dd>
             </dl>
-            <a class="button" href="#">Позвать!</a>
+            <a class="button traveler-card__invite-button" href="#">Позвать!</a>
           </li>
         </ul>
-        <a class="link link--icon-plus" href="catalog/page.html">Показать еще</a>
+        <a class="travelers__show-more" href="catalog/page.html">
+          <svg class="travelers__show-more-icon" width="18" height="18">
+            <use class="travelers__icon-plus" href="img/sprite.svg#icon-plus-2"></use>
+          </svg>
+          Показать еще</a>
         <div class="pagination-controls">
-          <a class="pagination-controls__button pagination-controls__button-prev" aria-label="На страницу назад"
-            href="catalog/1.html"></a>
-          <a class="pagination-controls__button pagination-controls__button-next" aria-label="На страницу вперед"
-            href="catalog/3.html"></a>
+          <a class="pagination-controls__button pagination-controls__button--prev" aria-label="На страницу назад"
+            href="catalog/1.html">
+            <svg class="pagination-controls__button-icon" width="13" height="20">
+              <use class="pagination-controls__pagination-arrow" href="img/sprite.svg#pagination-arrow"></use>
+            </svg>
+          </a>
+          <a class="pagination-controls__button pagination-controls__button--next" aria-label="На страницу вперед"
+            href="catalog/3.html">
+            <svg class="pagination-controls__button-icon" width="13" height="20">
+              <use class="pagination-controls__pagination-arrow" href="img/sprite.svg#pagination-arrow"></use>
+            </svg>
+          </a>
         </div>
       </section>
     </div>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer page-footer--low-margin stack stack--top-round">
     <div class="container">
-      <a class="logo" href="index.html">
-        <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
+      <a class="logo page-footer__logo" href="index.html">
+        <img class="logo__image" src="img/logo-mobile.png" alt="Логотип компании «Погнали»" width="100" height="15">
       </a>
-      <ul class="social-list">
+      <ul class="social-list social-list--colored page-footer__social-list">
         <li class="social-list__item">
-          <a class="social-list__button social-list__button--fb" href="#"><span
-              class="visually-hidden">Facebook</span></a>
+          <a class="social-list__button" href="#"><span class="visually-hidden">Facebook</span>
+            <svg class="social-list__icon" width="11" height="21">
+              <use class="social-list__icon-sprite" href="img/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__button social-list__button--vk" href="#"><span
-              class="visually-hidden">ВКонтакте</span></a>
+          <a class="social-list__button" href="#"><span class="visually-hidden">ВКонтакте</span>
+            <svg class="social-list__icon" width="23" height="12">
+              <use class="social-list__icon-sprite" href="img/sprite.svg#icon-vk"></use>
+            </svg>
+          </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__button social-list__button--ig" href="#"><span
-              class="visually-hidden">Instagram</span></a>
+          <a class="social-list__button" href="#"><span class="visually-hidden">Instagram</span>
+            <svg class="social-list__icon" width="18" height="18">
+              <use class="social-list__icon-sprite" href="img/sprite.svg#icon-ig"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <div class="copyright page-footer__copyright">
-        <a class="copyright__text" href="#">Разработано</a>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__image" src="img/htmlacademy.svg" alt="Логотип компании «HTML Academy»" width="27"
-            height="34">
+        <a class="copyright__text copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+        <a class="copyright__logo copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__image" src="img/htmlacademy.svg" alt="Логотип компании «HTML Academy»" width="40"
+            height="40">
         </a>
       </div>
     </div>
