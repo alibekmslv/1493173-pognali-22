@@ -1,0 +1,39 @@
+.pagination-controls {
+  display: flex;
+}
+
+.pagination-controls__button {
+  display: flex;
+  justify-content: center;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  background-color: @white;
+  flex-grow: 1;
+
+  &:hover {
+    .pagination-controls__button-icon {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    .pagination-controls__button-icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+
+.pagination-controls__button--prev {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  .pagination-controls__button-icon {
+    transform: scaleX(-1);
+  }
+}
+
+.pagination-controls__button--next {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}

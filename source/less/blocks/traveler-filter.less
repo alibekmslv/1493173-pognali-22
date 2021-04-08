@@ -1,0 +1,48 @@
+.traveler-filter {
+  background-color: @color-secondary;
+  border-radius: 20px;
+  padding-top: 26px;
+  padding-right: 25px;
+  padding-bottom: 23px;
+  padding-left: 25px;
+  margin-bottom: 27px;
+}
+
+.traveler-filter .traveler-filter__heading {
+  font-size: 1.375em;
+  line-height: 1.375rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: @color-primary-light;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.traveler-filter__form {
+  margin-top: 23px;
+}
+
+.traveler-filter__submit {
+  width: 100%;
+  .primary-font();
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: @color-primary;
+  background-color: @white;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+  margin-top: 4px;
+  transform: scaleX(1.04);
+
+  &:hover {
+    box-shadow: 0 3px 6px rgba(@black, 0.14);
+  }
+
+  &:active {
+    background-color: @fieldset-border;
+    color: rgba(@color-primary, 0.3);
+  }
+}

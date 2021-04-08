@@ -3,6 +3,205 @@
   border-radius: 10px;
 }
 
+.traveler-card__name {
+  font-weight: 700;
+  text-decoration: none;
+  color: @color-primary-light;
+}
+
+.traveler-card__name-limiter {
+  width: 30px;
+}
+
+.traveler-card__avatar-image {
+  display: block;
+}
+
+.traveler-card--dynamic {
+  display: grid;
+  grid-template-columns: 99px auto auto;
+  padding-top: 16px;
+  padding-bottom: 23px;
+  column-gap: 5px;
+  border-radius: 20px;
+
+  .traveler-card__avatar {
+    grid-column: ~"1 / 2";
+    grid-row: ~"1 / 3";
+    justify-self: end;
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 11px;
+  }
+
+  .traveler-card__name {
+    grid-column: ~"2 / 4";
+    font-size: 1.25em;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &::before {
+      margin-top: 7px;
+      margin-right: 22px;
+    }
+  }
+
+  .traveler-card__like-button {
+    grid-column: ~"1 / 2";
+    grid-row: ~"2 / 3";
+    align-self: end;
+    justify-self: end;
+  }
+
+  .traveler-card__likes-count {
+    grid-column: ~"2 / 4";
+    font-size: 0.825em;
+    line-height: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @color-primary;
+    align-self: center;
+  }
+
+  .traveler-card__tags-cell {
+    grid-column: ~"1 / 3";
+    margin-top: 13px;
+    margin-bottom: 5px;
+    margin-left: 26px;
+  }
+
+  .traveler-card__tags {
+    font-size: 15px;
+    line-height: 18px;
+    color: @color-special-1;
+  }
+
+  .traveler-card__visit-cell {
+    grid-column: ~"1 / -1";
+    padding-top: 25px;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .traveler-card__transport-cell {
+    grid-column: ~"1 / 3";
+    padding-top: 23px;
+    padding-bottom: 7px;
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+
+  .traveler-card__transports {
+    display: flex;
+    margin-left: 21px;
+  }
+
+  .traveler-card__transport {
+    width: 32px;
+    height: 32px;
+    background-color: @color-neutral-lighter;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1px;
+  }
+
+  .traveler-card__level-cell {
+    grid-column: ~"3 / -1";
+    margin-top: 18px;
+    margin-right: 21px;
+    margin-bottom: 0;
+    padding-top: 17px;
+  }
+
+  .traveler-card__invite-button {
+    grid-column: ~"1 / -1";
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 17px;
+    color: @color-primary-light;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: @color-secondary;
+    border-radius: 25px;
+    margin-top: 13px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .traveler-card__visit-wish-list {
+    margin-left: 25px;
+  }
+}
+
+.traveler-card__visit-wish-list {
+  .visit-wish-list__item {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      width: 26px;
+      height: 18px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+
+    &:nth-child(2):last-of-type {
+      margin-bottom: 7px;
+    }
+  }
+
+  .visit-wish-list__country-name {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1rem;
+    text-transform: uppercase;
+    color: @color-primary-light;
+    white-space: nowrap;
+    margin-top: 4px;
+    margin-left: 14px;
+  }
+}
+
+.traveler-card__info--legend {
+  position: relative;
+  border-top-width: 1px;
+  border-style: solid;
+  border-color: @color-neutral-lighter;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+
+  .traveler-card__term {
+    background-color: @white;
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    padding-left: 11px;
+    padding-right: 10px;
+    font-size: 15px;
+    line-height: 1rem;
+    color: @color-special-1;
+    text-transform: lowercase;
+  }
+}
+
+.traveler-card__level-cell .traveler-card__term {
+  left: -10px;
+  padding-left: 14px;
+}
+
 .traveler-card__details {
   margin-left: 0;
 }
@@ -47,13 +246,11 @@
   }
 
   .traveler-card__name {
+    grid-column: auto;
     display: flex;
     align-items: center;
     font-size: 21px;
     line-height: 21px;
-    font-weight: 700;
-    text-decoration: none;
-    color: @color-primary-light;
     margin-top: 27px;
     justify-self: center;
     margin-left: -16px;

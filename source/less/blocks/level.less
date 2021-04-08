@@ -28,6 +28,40 @@
   color: @white;
 }
 
+.level--small-on-mobile {
+  .level__circle {
+    stroke-dasharray: 125 125;
+  }
+
+  .level__circle--99 {
+    stroke-dashoffset: calc(125 - 99 / 100 * 125);
+  }
+
+  .level__circle--80 {
+    stroke-dashoffset: calc(125 - 80 / 100 * 125);
+  }
+
+  .level__circle--50 {
+    stroke-dashoffset: calc(125 - 50 / 100 * 125);
+  }
+
+  .level__circle--25 {
+    stroke-dashoffset: calc(125 - 25 / 100 * 125);
+  }
+
+  .level__value {
+    font-weight: 700;
+    color: @color-primary-light;
+    top: 14px;
+    left: 10px;
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
 .level__circle {
   stroke-dasharray: 172 172;
   stroke-linecap: round;

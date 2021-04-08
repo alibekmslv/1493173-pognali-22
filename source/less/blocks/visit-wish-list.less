@@ -5,7 +5,18 @@
   list-style-type: none;
 }
 
-.visit-wish-list__item {
+// .visit-wish-list__item {
+//   width: 35px;
+//   height: 25px;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   border-radius: 3px;
+//   cursor: pointer;
+// }
+
+.visit-wish-list__item::before {
+  content: "";
+  display: block;
   width: 35px;
   height: 25px;
   background-size: cover;
@@ -14,22 +25,43 @@
   cursor: pointer;
 }
 
-.visit-wish-list__item--lk {
+
+.visit-wish-list__item--lk::before {
   background-image: url("../img/flag-lk.jpg");
 }
 
-.visit-wish-list__item--th {
+.visit-wish-list__item--th::before {
   background-image: url("../img/flag-th.jpg");
 }
 
-.visit-wish-list__item--sc {
+.visit-wish-list__item--sc::before {
   background-image: url("../img/flag-sc.jpg");
 }
 
-.visit-wish-list__item--be {
+.visit-wish-list__item--be::before {
   background-image: url("../img/flag-be.jpg");
 }
 
-.visit-wish-list__item--cz {
+.visit-wish-list__item--cz::before {
   background-image: url("../img/flag-cz.jpg");
+}
+
+.visit-wish-list__item--dm::before {
+  background-image: url("../img/flag-dm.jpg");
+}
+
+.visit-wish-list__item--us::before {
+  background-image: url("../img/flag-us.jpg");
+}
+
+.visit-wish-list__item--au::before {
+  background-image: url("../img/flag-au.jpg");
+}
+
+.visit-wish-list__item--de::before {
+  background-image: url("../img/flag-de.jpg");
+}
+
+.visit-wish-list__item--gb::before {
+  background-image: url("../img/flag-gb.jpg");
 }

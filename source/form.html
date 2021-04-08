@@ -230,12 +230,10 @@
               </div>
             </div>
             <label class="checkbox progress-form__checkbox">
-              <svg class="checkbox__box" width="26" height="26">
-                <use class="checkbox__icon" href="img/sprite.svg#icon-checkbox"></use>
-              </svg>
-              <input class="checkbox__input visually-hidden" type="checkbox" name="with-kids" checked>
-              <svg class="checkbox__checkmark" width="13" height="26">
-                <use class="checkbox__icon" href="img/sprite.svg#icon-checkmark"></use>
+              <input class="checkbox__input visually-hidden" type="checkbox" name="with-kids">
+              <svg class="checkbox__icon" width="26" height="26">
+                <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
+                <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
               </svg>
               Можно с детьми
             </label>
@@ -422,48 +420,76 @@
                 </svg>
               </label>
               <div class="input-select__dropdown">
-                <div class="input-select__tablist" role="tablist" aria-label="Список стран" tabindex="0">
-                  <span class="input-select__tab input-select__tab--active" role="tab" aria-selected="true"
+                <div class="alphabet-tablist" role="tablist" aria-label="Список стран" tabindex="0">
+                  <span class="alphabet-tablist__tab alphabet-tablist__tab--active" role="tab" aria-selected="true"
                     aria-controls="panel-007" id="tab-007" tabindex="0">А</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-008" tabindex="0">Б</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-009" tabindex="0">В</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-010" tabindex="0">Г</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-011" tabindex="0">Д</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-012" tabindex="0">E</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-013" tabindex="0">З</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-014" tabindex="0">И</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-015" tabindex="0">К</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-016" tabindex="0">Л</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-017" tabindex="0">М</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-018" tabindex="0">Н</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-019" tabindex="0">О</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-020" tabindex="0">П</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-021" tabindex="0">Р</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-022" tabindex="0">С</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-023" tabindex="0">Т</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-024" tabindex="0">У</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-025" tabindex="0">Ф</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-026" tabindex="0">Х</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-027" tabindex="0">Ч</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-028" tabindex="0">Ш</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-029" tabindex="0">Э</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-030" tabindex="0">Ю</span>
-                  <span class="input-select__tab" role="tab" aria-selected="false" id="tab-031" tabindex="0">Я</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-008"
+                    tabindex="0">Б</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-009"
+                    tabindex="0">В</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-010"
+                    tabindex="0">Г</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-011"
+                    tabindex="0">Д</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-012"
+                    tabindex="0">E</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-013"
+                    tabindex="0">З</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-014"
+                    tabindex="0">И</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-015"
+                    tabindex="0">К</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-016"
+                    tabindex="0">Л</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-017"
+                    tabindex="0">М</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-018"
+                    tabindex="0">Н</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-019"
+                    tabindex="0">О</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-020"
+                    tabindex="0">П</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-021"
+                    tabindex="0">Р</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-022"
+                    tabindex="0">С</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-023"
+                    tabindex="0">Т</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-024"
+                    tabindex="0">У</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-025"
+                    tabindex="0">Ф</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-026"
+                    tabindex="0">Х</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-027"
+                    tabindex="0">Ч</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-028"
+                    tabindex="0">Ш</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-029"
+                    tabindex="0">Э</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-030"
+                    tabindex="0">Ю</span>
+                  <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-031"
+                    tabindex="0">Я</span>
                 </div>
-                <div class="input-select__list input-select__list--active" id="panel-007" role="tabpanel"
-                  aria-labelledby="tab-007" tabindex="0">
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Австралия</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Австрия</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Азербайджан</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Албания</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Алжир</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Ангола</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Андорра</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Антигуа и
+                <div class="country-tabpanel country-tabpanel--active input-select__country-tabpanel" id="panel-007"
+                  role="tabpanel" aria-labelledby="tab-007">
+                  <span class="country-tabpanel__item" role="checkbox" aria-checked="false"
+                    tabindex="0">Австралия</span>
+                  <span class="country-tabpanel__item" role="checkbox" aria-checked="false" tabindex="0">Австрия</span>
+                  <span class="country-tabpanel__item" role="checkbox" aria-checked="false"
+                    tabindex="0">Азербайджан</span>
+                  <span class="country-tabpanel__item" role="checkbox" aria-checked="false" tabindex="0">Албания</span>
+                  <span class="country-tabpanel__item" role="checkbox" aria-checked="false" tabindex="0">Алжир</span>
+                  <span class="country-tabpanel__item" role="checkbox" aria-checked="false" tabindex="0">Ангола</span>
+                  <span class="country-tabpanel__item" role="checkbox" aria-checked="false" tabindex="0">Андорра</span>
+                  <span class="country-tabpanel__item" role="checkbox" aria-checked="false" tabindex="0">Антигуа и
                     Барбуда</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Аргентина</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Армения</span>
-                  <span class="input-select__item" role="checkbox" aria-checked="false" tabindex="0">Афганистан</span>
+                  <span class="country-tabpanel__item" role="checkbox" aria-checked="false"
+                    tabindex="0">Аргентина</span>
+                  <span class="country-tabpanel__item" role="checkbox" aria-checked="false" tabindex="0">Армения</span>
+                  <span class="country-tabpanel__item" role="checkbox" aria-checked="false"
+                    tabindex="0">Афганистан</span>
                 </div>
               </div>
               <div class="input-select__result-icon"></div>
