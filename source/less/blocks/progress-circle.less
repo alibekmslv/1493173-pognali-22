@@ -1,0 +1,283 @@
+.progress-circle {
+  border-radius: 50%;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: "level";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.progress-circle--static {
+  @progress-circle-stroke-width: 4px;
+  @size: 60px;
+  @radius: (@size / 2 - @progress-circle-stroke-width / 2) / 1px;
+  width: @size;
+  height: @size;
+  background-color: rgba(@black, 0.6);
+
+  &::before {
+    width: 30px;
+    height: 1px;
+    background-color: rgba(@white, 0.3);
+    top: 36px;
+  }
+
+  &::after {
+    font-size: 14px;
+    color: @white;
+    top: 39px;
+  }
+
+  .progress-circle__svg {
+    width: @size;
+    height: @size;
+  }
+
+  .progress-circle__circle {
+    @circumference: 2 * 3.14 * @radius - 4; // здесь 4 - это поправка чтобы кольцо не заполнялось полностью при 99% т.к у него stroke-linecap: round
+    r: @radius * 1px;
+    cx: @size / 2;
+    cy: @size / 2;
+    stroke-width: @progress-circle-stroke-width;
+    stroke-linecap: round;
+    stroke-dasharray: @circumference @circumference;
+    stroke-dashoffset: calc(calc(@circumference - var(--progress-circle-percent) / 100 * @circumference) * 1px);
+  }
+
+  .progress-circle__value {
+    font-size: 24px;
+    top: 14px;
+    left: 50%;
+    color: @white;
+    transform: translateX(-50%);
+  }
+}
+
+.progress-circle--profile {
+  @progress-circle-stroke-width: 3px;
+  @size: 100px;
+  @radius: (@size / 2 - @progress-circle-stroke-width / 2) / 1px;
+  width: @size;
+  height: @size;
+
+  &::before {
+    width: 51px;
+    height: 1px;
+    background-color: rgba(@color-special-1, 0.3);
+    top: 55px;
+  }
+
+  &::after {
+    font-size: 18px;
+    color: @color-special-1;
+    top: 62px;
+  }
+
+  .progress-circle__svg {
+    width: @size;
+    height: @size;
+  }
+
+  .progress-circle__circle {
+    @circumference: 2 * 3.14 * @radius;
+    r: @radius * 1px;
+    cx: @size / 2;
+    cy: @size / 2;
+    stroke-width: @progress-circle-stroke-width;
+    stroke-linecap: butt;
+    stroke-dasharray: @circumference @circumference;
+    stroke-dashoffset: calc(calc(@circumference - var(--progress-circle-percent) / 100 * @circumference) * 1px);
+  }
+
+  .progress-circle__value {
+    font-size: 38px;
+    top: 17px;
+    left: 50%;
+    color: @color-primary;
+    transform: translateX(-50%);
+  }
+}
+
+.progress-circle--card {
+  @progress-circle-stroke-width: 3px;
+  @size: 45px;
+  @radius: (@size / 2 - @progress-circle-stroke-width / 2) / 1px;
+  width: @size;
+  height: @size;
+
+  &::after {
+    display: none;
+  }
+
+  .progress-circle__svg {
+    width: @size;
+    height: @size;
+  }
+
+  .progress-circle__circle {
+    @circumference: 2 * 3.14 * @radius - 4;
+    r: @radius * 1px;
+    cx: @size / 2;
+    cy: @size / 2;
+    stroke-width: @progress-circle-stroke-width;
+    stroke-linecap: round;
+    stroke-dasharray: @circumference @circumference;
+    stroke-dashoffset: calc(calc(@circumference - var(--progress-circle-percent) / 100 * @circumference) * 1px);
+  }
+
+  .progress-circle__value {
+    font-size: 24px;
+    top: 12px;
+    color: @color-primary-light;
+  }
+}
+
+.progress-circle__circle {
+  stroke: @color-circle;
+  fill: transparent;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.progress-circle__value {
+  position: absolute;
+  font-weight: 700;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+@media (min-width: @tablet) {
+  .progress-circle--profile {
+    @progress-circle-stroke-width: 3px;
+    @size: 94px;
+    @radius: (@size / 2 - @progress-circle-stroke-width / 2) / 1px;
+    width: @size;
+    height: @size;
+
+    &::before {
+      width: 48px;
+    }
+
+    &::after {
+      top: 61px;
+    }
+
+    .progress-circle__svg {
+      width: @size;
+      height: @size;
+      display: flex; // Здесь делаем кольцо флекс контейнером, т.к. в Хроме при изменени вьюпорта начинает смещаться кольцо
+      align-items: center;
+    }
+
+    .progress-circle__circle {
+      @circumference: 2 * 3.14 * @radius;
+      r: @radius * 1px;
+      cx: @size / 2;
+      cy: @size / 2;
+      stroke-dasharray: @circumference @circumference;
+      stroke-dashoffset: calc(calc(@circumference - var(--progress-circle-percent) / 100 * @circumference) * 1px);
+    }
+
+    .progress-circle__value {
+      top: 19px;
+    }
+  }
+
+  .progress-circle--card {
+    @progress-circle-stroke-width: 3px;
+    @size: 60px;
+    @radius: (@size / 2) / 1px;
+    width: @size;
+    height: @size;
+
+    &::before {
+      width: 31px;
+      height: 1px;
+      background-color: rgba(@black, 0.1);
+      top: 33px;
+    }
+
+    &::after {
+      display: block;
+      font-size: 14px;
+      top: 34px;
+      color: rgba(@black, 0.4);
+    }
+
+    .progress-circle__svg {
+      width: @size;
+      height: @size;
+      display: flex; // Здесь делаем кольцо флекс контейнером, т.к. в Хроме при изменени вьюпорта начинает смещаться кольцо
+      align-items: center;
+      overflow: visible;
+    }
+
+    .progress-circle__circle {
+      @circumference: 2 * 3.14 * @radius - 4;
+      r: @radius * 1px;
+      cx: @size / 2;
+      cy: @size / 2;
+      stroke-dasharray: @circumference @circumference;
+      stroke-dashoffset: calc(calc(@circumference - var(--progress-circle-percent) / 100 * @circumference) * 1px);
+    }
+
+    .progress-circle__value {
+      top: 12px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .progress-circle--profile {
+    @progress-circle-stroke-width: 3px;
+    @size: 95px;
+    @radius: (@size / 2 - @progress-circle-stroke-width / 2) / 1px;
+    width: @size;
+    height: @size;
+
+    &::before {
+      width: 50px;
+      height: 2px;
+      background-color: rgba(@white, 0.3);
+      top: 57px;
+    }
+
+    &::after {
+      color: @white;
+      top: 63px;
+    }
+
+    .progress-circle__svg {
+      width: @size;
+      height: @size;
+      display: flex; // Здесь делаем кольцо флекс контейнером, т.к. в Хроме при изменени вьюпорта начинает смещаться кольцо
+      align-items: center;
+    }
+
+    .progress-circle__circle {
+      @circumference: 2 * 3.14 * @radius;
+      r: @radius * 1px;
+      cx: @size / 2;
+      cy: @size / 2;
+      stroke-dasharray: @circumference @circumference;
+      stroke-dashoffset: calc(calc(@circumference - var(--progress-circle-percent) / 100 * @circumference) * 1px);
+    }
+
+    .progress-circle__value {
+      color: @white;
+      top: 22px;
+    }
+  }
+}
