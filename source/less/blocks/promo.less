@@ -10,9 +10,9 @@
 }
 
 .promo__heading {
+  font-weight: 700;
   font-size: 2.25em;
   line-height: 2.5rem;
-  font-weight: 700;
   color: @white;
   text-align: center;
   max-width: 238px;
@@ -34,4 +34,33 @@
 
 .promo__gradient-stack {
   margin-top: 27px;
+}
+
+@media (min-width: @tablet) {
+  .promo {
+    padding-top: 162px;
+  }
+
+  .promo__heading {
+    font-size: 3.75em;
+    line-height: 4.375rem;
+    max-width: 400px;
+    margin-bottom: 10px;
+  }
+
+  .promo__wrapper {
+    padding-top: 76px;
+  }
+
+  .promo .promo__blockquote {
+    margin-left: 32px;
+  }
+
+  .promo__blockquote .blockquote__text {
+    margin-bottom: 45px;
+  }
+
+  .promo__gradient-stack {
+    margin-top: 211px;
+  }
 }
