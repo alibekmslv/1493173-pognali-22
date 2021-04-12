@@ -5,15 +5,15 @@
 
 .directions__heading {
   color: @color-special-3;
-  padding-left: 25px;
   margin-top: 0;
   margin-bottom: 19px;
+  margin-left: 25px;
 }
 
 .directions__text {
   color: @color-special-1;
   max-width: 200px;
-  padding-left: 25px;
+  margin-left: 25px;
 }
 
 .directions__text:last-of-type {
@@ -27,13 +27,108 @@
 .directions__button {
   box-sizing: border-box;
   max-width: 460px;
+  font-weight: 700;
   font-size: 1.125em;
   line-height: 1.125rem;
-  font-weight: 700;
   text-decoration: none;
   border-radius: 10px;
   padding-top: 22.48px;
-  padding-left: 23.1px;
   padding-right: 21px;
   padding-bottom: 21.52px;
+  padding-left: 23.1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (min-width: @tablet) {
+  .directions {
+    padding-top: 73px;
+    padding-bottom: 79px;
+  }
+
+  .directions__wrapper {
+    background-image: url("../img/directions-tablet.png");
+    background-repeat: no-repeat;
+    background-position-x: calc(100% - 40px);
+    background-position-y: 7px;
+    background-size: auto;
+  }
+
+  .directions__heading {
+    margin-left: 33px;
+    margin-bottom: 57px;
+  }
+
+  .directions__text {
+    max-width: 378px;
+    margin-left: 33px;
+  }
+
+  .directions__text:last-of-type {
+    margin-bottom: 66px;
+  }
+
+  .directions .directions__country-stack {
+    margin-bottom: 46px;
+  }
+
+  .directions__button {
+    max-width: none;
+    width: calc(100% - 70px);
+    font-size: 1.5em;
+    line-height: 1.5rem;
+    border-radius: 20px;
+    padding-top: 31px;
+    padding-right: 31.81px;
+    padding-bottom: 27px;
+    padding-left: 32.73px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .directions {
+    padding-top: 90px;
+    padding-bottom: 137px;
+  }
+
+  .directions__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 60px;
+    background-position-x: calc(100% - 60px);
+    background-position-y: -1px;
+  }
+
+  .directions__heading {
+    grid-column: ~"2 / -1";
+    margin-top: 76px;
+    margin-bottom: 58px;
+    margin-left: 111px;
+  }
+
+  .directions__country-stack {
+    grid-column: ~"1 / 2";
+    grid-row: ~"1 / 4"
+  }
+
+  .directions__text {
+    grid-column: ~"2 / -1";
+    margin-top: 0;
+    margin-left: 112px;
+  }
+
+  .directions__text:last-of-type {
+    margin-bottom: 97px;
+  }
+
+  .directions .directions__country-stack {
+    margin-bottom: 0;
+  }
+
+  .directions__button {
+    grid-column: ~"2 / -1";
+    max-width: 275px;
+    margin-left: 113px;
+  }
 }
