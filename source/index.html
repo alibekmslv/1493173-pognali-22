@@ -199,8 +199,8 @@
         </a>
       </div>
     </section>
-    <section class="fellow-travelers stack stack--bottom-round stack--background-primary stack--back-neutral">
-      <div class="container">
+    <section class="fellow-travelers stack stack--bottom-round stack--background-primary stack--back-neutral-lighter">
+      <div class="container fellow-travelers__wrapper">
         <h2 class="heading fellow-travelers__heading">Попутчики</h2>
         <p class="paragraph paragraph--light fellow-travelers__text">Все мы индивидуальны и у каждого свой взгляд на
           идеальный отдых. Одному
@@ -211,7 +211,7 @@
           <li class="travelers-list__item traveler-card traveler-card--static">
             <a class="traveler-card__name traveler-card__status traveler-card__status--offline" href="#">Таня
               Фирсова</a>
-            <img class="traveler-card__avatar" src="img/user-tanya.jpg" width="270" height="270"
+            <img class="traveler-card__avatar-image" src="img/user-tanya.jpg" width="270" height="270"
               alt="Аватар путешественника Таня Фирсова">
             <dl class="traveler-card__info">
               <dt class="traveler-card__term visually-hidden">Тэги:</dt>
@@ -268,7 +268,7 @@
           </li>
           <li class="travelers-list__item traveler-card traveler-card--static">
             <a class="traveler-card__name traveler-card__status traveler-card__status--online" href="#">Петя Демин</a>
-            <img class="traveler-card__avatar" src="img/user-petya.jpg" width="270" height="270"
+            <img class="traveler-card__avatar-image" src="img/user-petya.jpg" width="270" height="270"
               alt="Аватар путешественника Петя Демин">
             <dl class="traveler-card__info">
               <dt class="traveler-card__term visually-hidden">Тэги:</dt>
@@ -329,8 +329,8 @@
         </a>
       </div>
     </section>
-    <section class="add-profile stack stack--bottom-round stack--background-neutral stack--back-primary">
-      <div class="container">
+    <section class="add-profile stack stack--bottom-round stack--background-neutral-lighter stack--back-primary">
+      <div class="container add-profile__wrapper">
         <h2 class="heading add-profile__heading">Добавьте свой профиль</h2>
         <dl class="price-list add-profile__price-list">
           <div class="price-list__item">
@@ -346,8 +346,13 @@
             <dd class="price-list__price">59 руб./мес</dd>
           </div>
         </dl>
-        <a class="add-profile__link" href="#business-rates" aria-label="Показать все тарифа для бизнеса">Показать тарифы
-          для бизнеса</a>
+        <a class="add-profile__link" href="#business-rates" aria-label="Показать все тарифа для бизнеса">
+          <span class="add-profile__link-circle">
+            <svg class="add-profile__link-icon" width="27" height="27">
+              <use class="add-profile__icon-businessman" href="img/sprite.svg#icon-businessman"></use>
+            </svg>
+          </span>
+          Показать тарифы для бизнеса</a>
       </div>
     </section>
     <section class="register stack stack--bottom-round stack--background-primary stack--back-secondary">

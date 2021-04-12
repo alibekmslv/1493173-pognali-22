@@ -229,6 +229,8 @@
   max-width: 270px;
   position: relative;
   transition: transform 0.3s;
+  overflow: hidden;
+  border-radius: 10px;
 
   &:hover {
     box-shadow: 0 4px 9px rgba(@black, 0.16);
@@ -239,10 +241,8 @@
     margin-top: 15px;
   }
 
-  .traveler-card__avatar {
+  .traveler-card__avatar-image {
     grid-row: ~"1 / 2";
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
   }
 
   .traveler-card__name {
@@ -312,5 +312,55 @@
   .traveler-card__transport-icon {
     fill: @tooltip;
     fill-opacity: 1;
+  }
+}
+
+
+@media (min-width: @tablet) {
+  .traveler-card--static {
+    max-width: 285px;
+    border-radius: 20px;
+
+    .traveler-card__info {
+      margin-top: 23px;
+      margin-bottom: 23px;
+    }
+
+    .traveler-card__avatar-image {
+      width: 285px;
+      height: 285px;
+    }
+
+    .traveler-card__name {
+      font-size: 1.5em;
+      line-height: 1.375rem;
+      margin-top: 31px;
+
+      &::before {
+        width: 8px;
+        height: 8px;
+        margin-right: 19px;
+      }
+    }
+
+    .traveler-card__tags {
+      max-width: 223px;
+      font-size: 1.25em;
+      line-height: 1.438rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .visit-wish-list {
+      top: 272px;
+    }
+
+    .visit-wish-list__item:not(:last-of-type) {
+      margin-right: 20px;
+    }
+
+    .traveler-card__level {
+      top: 20px;
+      left: 22px;
+    }
   }
 }

@@ -1,13 +1,14 @@
 .price-list {
   display: grid;
+  counter-reset: priceItem;
 }
 
 .price-list__item {
   max-width: 200px;
   position: relative;
+  font-weight: 300;
   font-size: 1em;
   line-height: 1rem;
-  font-weight: 300;
   padding-top: 13px;
   padding-bottom: 14px;
   border-top-width: 1px;
@@ -28,24 +29,24 @@
   position: absolute;
   top: 2px;
   right: -45px;
+  content: counter(priceItem);
+  counter-increment: priceItem;
   width: 34px;
   height: 34px;
   border-radius: 50%;
   color: @white;
+
 }
 
 .price-list__item:nth-child(1)::after {
-  content: "1";
   background-color: @color-special-3;
 }
 
 .price-list__item:nth-child(2)::after {
-  content: "2";
   background-color: @color-secondary-dark;
 }
 
 .price-list__item:nth-child(3)::after {
-  content: "3";
   background-color: @color-secondary;
 }
 
@@ -60,5 +61,36 @@
 .price-list--no-numbers {
   .price-list__item::after {
     display: none;
+  }
+}
+
+
+@media (min-width: @tablet) {
+  .price-list__item {
+    max-width: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.75em;
+    line-height: 1.75rem;
+    padding-top: 20px;
+    padding-bottom: 19px;
+  }
+
+  .price-list__item::after {
+    top: 0;
+    right: auto;
+    left: -90px;
+    width: 68px;
+    height: 68px;
+  }
+
+  .price-list__term {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .price-list__item::after {
+    left: -92px;
   }
 }
