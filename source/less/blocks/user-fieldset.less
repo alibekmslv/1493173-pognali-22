@@ -29,9 +29,9 @@
   top: -8px;
   left: 50%;
   transform: translateX(-50%);
+  font-weight: 700;
   font-size: 1em;
   line-height: 1.125rem;
-  font-weight: 700;
   color: @color-primary-light;
   text-transform: uppercase;
   background-color: @color-neutral-lighter;
@@ -87,5 +87,57 @@
 
   .user-fieldset__checkbox-input:checked + .user-fieldset__checkbox-icon {
     fill: rgba(@color-primary-light, 0.3);
+  }
+}
+
+@media (min-width: @tablet) {
+  .user-fieldset__legend {
+    top: auto;
+    bottom: -10px;
+    font-size: 1.25em;
+    line-height: 1.25rem;
+    letter-spacing: 0.08em;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .user-fieldset__checkboxarea {
+    padding-top: 25px;
+    padding-right: 66px;
+    padding-bottom: 24px;
+    padding-left: 66px;
+  }
+
+  .user-fieldset__checkbox {
+    width: 44px;
+    height: 44px;
+  }
+
+  .user-fieldset__checkbox-icon {
+    width: 23px;
+    height: 22px;
+  }
+
+  .user-fieldset__textarea {
+    font-size: 1.25em;
+    line-height: 1.375rem;
+    padding-top: 34px;
+    padding-bottom: 12px;
+  }
+}
+
+
+@media (min-width: @desktop) {
+  .user-fieldset__legend {
+    bottom: -8px;
+  }
+
+  .user-fieldset__checkboxarea {
+    padding-right: 102px;
+    padding-left: 103px;
+  }
+
+  .user-fieldset__textarea {
+    padding-left: 38px;
   }
 }

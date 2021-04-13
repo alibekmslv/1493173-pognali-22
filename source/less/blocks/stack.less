@@ -54,6 +54,11 @@
 .stack--bottom-third-round {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+
+  @media (min-width: @tablet) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
 }
 
 .stack--top-round {
@@ -84,14 +89,26 @@
 
 .stack--back-secondary::before {
   background-color: @color-secondary;
+
+  @media (min-width: @tablet) {
+    background-color: @color-neutral-lighter;
+  }
 }
 
 .stack--back-showed {
   margin-bottom: 4px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .stack--back-showed::before {
   margin-bottom: -4px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .stack--background-filter {

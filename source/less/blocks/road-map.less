@@ -26,9 +26,9 @@
 .road-map__countries {
   display: inline-block;
   vertical-align: top;
+  font-weight: 700;
   font-size: 1em;
   line-height: 1rem;
-  font-weight: 700;
   margin-bottom: 1.25rem;
 }
 
@@ -60,5 +60,150 @@
 
   &:active {
     color: rgba(@black, 0.1);
+  }
+}
+
+
+@media (min-width: @tablet) {
+  .road-map {
+    width: calc(100% - 70px);
+    list-style-position: outside;
+    list-style-type: none;
+    counter-reset: roadMapCounter;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+
+  .road-map__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: max-content auto min-content;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-right: 32px;
+    padding-bottom: 14px;
+  }
+
+  .road-map__item:not(:last-of-type) {
+    margin-bottom: 11px;
+  }
+
+  .road-map__item::before {
+    grid-column: ~"3 / 4";
+    grid-row: ~"1 / 2";
+    justify-self: end;
+    content: counter(roadMapCounter) ". ";
+    counter-increment: roadMapCounter;
+    font-weight: 500;
+    font-size: 1.250rem;
+    line-height: 1.250rem;
+    margin-top: 2px;
+  }
+
+  .road-map__item::after {
+    position: absolute;
+    top: 97px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: @input-border;
+  }
+
+  .road-map__countries {
+    display: block;
+    grid-column: ~"1 / 3";
+    grid-row: ~"1 / 2";
+    font-size: 1.5em;
+    line-height: 1.5rem;
+    margin-bottom: 2.125rem;
+  }
+
+  .road-map__fellows,
+  .road-map__date,
+  .road-map__link {
+    display: block;
+    font-size: 1.250em;
+    line-height: 1.250rem;
+    letter-spacing: 0.1em;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .road-map__date {
+    justify-self: end;
+    letter-spacing: 0.06em;
+    margin-right: 82px;
+    margin-bottom: 0;
+  }
+
+  .road-map__link {
+    justify-self: end;
+    margin-right: 8px;
+  }
+}
+
+
+@media (min-width: @desktop) {
+  .road-map {
+    width: calc(100% - 64px);
+    margin-right: 0;
+    margin-left: 64px;
+  }
+
+  .road-map__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: min-content 532px auto auto auto;
+    padding-left: 43px;
+    padding-top: 36px;
+    padding-right: 40px;
+    padding-bottom: 37px;
+  }
+
+  .road-map__item:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+
+  .road-map__item::before {
+    grid-column: ~"1 / 2";
+    grid-row: ~"1 / 2";
+    justify-self: end;
+    content: counter(roadMapCounter) ". ";
+    counter-increment: roadMapCounter;
+    font-size: 1.250rem;
+    line-height: 1.250rem;
+    margin-top: 2px;
+    margin-right: 36px;
+  }
+
+  .road-map__item::after {
+    display: none;
+  }
+
+  .road-map__countries {
+    display: block;
+    grid-column: ~"2 / 3";
+    grid-row: ~"1 / 2";
+    margin-bottom: 0;
+  }
+
+  .road-map__fellows,
+  .road-map__date,
+  .road-map__link {
+    margin-top: 3px;
+  }
+
+  .road-map__date {
+    justify-self: end;
+    letter-spacing: 0.06em;
+    margin-right: 110px;
+  }
+
+  .road-map__link {
+    margin-right: 0;
   }
 }
