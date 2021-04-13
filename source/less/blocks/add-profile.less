@@ -21,12 +21,12 @@
 }
 
 .add-profile__link {
+  font-weight: 700;
   font-size: 1em;
   line-height: 1rem;
-  font-weight: 700;
   color: @action-link;
   text-decoration: none;
-  padding-left: 25px;
+  margin-left: 25px;
 }
 
 .add-profile__link:hover {
@@ -35,4 +35,109 @@
 
 .add-profile__link:active {
   color: rgba(@action-link, 0.3);
+}
+
+.add-profile__link-icon {
+  display: none;
+}
+
+@media (min-width: @tablet) {
+  .add-profile {
+    padding-top: 74px;
+    padding-bottom: 45px;
+    background-image: none;
+  }
+
+  .add-profile__wrapper {
+    background-image: url("../img/rates.png"),
+      url("../img/background-figure-2.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position-x: calc(100% - 85px), calc(100% - 40px);
+    background-position-y: bottom, calc(77px);
+    background-size: auto, 198px calc(100% - 151px);
+    padding-bottom: 18px;
+  }
+
+  .add-profile__heading {
+    max-width: none;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 73px;
+  }
+
+  .add-profile__price-list {
+    margin-right: 35px;
+    margin-bottom: 27px;
+    margin-left: 90px;
+  }
+
+  .add-profile__link {
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+    line-height: 1.25rem;
+    margin-left: 0;
+  }
+
+  .add-profile__link-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: @filter-country-background;
+    margin-right: 21px;
+  }
+
+  .add-profile__link-icon {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop) {
+  .add-profile {
+    padding-top: 107px;
+    padding-bottom: 165px;
+  }
+
+  .add-profile__wrapper {
+    background-image: url("../img/rates-desktop.png"),
+      url("../img/background-figure-2.svg");
+    background-position-x: calc(100% - 133px), calc(100% - 244px);
+    background-position-y: 180px, 128px;
+    background-size: auto, 446px calc(100% - 178px);
+    padding-bottom: 0;
+  }
+
+  .add-profile__heading {
+    margin-bottom: 130px;
+  }
+
+  .add-profile__price-list {
+    margin-right: 345px;
+    margin-bottom: 30px;
+    margin-left: 162px;
+  }
+
+  .add-profile__link {
+    font-size: 1.25em;
+    line-height: 1.25rem;
+    margin-left: 70px;
+  }
+
+  .add-profile__link-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: @filter-country-background;
+    margin-right: 21px;
+  }
+
+  .add-profile__link-icon {
+    display: block;
+  }
 }

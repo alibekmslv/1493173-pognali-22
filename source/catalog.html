@@ -47,7 +47,7 @@
               <use class="menu__icon-sprite" href="img/sprite.svg#icon-email-2"></use>
             </svg>
           </a>
-          <a class="menu__show-button button button--secondary" href="sign-in.html">Авторизация</a>
+          <a class="menu__auth-button button button--secondary" href="sign-in.html">Авторизация</a>
         </div>
         <b class="visually-hidden">Наши контакты</b>
         <dl class="contact-list menu__contact-list">
@@ -436,12 +436,18 @@
             </dl>
             <dl class="traveler-card__info traveler-card__info--legend traveler-card__level-cell">
               <dt class="traveler-card__term">Левел:</dt>
-              <dd class="traveler-card__details level level--small-on-mobile level--text traveler-card__level">
+              <!-- <dd class="traveler-card__details level level--small-on-mobile level--text traveler-card__level">
                 <svg class="level__progress-ring" width="45" height="45">
                   <circle class="level__circle level__circle--99" r="20.5" cx="22.5" cy="22.5" stroke-width="4"
                     stroke="#FF8D30" fill="transparent" />
                 </svg>
                 <span class="level__value">99</span>
+              </dd> -->
+              <dd class="traveler-card__details progress-circle progress-circle--card traveler-card__level">
+                <svg class="progress-circle__svg" width="60" height="60" style="--progress-circle-percent: 99">
+                  <circle class="progress-circle__circle" />
+                </svg>
+                <span class="progress-circle__value">99</span>
               </dd>
             </dl>
             <a class="button traveler-card__invite-button" href="#">Позвать!</a>
@@ -511,12 +517,11 @@
             </dl>
             <dl class="traveler-card__info traveler-card__info--legend traveler-card__level-cell">
               <dt class="traveler-card__term visually-hidden">Левел:</dt>
-              <dd class="traveler-card__details level level--small-on-mobile level--text traveler-card__level">
-                <svg class="level__progress-ring" width="45" height="45">
-                  <circle class="level__circle level__circle--80" r="20.5" cx="22.5" cy="22.5" stroke-width="4"
-                    stroke="#FF8D30" fill="transparent" />
+              <dd class="traveler-card__details progress-circle progress-circle--card traveler-card__level">
+                <svg class="progress-circle__svg" width="60" height="60" style="--progress-circle-percent: 80">
+                  <circle class="progress-circle__circle" />
                 </svg>
-                <span class="level__value">80</span>
+                <span class="progress-circle__value">80</span>
               </dd>
             </dl>
             <a class="button traveler-card__invite-button" href="#">Позвать!</a>
@@ -589,12 +594,11 @@
             </dl>
             <dl class="traveler-card__info traveler-card__info--legend traveler-card__level-cell">
               <dt class="traveler-card__term">Левел:</dt>
-              <dd class="traveler-card__details level level--small-on-mobile level--text traveler-card__level">
-                <svg class="level__progress-ring" width="45" height="45">
-                  <circle class="level__circle level__circle--25" r="20.5" cx="22.5" cy="22.5" stroke-width="4"
-                    stroke="#FF8D30" fill="transparent" />
+              <dd class="traveler-card__details progress-circle progress-circle--card traveler-card__level">
+                <svg class="progress-circle__svg" width="60" height="60" style="--progress-circle-percent: 25">
+                  <circle class="progress-circle__circle" />
                 </svg>
-                <span class="level__value">25</span>
+                <span class="progress-circle__value">25</span>
               </dd>
             </dl>
             <a class="button traveler-card__invite-button" href="#">Позвать!</a>
@@ -664,12 +668,11 @@
             </dl>
             <dl class="traveler-card__info traveler-card__info--legend traveler-card__level-cell">
               <dt class="traveler-card__term">Левел:</dt>
-              <dd class="traveler-card__details level level--small-on-mobile level--text traveler-card__level">
-                <svg class="level__progress-ring" width="45" height="45">
-                  <circle class="level__circle level__circle--50" r="20.5" cx="22.5" cy="22.5" stroke-width="4"
-                    stroke="#FF8D30" fill="transparent" />
+              <dd class="traveler-card__details progress-circle progress-circle--card traveler-card__level">
+                <svg class="progress-circle__svg" width="60" height="60" style="--progress-circle-percent: 50">
+                  <circle class="progress-circle__circle" />
                 </svg>
-                <span class="level__value">50</span>
+                <span class="progress-circle__value">50</span>
               </dd>
             </dl>
             <a class="button traveler-card__invite-button" href="#">Позвать!</a>

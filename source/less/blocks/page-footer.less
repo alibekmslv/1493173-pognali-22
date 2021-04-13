@@ -1,6 +1,5 @@
 .page-footer {
   background-color: @white;
-  margin-top: -140px;
   padding-top: 37px;
 }
 
@@ -16,4 +15,31 @@
 
 .page-footer--low-margin {
   margin-top: -30px;
+}
+
+@media (min-width: @tablet) {
+  .page-footer {
+    padding-top: 46px;
+    padding-bottom: 32px;
+  }
+
+  .page-footer__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .page-footer__logo {
+    margin-bottom: 0;
+  }
+
+  .page-footer .page-footer__social-list {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-footer {
+    padding-top: 47px;
+    padding-bottom: 43px;
+  }
 }

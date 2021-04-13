@@ -35,17 +35,65 @@
   background-color: @menu-background;
   padding-top: 27px;
   padding-bottom: 31px;
-}
 
-.page-header--on-scroll .menu__toggle {
-  top: 29px;
+  .menu__toggle {
+    top: 29px;
+  }
 
-  &::before,
-  &::after {
-    background-color: @menu-toggle;
+  .menu__menu-toggle {
+    fill: @menu-toggle;
+  }
+
+  .menu__activity {
+    display: none;
   }
 }
 
-.page-header--on-scroll .menu__activity {
-  display: none;
+
+@media (min-width: @tablet) {
+  .page-header {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .page-header--on-scroll {
+    .menu__toggle {
+      top: 61px;
+    }
+
+    .menu__activity {
+      display: grid;
+      top: 40px;
+      right: 40px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-header {
+    padding-top: 47px;
+    padding-bottom: 47px;
+  }
+
+  .page-header__wrapper {
+    display: flex;
+  }
+
+  .page-header--expanded {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    padding-top: 27px;
+    padding-bottom: 0;
+    z-index: 2;
+  }
+}
+
+@media (orientation: landscape) {
+  .page-header__wrapper {
+    height: 100%;
+  }
 }

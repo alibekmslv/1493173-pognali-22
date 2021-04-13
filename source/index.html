@@ -10,13 +10,18 @@
 
 <body class="page__body">
   <header class="page-header">
-    <div class="container">
+    <div class="container page-header__wrapper">
       <a href="#" class="logo page-header__logo">
         <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
       </a>
       <nav class="menu">
         <button class="menu__toggle button" type="button" aria-expanded="false" aria-controls="menu__list"
-          aria-label="Открыть меню"></button>
+          aria-label="Открыть меню">
+          <svg class="menu__toggle-icon" width="25" height="11">
+            <use class="menu__menu-toggle" href="img/sprite.svg#menu-toggle"></use>
+            <use class="menu__menu-close" href="img/sprite.svg#menu-close"></use>
+          </svg>
+        </button>
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="#">
@@ -47,7 +52,7 @@
               <use class="menu__icon-sprite" href="img/sprite.svg#icon-email-2"></use>
             </svg>
           </a>
-          <a class="menu__show-button button button--secondary" href="sign-in.html">Авторизация</a>
+          <a class="menu__auth-button button button--secondary" href="sign-in.html">Авторизация</a>
         </div>
         <b class="visually-hidden">Наши контакты</b>
         <dl class="contact-list menu__contact-list">
@@ -72,7 +77,7 @@
           <dd class="contact-list__details">
             <a class="contact-list__link contact-list__link--icon-email" href="mailto:mail@htmlacademy.ru">
               <span class="contact-list__icon-wrapper">
-                <svg class="contact-list__icon" width="23.5" height="25">
+                <svg class="contact-list__icon" width="18" height="12">
                   <use class="contact-list__icon-sprite" href="img/sprite.svg#icon-email"></use>
                 </svg>
               </span>
@@ -86,22 +91,22 @@
         <ul class="social-list menu__social-list">
           <li class="social-list__item">
             <a class="social-list__button" href="#"><span class="visually-hidden">Facebook</span>
-              <svg class="social-list__icon" width="11" height="21">
-                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-fb"></use>
+              <svg class="social-list__icon social-list__icon--fb" width="11" height="21">
+                <use class="social-list__icon-fb" href="img/sprite.svg#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__button" href="#"><span class="visually-hidden">ВКонтакте</span>
-              <svg class="social-list__icon" width="23" height="12">
-                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-vk"></use>
+              <svg class="social-list__icon social-list__icon--vk" width="23" height="12">
+                <use class="social-list__icon-vk" href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__button" href="#"><span class="visually-hidden">Instagram</span>
-              <svg class="social-list__icon" width="18" height="18">
-                <use class="social-list__icon-sprite" href="img/sprite.svg#icon-ig"></use>
+              <svg class="social-list__icon social-list__icon--ig" width="18" height="18">
+                <use class="social-list__icon-ig" href="img/sprite.svg#icon-ig"></use>
               </svg>
             </a>
           </li>
@@ -112,36 +117,37 @@
   <main class="page-main">
     <h1 class="visually-hidden">Главная страница сайта для путешествий «Погнали»</h1>
     <section class="promo">
-      <h2 class="promo__heading">В путешествие с крутыми попутчиками!</h2>
-      <div class="promo__wrapper promo__gradient-background">
-        <div class="container">
-          <blockquote class="blockquote promo__blockquote">
-            <p class="blockquote__text">«Лучшее приложение, что я видел в жизни!»</p>
-            <cite class="blockquote__cite">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
-          </blockquote>
-          <ol class="gradient-stack promo__gradient-stack">
-            <li class="gradient-stack__item">Выберите<br>направление</li>
-            <li class="gradient-stack__item">Изучите идеи<br>путешественников</li>
-            <li class="gradient-stack__item">Находите тех,<br>кто похож на вас</li>
-            <li class="gradient-stack__item">Путешествуйте<br>вместе!</li>
-          </ol>
-        </div>
+      <div class="container promo__wrapper">
+        <h2 class="promo__heading">В путешествие с крутыми попутчиками!</h2>
+        <blockquote class="blockquote promo__blockquote">
+          <p class="blockquote__text">«Лучшее приложение, что я видел в жизни!»</p>
+          <cite class="blockquote__cite">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+        </blockquote>
+        <ol class="gradient-stack promo__gradient-stack">
+          <li class="gradient-stack__item">Выберите<br>направление</li>
+          <li class="gradient-stack__item">Изучите идеи<br>путешественников</li>
+          <li class="gradient-stack__item">Находите тех,<br>кто похож на вас</li>
+          <li class="gradient-stack__item">Путешествуйте<br>вместе!</li>
+        </ol>
       </div>
     </section>
     <section class="about stack stack--background-primary stack--bottom-round stack--back-neutral-lighter">
-      <div class="container">
+      <div class="container about__wrapper">
         <h2 class="heading about__heading">О сервисе</h2>
         <p class="paragraph paragraph--light about__text">Любое путешествие веселее с попутчиками, которые на одной
-          волне с тобой!
-          Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
-        <p class="paragraph paragraph--light paragraph--bold about__text">А если найдете кого-то близкого по духу —
-          скорее зовите в
-          совместный трип!</p>
-        <a class="button hide-on-mobile" href="#" aria-label="Подробнее о сервисе">Подробнее</a>
+          волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+        <p class="paragraph paragraph--light paragraph--bold about__text">А если найдете кого-то близкого по духу
+          &horbar; скорее зовите в совместный трип!</p>
+        <a class="button button--secondary button--polygon about__button" href="#"
+          aria-label="Подробнее о сервисе">Подробнее
+          <svg class="button__icon" width="14" height="14">
+            <use class="button__icon-sprite" href="img/sprite.svg#polygon"></use>
+          </svg>
+        </a>
       </div>
     </section>
     <section class="directions stack stack--background-neutral-lighter stack--bottom-round stack--back-primary">
-      <div class="container">
+      <div class="container directions__wrapper">
         <h2 class="heading directions__heading">Направления</h2>
         <p class="paragraph directions__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
           куда хотели бы отправиться и чем можно там заняться.</p>
@@ -193,8 +199,8 @@
         </a>
       </div>
     </section>
-    <section class="fellow-travelers stack stack--bottom-round stack--background-primary stack--back-neutral">
-      <div class="container">
+    <section class="fellow-travelers stack stack--bottom-round stack--background-primary stack--back-neutral-lighter">
+      <div class="container fellow-travelers__wrapper">
         <h2 class="heading fellow-travelers__heading">Попутчики</h2>
         <p class="paragraph paragraph--light fellow-travelers__text">Все мы индивидуальны и у каждого свой взгляд на
           идеальный отдых. Одному
@@ -205,7 +211,7 @@
           <li class="travelers-list__item traveler-card traveler-card--static">
             <a class="traveler-card__name traveler-card__status traveler-card__status--offline" href="#">Таня
               Фирсова</a>
-            <img class="traveler-card__avatar" src="img/user-tanya.jpg" width="270" height="270"
+            <img class="traveler-card__avatar-image" src="img/user-tanya.jpg" width="270" height="270"
               alt="Аватар путешественника Таня Фирсова">
             <dl class="traveler-card__info">
               <dt class="traveler-card__term visually-hidden">Тэги:</dt>
@@ -252,18 +258,17 @@
                 </div>
               </dd>
               <dt class="traveler-card__term visually-hidden">Левел:</dt>
-              <dd class="traveler-card__details level level--back level--text traveler-card__level">
-                <svg class="level__progress-ring" width="60" height="60">
-                  <circle class="level__circle level__circle--99" r="28" cx="30" cy="30" stroke-width="4"
-                    stroke="#FF8D30" fill="transparent" />
+              <dd class="traveler-card__details progress-circle progress-circle--static traveler-card__level">
+                <svg class="progress-circle__svg" width="60" height="60" style="--progress-circle-percent: 99">
+                  <circle class="progress-circle__circle" r="28" />
                 </svg>
-                <span class="level__value">99</span>
+                <span class="progress-circle__value">99</span>
               </dd>
             </dl>
           </li>
           <li class="travelers-list__item traveler-card traveler-card--static">
             <a class="traveler-card__name traveler-card__status traveler-card__status--online" href="#">Петя Демин</a>
-            <img class="traveler-card__avatar" src="img/user-petya.jpg" width="270" height="270"
+            <img class="traveler-card__avatar-image" src="img/user-petya.jpg" width="270" height="270"
               alt="Аватар путешественника Петя Демин">
             <dl class="traveler-card__info">
               <dt class="traveler-card__term visually-hidden">Тэги:</dt>
@@ -307,12 +312,11 @@
                 </div>
               </dd>
               <dt class="traveler-card__term visually-hidden">Левел:</dt>
-              <dd class="traveler-card__details level level--back level--text traveler-card__level">
-                <svg class="level__progress-ring" width="60" height="60">
-                  <circle class="level__circle level__circle--80" r="28" cx="30" cy="30" stroke-width="4"
-                    stroke="#FF8D30" fill="transparent" />
+              <dd class="traveler-card__details progress-circle progress-circle--static traveler-card__level">
+                <svg class="progress-circle__svg" width="60" height="60" style="--progress-circle-percent: 80">
+                  <circle class="progress-circle__circle" r="28" />
                 </svg>
-                <span class="level__value">80</span>
+                <span class="progress-circle__value">80</span>
               </dd>
             </dl>
           </li>
@@ -325,8 +329,8 @@
         </a>
       </div>
     </section>
-    <section class="add-profile stack stack--bottom-round stack--background-neutral stack--back-primary">
-      <div class="container">
+    <section class="add-profile stack stack--bottom-round stack--background-neutral-lighter stack--back-primary">
+      <div class="container add-profile__wrapper">
         <h2 class="heading add-profile__heading">Добавьте свой профиль</h2>
         <dl class="price-list add-profile__price-list">
           <div class="price-list__item">
@@ -342,8 +346,13 @@
             <dd class="price-list__price">59 руб./мес</dd>
           </div>
         </dl>
-        <a class="add-profile__link" href="#business-rates" aria-label="Показать все тарифа для бизнеса">Показать тарифы
-          для бизнеса</a>
+        <a class="add-profile__link" href="#business-rates" aria-label="Показать все тарифа для бизнеса">
+          <span class="add-profile__link-circle">
+            <svg class="add-profile__link-icon" width="27" height="27">
+              <use class="add-profile__icon-businessman" href="img/sprite.svg#icon-businessman"></use>
+            </svg>
+          </span>
+          Показать тарифы для бизнеса</a>
       </div>
     </section>
     <section class="register stack stack--bottom-round stack--background-primary stack--back-secondary">
@@ -398,8 +407,8 @@
       </div>
     </section>
     <section class="location">
-      <div class="location__wrapper stack stack--background-secondary stack--bottom-round">
-        <div class="container">
+      <div class="stack stack--background-secondary stack--bottom-round">
+        <div class="container location__wrapper">
           <h2 class="visually-hidden">Как нас найти</h2>
           <dl class="contact-list location__contact-list">
             <dt class="contact-list__term visually-hidden">Наш адрес</dt>
@@ -410,7 +419,7 @@
                     <use class="contact-list__icon-sprite" href="img/sprite.svg#icon-pin"></use>
                   </svg>
                 </span>
-                <address class="contact-list__text">ул. Большая<br>Конюшенная, 19/8</address>
+                <address class="contact-list__text">ул. Большая Конюшенная, 19/8</address>
               </a>
             </dd>
           </dl>
@@ -427,7 +436,7 @@
     </section>
   </main>
   <footer class="page-footer stack stack--top-round">
-    <div class="container">
+    <div class="container page-footer__wrapper">
       <a class="logo page-footer__logo" href="#">
         <img class="logo__image" src="img/logo-mobile.png" alt="Логотип компании «Погнали»" width="100" height="15">
       </a>

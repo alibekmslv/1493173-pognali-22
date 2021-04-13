@@ -1,31 +1,24 @@
 .promo {
-  background-image: url("../img/traveler-illustration-mobile.png"),
+  background-image: linear-gradient(180deg, transparent 0%, transparent 477px, @color-primary 477px, @color-primary 762px, @primary-background 762px, @primary-background 100%),
+    url("../img/traveler-illustration-mobile.png"),
     url("../img/globe-background-mobile.jpg");
   background-color: @color-primary;
-  background-position-x: 62%, center;
-  background-position-y: 222px, top;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 192px, contain;
+  background-position-x: center, 62%, center;
+  background-position-y: top, 222px, top;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: cover, 192px, contain;
   padding-top: 94px;
-}
-
-.promo__heading {
-  font-size: 2.25em;
-  line-height: 2.5rem;
-  font-weight: 700;
-  color: @white;
-  text-align: center;
-  max-width: 238px;
-  margin: 0 auto 265px;
-}
-
-.promo__wrapper {
-  padding-top: 3rem;
   padding-bottom: 39px;
 }
 
-.promo__gradient-background {
-  background-image: linear-gradient(180deg, @color-primary 0%, @color-primary 50.5%, @primary-background 50.5%, @primary-background 100%);
+.promo__heading {
+  font-weight: 700;
+  font-size: 2.25em;
+  line-height: 2.5rem;
+  color: @white;
+  text-align: center;
+  max-width: 238px;
+  margin: 0 auto 313px;
 }
 
 .promo .promo__blockquote {
@@ -34,4 +27,73 @@
 
 .promo__gradient-stack {
   margin-top: 27px;
+}
+
+@media (min-width: @tablet) {
+  .promo {
+    background-image: linear-gradient(180deg, transparent 0%, transparent 994px, @primary-background 994px, @primary-background 100%),
+      url("../img/traveler-illustration-tablet.png"),
+      url("../img/globe-background-tablet.jpg");
+    background-color: @color-header;
+    background-position-x: center, 72%, center;
+    background-position-y: top, 404px, 382px;
+    background-size: cover, 372px, contain;
+    padding-top: 162px;
+    padding-bottom: 96px;
+  }
+
+  .promo__heading {
+    font-size: 3.75em;
+    line-height: 4.375rem;
+    max-width: 400px;
+    margin-bottom: 86px;
+  }
+
+  .promo .promo__blockquote {
+    margin-left: 32px;
+  }
+
+  .promo__blockquote .blockquote__text {
+    margin-bottom: 45px;
+  }
+
+  .promo__gradient-stack {
+    margin-top: 211px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .promo {
+    background-image: url("../img/traveler-illustration-desktop.png"),
+      url("../img/globe-background-desktop.png");
+    background-color: @color-primary;
+    background-position-x: 60%, center;
+    background-position-y: bottom, top;
+    background-size: 431px, cover;
+    padding-top: 209px;
+    padding-bottom: 123px;
+  }
+
+  .promo__heading {
+    text-align: left;
+    margin-left: 67px;
+    margin-bottom: 0;
+  }
+
+  .promo__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .promo .promo__blockquote {
+    justify-self: end;
+    margin-top: 12px;
+    margin-right: 23px;
+    margin-left: 0;
+  }
+
+  .promo__gradient-stack {
+    grid-column: ~"1 / -1";
+    margin-top: 101px;
+  }
 }

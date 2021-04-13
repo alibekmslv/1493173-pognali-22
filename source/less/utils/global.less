@@ -84,14 +84,33 @@
   padding-right: 25px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: @tablet) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 1320px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 
 .hide-on-mobile {
   display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+  }
 }
 
 .show-on-desktop {
   display: none;
+
+  @media (min-width: @desktop) {
+    display: block;
+  }
 }
 
 .show-on-tablet {
