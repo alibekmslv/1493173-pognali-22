@@ -32,3 +32,71 @@
 .register .register__contact-list {
   color: @color-secondary;
 }
+
+@media (min-width: @tablet) {
+  .register {
+    padding-top: 76px;
+    padding-bottom: 60px;
+  }
+
+  .register__heading {
+    margin-bottom: 59px;
+  }
+
+  .register .paragraph {
+    &:first-of-type {
+      max-width: none;
+      width: calc(100% - 70px);
+      margin-bottom: 66px;
+      line-height: 2rem;
+    }
+
+    &:last-of-type {
+      max-width: none;
+      width: calc(100% - 70px);
+      margin-bottom: 36px;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  .register__signup-form {
+    margin-bottom: 60px;
+  }
+
+  .register .register__contact-list {
+    max-width: 616px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: @desktop) {
+  .register {
+    padding-top: 109px;
+    padding-bottom: 103px;
+  }
+
+  .register__heading {
+    margin-bottom: 57px;
+  }
+
+  .register .paragraph {
+    &:first-of-type {
+      margin-bottom: 58px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 41px;
+    }
+  }
+
+  .register__signup-form {
+    margin-bottom: 70px;
+  }
+
+  .register .register__contact-list {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

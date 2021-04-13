@@ -337,13 +337,12 @@
   .menu__social-list {
     display: none;
   }
-
 }
 
 
 // Меню когда экран перевернут
 // Экран мобильного перевернут
-@media (orientation: landscape) and (max-height: @mobile-large){
+@media (orientation: landscape) and (max-height: @mobile-large) {
   .menu--open {
     display: grid;
     grid-template-columns: 1fr min-content;
@@ -363,6 +362,7 @@
       margin-top: 0;
       align-self: flex-start;
     }
+
     .menu__social-list {
       margin-top: 0;
     }
@@ -404,9 +404,6 @@
 
     .menu__list {
       align-self: center;
-    }
-
-    .menu__list {
       margin-top: 0;
     }
 

@@ -107,6 +107,10 @@
 
 .show-on-desktop {
   display: none;
+
+  @media (min-width: @desktop) {
+    display: block;
+  }
 }
 
 .show-on-tablet {
