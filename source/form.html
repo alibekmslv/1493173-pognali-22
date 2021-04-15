@@ -201,7 +201,7 @@
         </ol>
       </div>
     </section>
-    <section class="add-road-map stack stack--top-round stack--background-neutral-saturated stack--back-neutral-light">
+    <section class="add-road-map stack stack--background-neutral-saturated stack--back-neutral-light">
       <div class="container">
         <h2 class="heading add-road-map__heading">Добавить план:</h2>
         <form class="progress-form" action="https://echo.htmlacademy.ru/courses" method="post">
@@ -210,38 +210,56 @@
               1.<br>Даты
               пребывания</h3>
             <p class="paragraph progress-form__paragraph">Укажите предпочтительное количество
-              попутчиков, которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
-            <div class="number-input progress-form__number-input">
-              <label class="number-input__label" for="fellows-number">Ищу попутчиков:</label>
-              <span class="number-input__term">Чел.</span>
-              <div class="number-input__wrapper">
-                <button class="button number-input__button number-input__button--minus" type="button"
-                  aria-label="минус 1"></button>
-                <input class="number-input__input" id="fellows-number" type="number" name="fellows-number" min="1"
-                  value="2">
-                <button class="button number-input__button number-input__button--plus" type="button"
-                  aria-label="плюс 1"></button>
+              попутчиков, которых<br>вы хотели бы позвать в поездку, и ее предполагаемую длительность.</p>
+            <div class="progress-form__inputs-wrapper">
+              <div class="number-input progress-form__number-input">
+                <label class="number-input__label" for="fellows-number">Ищу попутчиков:</label>
+                <span class="number-input__term number-input__term--wide">Чел.</span>
+                <div class="number-input__body">
+                  <button class="button number-input__button number-input__button--minus" type="button"
+                    aria-label="минус 1">
+                    <svg class="number-input__controller" width="14" height="14">
+                      <use class="number-input__controller-icon" href="img/sprite.svg#controller-minus"></use>
+                    </svg>
+                  </button>
+                  <input class="number-input__input" id="fellows-number" type="number" name="fellows-number" min="1"
+                    value="2">
+                  <button class="button number-input__button number-input__button--plus" type="button"
+                    aria-label="плюс 1">
+                    <svg class="number-input__controller" width="14" height="14">
+                      <use class="number-input__controller-icon" href="img/sprite.svg#controller-plus"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="number-input progress-form__number-input">
-              <label class="number-input__label" for="trip-days">Длительность:</label>
-              <span class="number-input__term">Дн.</span>
-              <div class="number-input__wrapper">
-                <button class="button number-input__button number-input__button--minus" type="button"
-                  aria-label="минус 1"></button>
-                <input class="number-input__input" id="trip-days" type="number" name="trip-days" min="1" value="3">
-                <button class="button number-input__button number-input__button--plus" type="button"
-                  aria-label="плюс 1"></button>
+              <div class="number-input progress-form__number-input">
+                <label class="number-input__label" for="trip-days">Длительность:</label>
+                <span class="number-input__term">Дн.</span>
+                <div class="number-input__body">
+                  <button class="button number-input__button number-input__button--minus" type="button"
+                    aria-label="минус 1">
+                    <svg class="number-input__controller" width="14" height="14">
+                      <use class="number-input__controller-icon" href="img/sprite.svg#controller-minus"></use>
+                    </svg>
+                  </button>
+                  <input class="number-input__input" id="trip-days" type="number" name="trip-days" min="1" value="3">
+                  <button class="button number-input__button number-input__button--plus" type="button"
+                    aria-label="плюс 1">
+                    <svg class="number-input__controller" width="14" height="14">
+                      <use class="number-input__controller-icon" href="img/sprite.svg#controller-plus"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
+              <label class="checkbox progress-form__checkbox">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="with-kids">
+                <svg class="checkbox__icon" width="26" height="26">
+                  <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
+                  <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
+                </svg>
+                Можно с детьми
+              </label>
             </div>
-            <label class="checkbox progress-form__checkbox">
-              <input class="checkbox__input visually-hidden" type="checkbox" name="with-kids">
-              <svg class="checkbox__icon" width="26" height="26">
-                <use class="checkbox__icon-checkbox" href="img/sprite.svg#icon-checkbox"></use>
-                <use class="checkbox__icon-checkmark" href="img/sprite.svg#icon-checkmark"></use>
-              </svg>
-              Можно с детьми
-            </label>
             <div class="date-input progress-form__date-input">
               <label class="date-input__label visually-hidden">Дата начала путешествия:
                 <input class="date-input__input" type="date" value="2019-03-26" name="travel-date" readonly
