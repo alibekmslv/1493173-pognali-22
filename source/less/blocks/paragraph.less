@@ -1,19 +1,32 @@
 .paragraph {
+  font-weight: 300;
   font-size: 1em;
   line-height: 1.375rem;
-  font-weight: 300;
+  color: @color-special-1;
+
+  @media (min-width: @tablet) {
+    font-size: 1.25em;
+    line-height: 1.5rem;
+  }
 }
 
 .paragraph--light {
   color: @white;
 }
 
-.paragraph--special {
-  color: @color-special-1;
+
+.paragraph--section {
+  @media (min-width: @tablet) {
+    font-size: 1.75em;
+  }
 }
 
-.paragraph--bold {
+.paragraph--additional-text {
   font-weight: 700;
+
+  @media (min-width: @tablet) {
+    font-size: 1.313em;
+  }
 }
 
 .paragraph__link {
@@ -27,12 +40,4 @@
 .paragraph__link:active {
   color: @color-special-3;
   opacity: 0.3;
-}
-
-
-@media (min-width: @tablet) {
-  .paragraph {
-    font-size: 1.75em;
-    line-height: 2.063rem;
-  }
 }
