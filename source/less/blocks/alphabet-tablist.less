@@ -40,3 +40,41 @@
   background-color: @color-neutral-lighter;
   margin-bottom: -1px;
 }
+
+@media (min-width: @tablet) {
+  .alphabet-tablist {
+    grid-template-columns: 52px 50px 51px 51px 52px;
+    grid-template-rows: repeat(5, 68px);
+  }
+
+  .alphabet-tablist__tab {
+    font-size: 1.25em;
+    line-height: 1.25rem;
+    padding-top: 24px;
+  }
+
+  .alphabet-tablist__tab--active {
+    background-color: @color-primary-light;
+    color: @white;
+  }
+}
+
+@media (min-width: @desktop) {
+  .alphabet-tablist {
+    grid-template-columns: repeat(5, 58px);
+    column-gap: 18px;
+    row-gap: 17px;
+    background-color: @white;
+    border-color: transparent;
+  }
+
+  .alphabet-tablist__tab {
+    padding-top: 24px;
+    border-radius: 4px;
+    border-color: @custom-input-hover;
+  }
+
+  .alphabet-tablist__tab--active {
+    border-color: @color-primary-light;
+  }
+}
