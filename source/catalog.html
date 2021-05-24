@@ -10,13 +10,18 @@
 
 <body class="page__body no-js">
   <header class="page-header page-header--no-activity">
-    <div class="container">
+    <div class="container page-header__wrapper">
       <a href="index.html" class="logo page-header__logo">
         <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
       </a>
       <nav class="menu">
         <button class="menu__toggle button" type="button" aria-expanded="false" aria-controls="menu__list"
-          aria-label="Открыть меню"></button>
+          aria-label="Открыть меню">
+          <svg class="menu__toggle-icon" width="25" height="11">
+            <use class="menu__menu-toggle" href="img/sprite.svg#menu-toggle"></use>
+            <use class="menu__menu-close" href="img/sprite.svg#menu-close"></use>
+          </svg>
+        </button>
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="index.html">
@@ -112,16 +117,20 @@
   <main class="page-main page-catalog">
     <div
       class="page__bar page__bar--filter stack stack--bottom-third-round stack--background-header stack--back-filter">
-      <div class="container">
+      <div class="container page__control">
         <h1 class="page__title">Попутчики</h1>
-        <a href="index.html" class="page__back-link hide-on-mobile">На главную</a>
+        <a href="index.html" class="page__back-link hide-on-mobile">На главную
+          <svg class="page__icon-back" width="32" height="16">
+            <use class="page__icon-arrow-bend" href="img/sprite.svg#icon-arrow-bend"></use>
+          </svg>
+        </a>
       </div>
     </div>
     <section class="country-filter stack stack--bottom-third-round stack--background-filter">
       <div class="container country-filter__panel">
         <h2 class="country-filter__heading">
           <svg class="country-filter__heading-icon" width="16" height="10">
-            <use class="country-filter__icon-filter " href="img/sprite.svg#icon-filter"></use>
+            <use class="country-filter__icon-filter" href="img/sprite.svg#icon-filter"></use>
           </svg>
           Фильтрация по странам:
         </h2>
@@ -145,8 +154,8 @@
         </button>
       </div>
       <div class="container country-filter__dropdown">
-        <div class="alphabet-tablist country-filter__alphabet-tablist" role="tablist" aria-label="Список стран"
-          tabindex="0">
+        <div class="alphabet-tablist alphabet-tablist--large country-filter__alphabet-tablist" role="tablist"
+          aria-label="Список стран" tabindex="0">
           <span class="alphabet-tablist__tab alphabet-tablist__tab--active" role="tab" aria-selected="true"
             aria-controls="panel-007" id="tab-007" tabindex="0">А</span>
           <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-008" tabindex="0">Б</span>
@@ -177,7 +186,7 @@
         <div class="country-filter__tabpanel-wrapper">
           <ul class="country-tabpanel country-tabpanel--active country-filter__country-tabpanel" id="panel-007"
             aria-labelledby="tab-007">
-            <li class="show-on-desktop">А</li>
+            <li class="country-tabpanel__capital-letter show-on-desktop">А</li>
             <li class="country-tabpanel__item"><a class="country-filter__link"
                 href="europe/australia.html">Австралия</a></li>
             <li class="country-tabpanel__item"><a class="country-filter__link" href="europe/australia.html">Австрия</a>
@@ -201,6 +210,347 @@
             </li>
             <li class="country-tabpanel__item"><a class="country-filter__link"
                 href="europe/australia.html">Афганистан</a></li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-008" aria-labelledby="tab-008">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Б</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Багамские
+                Острова</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бангладеш</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Барбадос</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бахрейн</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Белоруссия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Белиз</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бельгия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бенин</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Болгария</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Боливия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Босния и
+                Герцеговина</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ботсвана</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бразилия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бруней</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html"
+                class="country-filter__link">Буркина-Фасо</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бурунди</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бутан</a></li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-009" aria-labelledby="tab-009">
+            <li class="country-tabpanel__capital-letter show-on-desktop">В</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Вануату</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html"
+                class="country-filter__link">Великобритания</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Венгрия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Венесуэла</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Восточный
+                Тимор</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Вьетнам</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-010" aria-labelledby="tab-010">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Г</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Габон</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гаити</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гайана</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гамбия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гана</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гватемала</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гвинея</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html"
+                class="country-filter__link">Гвинея-Бисау</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Германия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гондурас</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гренада</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Греция</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Грузия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-011" aria-labelledby="tab-011">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Д</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Дания</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Джибути</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Доминика</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Доминикана</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-012" aria-labelledby="tab-012">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Е</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Египет</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-013" aria-labelledby="tab-013">
+            <li class="country-tabpanel__capital-letter show-on-desktop">З</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Замбия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Зимбабве</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-014" aria-labelledby="tab-014">
+            <li class="country-tabpanel__capital-letter show-on-desktop">И</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Израиль</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Индия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Индонезия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Иордания</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ирак</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Иран</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ирландия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Исландия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Испания</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Италия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-015" aria-labelledby="tab-015">
+            <li class="country-tabpanel__capital-letter show-on-desktop">K</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Кабо-Верде</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Казахстан</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Камбоджа</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Камерун</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Канада</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Катар</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Кения</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Кипр</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Киргизия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Кирибати</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Китай</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Колумбия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-016" aria-labelledby="tab-016">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Л</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Лаос</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Латвия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Лесото</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Либерия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ливан</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ливия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Литва</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html"
+                class="country-filter__link">Лихтенштейн</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Люксембург</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-017" aria-labelledby="tab-017">
+            <li class="country-tabpanel__capital-letter show-on-desktop">М</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Маврикий</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Мавритания</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Мадагаскар</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Малави</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Малайзия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Мали</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Мальдивы</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Мальта</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Марокко</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-018" aria-labelledby="tab-018">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Н</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Намибия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Науру</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Непал</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Нигер</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Нигерия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Нидерланды</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Никарагуа</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Новая
+                Зеландия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Норвегия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-019" aria-labelledby="tab-019">
+            <li class="country-tabpanel__capital-letter show-on-desktop">О</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">ОАЭ</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Оман</a></li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-020" aria-labelledby="tab-020">
+            <li class="country-tabpanel__capital-letter show-on-desktop">П</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Пакистан</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Палау</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Панама</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Папуа - Новая
+                Гвинея</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Парагвай</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Перу</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Польша</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Португалия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-021" aria-labelledby="tab-021">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Л</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Руанда</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Румыния</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Россия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-022" aria-labelledby="tab-022">
+            <li class="country-tabpanel__capital-letter show-on-desktop">С</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сальвадор</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Самоа</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сан-Марино</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Саудовская
+                Аравия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сейшелы</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сенегал</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сербия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сингапур</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сирия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Словакия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Словения</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">США</a></li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-023" aria-labelledby="tab-023">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Т</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html"
+                class="country-filter__link">Таджикистан</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Таиланд</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Танзания</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Того</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Тонга</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Тринидад и
+                Тобаго</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Тувалу</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Тунис</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Туркмения</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Турция</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-024" aria-labelledby="tab-024">
+            <li class="country-tabpanel__capital-letter show-on-desktop">У</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Уганда</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Узбекистан</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Украина</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Уругвай</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-025" aria-labelledby="tab-025">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Ф</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Фиджи</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Филиппины</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Финляндия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Франция</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-026" aria-labelledby="tab-026">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Х</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Хорватия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-027" aria-labelledby="tab-027">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Ч</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Чад</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Черногория</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Чехия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Чили</a></li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-028" aria-labelledby="tab-028">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Ш</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Швейцария</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Швеция</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Шри-Ланка</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-029" aria-labelledby="tab-029">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Э</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Эквадор</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Эритрея</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Эсватини</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Эстония</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Эфиопия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-030" aria-labelledby="tab-030">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Ю</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">ЮАР</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Южный
+                Судан</a></li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-031" aria-labelledby="tab-031">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Я</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ямайка</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Япония</a>
+            </li>
           </ul>
         </div>
         <button class="button country-filter__collapse-button">

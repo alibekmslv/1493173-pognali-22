@@ -47,16 +47,40 @@
     bottom: -70px;
     height: 8px;
   }
+
+  .page__back-link {
+    font-size: 1.25em;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: @white;
+    margin-right: 34px;
+  }
+
+  .page__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page__icon-back {
+    margin-left: 22px;
+  }
 }
 
 @media (min-width: @desktop) {
   .page__bar {
     padding-top: 224px;
-    padding-bottom: 67px;
+    padding-bottom: 66px;
   }
 
   .page__title {
     margin-left: 64px;
     z-index: 1;
+  }
+
+  .page__back-link {
+    margin-right: 64px;
   }
 }

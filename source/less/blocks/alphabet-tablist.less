@@ -57,6 +57,37 @@
     background-color: @color-primary-light;
     color: @white;
   }
+
+  .alphabet-tablist--large {
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: repeat(5, 50px);
+    column-gap: 25px;
+    row-gap: 33px;
+    border-width: 0;
+    background-color: transparent;
+
+    .alphabet-tablist__tab {
+      font-size: 3.75em;
+      line-height: 3.75rem;
+      font-weight: 700;
+      text-align: center;
+      padding-top: 0;
+      border-width: 0;
+      background-color: transparent;
+      color: @menu-link;
+      opacity: 0.3;
+    }
+
+    .alphabet-tablist__tab:hover {
+      margin: auto;
+      opacity: 1;
+    }
+
+    .alphabet-tablist__tab--active {
+      color: @menu-link;
+      opacity: 1;
+    }
+  }
 }
 
 @media (min-width: @desktop) {
@@ -66,6 +97,10 @@
     row-gap: 17px;
     background-color: @white;
     border-color: transparent;
+  }
+
+  .alphabet-tablist--large {
+    display: none;
   }
 
   .alphabet-tablist__tab {
@@ -78,3 +113,4 @@
     border-color: @color-primary-light;
   }
 }
+
