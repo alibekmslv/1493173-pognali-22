@@ -21,6 +21,10 @@
 .progress-form__paragraph {
   margin-top: 0;
   margin-bottom: 1.25rem;
+
+  br {
+    display: none;
+  }
 }
 
 .progress-form__number-input {
@@ -148,6 +152,10 @@
 
   .progress-form__paragraph {
     margin-bottom: 0;
+
+    br {
+      display: inline;
+    }
   }
 
   .progress-form__inputs-wrapper {
@@ -209,7 +217,7 @@
     border-top-color: @table-border;
     margin-top: 31px;
     padding-top: 42px;
-    padding-bottom: 41px;
+    padding-bottom: 42px;
   }
 
   .progress-form__input-select-wrapper::before {
@@ -265,6 +273,38 @@
 
   .progress-form__button--step-back:active .progress-form__button-icon {
     fill: rgba(@color-primary-light, 0.3);
+  }
+
+  .progress-form__textarea:first-of-type {
+    margin-top: 32px;
+  }
+
+  .progress-form__textarea:nth-last-of-type(2) {
+    margin-bottom: 47px;
+  }
+
+  .progress-form__textarea {
+    margin-bottom: 42px;
+  }
+
+  .progress-form__send-button {
+    .progress-form__button-icon {
+      margin-left: 82px;
+    }
+  }
+
+  .progress-form__dots {
+    top: 66px;
+    right: 42px;
+  }
+
+  .progress-form__dot {
+    margin-right: 1.85em;
+
+    &::before {
+      width: 6px;
+      height: 6px;
+    }
   }
 }
 
@@ -375,5 +415,41 @@
 
   .progress-form__input-select-wrapper::before {
     height: calc(100% + 113px);
+  }
+
+  .progress-form__textarea:first-of-type {
+    margin-top: 52px;
+  }
+
+  .progress-form__textarea {
+    margin-bottom: 48px;
+  }
+
+  .progress-form__textarea:nth-last-of-type(2) {
+    margin-bottom: 60px;
+  }
+
+  .progress-form {
+    position: relative;
+  }
+
+  .progress-form__dots {
+    top: 104px;
+    right: 206px;
+    flex-direction: column;
+  }
+
+  .progress-form__dot {
+    margin-right: 0;
+    margin-bottom: 20px;
+
+    &::before {
+      margin-right: 36px;
+    }
+  }
+
+
+  .progress-form__dot-text {
+    display: block;
   }
 }
