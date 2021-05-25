@@ -310,6 +310,7 @@
 
 @media (min-width: @desktop) {
   .progress-form {
+    position: relative;
     padding-right: 0;
     padding-left: 0;
   }
@@ -393,6 +394,7 @@
 
     &::before {
       right: 225px;
+      height: calc(100% + 113px);
     }
   }
 
@@ -413,10 +415,6 @@
     margin-bottom: 44px;
   }
 
-  .progress-form__input-select-wrapper::before {
-    height: calc(100% + 113px);
-  }
-
   .progress-form__textarea:first-of-type {
     margin-top: 52px;
   }
@@ -427,10 +425,6 @@
 
   .progress-form__textarea:nth-last-of-type(2) {
     margin-bottom: 60px;
-  }
-
-  .progress-form {
-    position: relative;
   }
 
   .progress-form__dots {
