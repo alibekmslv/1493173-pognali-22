@@ -11,10 +11,14 @@
 
 
 .profile-form__avatar {
-  width: 100px;
-  height: 100px;
   grid-column: ~"3 / 5";
   justify-self: center;
+}
+
+.profile-form__avatar-image {
+  display: block;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 }
 
@@ -49,10 +53,13 @@
   }
 
   .profile-form__avatar {
-    width: 94px;
-    height: 94px;
     grid-column: ~"4 / 5";
     justify-self: end;
+  }
+
+  .profile-form__avatar-image {
+    width: 94px;
+    height: 94px;
     border-radius: 7px;
   }
 
@@ -89,13 +96,18 @@
   }
 
   .profile-form__avatar {
-    width: 190px;
-    height: 190px;
     grid-column: ~"4 / 5";
     justify-self: end;
+    margin-right: 95px;
+  }
+
+  .profile-form__avatar-image {
+    width: 190px;
+    height: 190px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    margin-right: 95px;
   }
 
   .profile-form__file-button {
