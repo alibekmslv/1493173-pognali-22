@@ -1,7 +1,7 @@
 .promo {
   background-image: linear-gradient(180deg, transparent 0%, transparent 477px, @color-primary 477px, @color-primary 762px, @primary-background 762px, @primary-background 100%),
-    url("../img/traveler-illustration-mobile.png"),
-    url("../img/globe-background-mobile.jpg");
+    url("../img/backgrounds/traveler-illustration-mobile.png"),
+    url("../img/backgrounds/globe-background-mobile.jpg");
   background-color: @color-primary;
   background-position-x: center, 62%, center;
   background-position-y: top, 222px, top;
@@ -9,6 +9,12 @@
   background-size: cover, 192px, contain;
   padding-top: 94px;
   padding-bottom: 39px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(180deg, transparent 0%, transparent 477px, @color-primary 477px, @color-primary 762px, @primary-background 762px, @primary-background 100%),
+    url("../img/backgrounds/traveler-illustration-mobile@2x.png"),
+    url("../img/backgrounds/globe-background-mobile@2x.jpg");
+  }
 }
 
 .promo__heading {
@@ -32,14 +38,20 @@
 @media (min-width: @tablet) {
   .promo {
     background-image: linear-gradient(180deg, transparent 0%, transparent 994px, @primary-background 994px, @primary-background 100%),
-      url("../img/traveler-illustration-tablet.png"),
-      url("../img/globe-background-tablet.jpg");
+      url("../img/backgrounds/traveler-illustration-tablet.png"),
+      url("../img/backgrounds/globe-background-tablet.jpg");
     background-color: @color-header;
     background-position-x: center, 72%, center;
     background-position-y: top, 404px, 382px;
     background-size: cover, 372px, contain;
     padding-top: 162px;
     padding-bottom: 96px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, transparent 0%, transparent 994px, @primary-background 994px, @primary-background 100%),
+      url("../img/backgrounds/traveler-illustration-tablet@2x.png"),
+      url("../img/backgrounds/globe-background-tablet@2x.jpg");
+    }
   }
 
   .promo__heading {
@@ -64,14 +76,19 @@
 
 @media (min-width: @desktop) {
   .promo {
-    background-image: url("../img/traveler-illustration-desktop.png"),
-      url("../img/globe-background-desktop.png");
+    background-image: url("../img/backgrounds/traveler-illustration-desktop.png"),
+      url("../img/backgrounds/globe-background-desktop.png");
     background-color: @color-primary;
     background-position-x: 60%, center;
     background-position-y: bottom, top;
     background-size: 431px, cover;
     padding-top: 209px;
     padding-bottom: 123px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/traveler-illustration-desktop@2x.png"),
+      url("../img/backgrounds/globe-background-desktop@2x.png");
+    }
   }
 
   .promo__heading {
