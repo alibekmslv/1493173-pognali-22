@@ -115,6 +115,14 @@
 
 .show-on-tablet {
   display: none;
+
+  @media (min-width: @tablet) {
+    display: inline;
+  }
+
+  @media (min-width: @desktop) {
+    display: none;
+  }
 }
 
 .hide-on-desktop {

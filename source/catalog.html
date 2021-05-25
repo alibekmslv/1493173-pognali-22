@@ -8,7 +8,7 @@
   <title>HTML Academy: Погнали</title>
 </head>
 
-<body class="page__body no-js">
+<body class="page__body">
   <header class="page-header page-header--no-activity">
     <div class="container page-header__wrapper">
       <a href="index.html" class="logo page-header__logo">
@@ -126,7 +126,8 @@
         </a>
       </div>
     </div>
-    <section class="country-filter stack stack--bottom-third-round stack--background-filter">
+    <!--  country-filter--expanded -->
+    <section class="country-filter stack stack--bottom-third-round stack--background-filter country-filter--expanded">
       <div class="container country-filter__panel">
         <h2 class="country-filter__heading">
           <svg class="country-filter__heading-icon" width="16" height="10">
@@ -431,7 +432,7 @@
             </li>
           </ul>
           <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-021" aria-labelledby="tab-021">
-            <li class="country-tabpanel__capital-letter show-on-desktop">Л</li>
+            <li class="country-tabpanel__capital-letter show-on-desktop">Р</li>
             <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Руанда</a>
             </li>
             <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Румыния</a>
@@ -562,7 +563,7 @@
       </div>
     </section>
     <div class="page-catalog__wrapper">
-      <aside class="traveler-filter">
+      <aside class="traveler-filter page-catalog__traveler-filter">
         <h2 class="heading heading--aside traveler-filter__heading">Подберите идеального попутчика</h2>
         <form class="traveler-filter__form" action="https://echo.htmlacademy.ru/courses" method="post">
           <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
@@ -652,7 +653,8 @@
               </label>
             </div>
           </fieldset>
-          <fieldset class="user-fieldset fieldset-dropdown fieldset-dropdown--tablet-off fieldset-dropdown--open">
+          <fieldset
+            class="user-fieldset fieldset-dropdown fieldset-dropdown--tablet-off fieldset-dropdown--custom-checkbox fieldset-dropdown--open">
             <legend class="fieldset-dropdown__legend">Транспорт<span class="show-on-tablet">:</span></legend>
             <div class="fieldset-dropdown__dropdown fieldset-dropdown__custom-checkbox-area">
               <label class="user-fieldset__checkbox tooltip">
@@ -689,7 +691,8 @@
               </label>
             </div>
           </fieldset>
-          <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off fieldset-dropdown--open">
+          <fieldset
+            class="fieldset-dropdown fieldset-dropdown--tablet-off fieldset-dropdown--range fieldset-dropdown--open">
             <legend class="fieldset-dropdown__legend">Левел<span class="show-on-tablet">:</span></legend>
             <div class="fieldset-dropdown__dropdown">
               <div class="range-filter">
@@ -715,7 +718,7 @@
           <button class="button button--white traveler-filter__submit" type="submit">Показать</button>
         </form>
       </aside>
-      <section class="travelers">
+      <section class="travelers page-catalog__travelers">
         <h2 class="visually-hidden">Список путешественников</h2>
         <ul class="travelers-list">
           <li class="travelers-list__item traveler-card traveler-card--dynamic">
@@ -759,25 +762,25 @@
               <dt class="traveler-card__term">Транспорт:</dt>
               <dd class="traveler-card__details traveler-card__transports">
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--avia" width="14" height="16">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
                   </svg>
                   <span class="tooltip__text">Авиаперелет</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--auto" width="20" height="18">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--bike" width="15" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Велосипед</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--hike" width="14" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
                   </svg>
                   <span class="tooltip__text">Пешком</span>
@@ -786,13 +789,6 @@
             </dl>
             <dl class="traveler-card__info traveler-card__info--legend traveler-card__level-cell">
               <dt class="traveler-card__term">Левел:</dt>
-              <!-- <dd class="traveler-card__details level level--small-on-mobile level--text traveler-card__level">
-                <svg class="level__progress-ring" width="45" height="45">
-                  <circle class="level__circle level__circle--99" r="20.5" cx="22.5" cy="22.5" stroke-width="4"
-                    stroke="#FF8D30" fill="transparent" />
-                </svg>
-                <span class="level__value">99</span>
-              </dd> -->
               <dd class="traveler-card__details progress-circle progress-circle--card traveler-card__level">
                 <svg class="progress-circle__svg" width="60" height="60" style="--progress-circle-percent: 99">
                   <circle class="progress-circle__circle" />
@@ -840,25 +836,25 @@
               <dt class="traveler-card__term">Транспорт:</dt>
               <dd class="traveler-card__details traveler-card__transports">
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--avia" width="14" height="16">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
                   </svg>
                   <span class="tooltip__text">Авиаперелет</span>
                 </div>
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--auto" width="20" height="18">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--bike" width="15" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Велосипед</span>
                 </div>
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--hike" width="14" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
                   </svg>
                   <span class="tooltip__text">Пешком</span>
@@ -917,25 +913,25 @@
               <dt class="traveler-card__term">Транспорт:</dt>
               <dd class="traveler-card__details traveler-card__transports">
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--avia" width="14" height="16">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
                   </svg>
                   <span class="tooltip__text">Авиаперелет</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--auto" width="20" height="18">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--bike" width="15" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Велосипед</span>
                 </div>
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--hike" width="14" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
                   </svg>
                   <span class="tooltip__text">Пешком</span>
@@ -991,25 +987,25 @@
               <dt class="traveler-card__term">Транспорт:</dt>
               <dd class="traveler-card__details traveler-card__transports">
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--avia" width="14" height="16">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
                   </svg>
                   <span class="tooltip__text">Авиаперелет</span>
                 </div>
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--auto" width="20" height="18">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--bike" width="15" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Велосипед</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--hike" width="14" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
                   </svg>
                   <span class="tooltip__text">Пешком</span>
@@ -1034,6 +1030,20 @@
           </svg>
           Показать еще</a>
         <div class="pagination-controls">
+          <ul class="pagination-controls__list">
+            <li class="pagination-controls__item">
+              <a class="pagination-controls__link pagination-controls__link--current" href="catalog/1.html">1</a>
+            </li>
+            <li class="pagination-controls__item">
+              <a class="pagination-controls__link" href="catalog/1.html">2</a>
+            </li>
+            <li class="pagination-controls__item">
+              <a class="pagination-controls__link" href="catalog/1.html">3</a>
+            </li>
+            <li class="pagination-controls__item">
+              <a class="pagination-controls__link" href="catalog/1.html">4</a>
+            </li>
+          </ul>
           <a class="pagination-controls__button pagination-controls__button--prev" aria-label="На страницу назад"
             href="catalog/1.html">
             <svg class="pagination-controls__button-icon" width="13" height="20">
@@ -1051,7 +1061,7 @@
     </div>
   </main>
   <footer class="page-footer page-footer--low-margin stack stack--top-round">
-    <div class="container">
+    <div class="container page-footer__wrapper">
       <a class="logo page-footer__logo" href="index.html">
         <img class="logo__image" src="img/logo-mobile.png" alt="Логотип компании «Погнали»" width="100" height="15">
       </a>

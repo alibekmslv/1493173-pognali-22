@@ -40,6 +40,10 @@
     .country-filter__dropdown {
       display: grid;
     }
+
+    .country-filter--expanded + .page-catalog__wrapper {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -51,6 +55,18 @@
 
     .country-filter__icon-expand {
       margin-left: 20px;
+    }
+
+    .country-filter--expanded + .page-catalog__wrapper {
+      margin-top: 72px;
+    }
+  }
+}
+
+@media (min-width: @tablet) and (max-width: @desktop - 1px) {
+  .no-js {
+    .fieldset-dropdown__dropdown {
+      display: grid;
     }
   }
 }

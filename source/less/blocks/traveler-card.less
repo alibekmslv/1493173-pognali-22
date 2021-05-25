@@ -24,6 +24,11 @@
   padding-bottom: 23px;
   column-gap: 5px;
   border-radius: 20px;
+  margin-bottom: 10px;
+
+  &:nth-child(2) {
+    padding-top: 14px;
+  }
 
   .traveler-card__avatar {
     grid-column: ~"1 / 2";
@@ -110,6 +115,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 1px;
+    cursor: pointer;
   }
 
   .traveler-card__level-cell {
@@ -361,6 +367,315 @@
     .traveler-card__level {
       top: 20px;
       left: 22px;
+    }
+  }
+
+  .traveler-card--dynamic {
+    grid-template-columns: 225px auto auto;
+    padding-top: 35px;
+    padding-bottom: 19px;
+    margin-bottom: 40px;
+
+    &:nth-child(2) {
+      padding-top: 35px;
+      margin-bottom: 40px;
+    }
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    .traveler-card__name {
+      grid-column: ~"2 / 3";
+      grid-row: ~"1 / 2";
+      align-self: flex-start;
+      justify-content: flex-end;
+      font-size: 1.875em;
+      line-height: 1.875rem;
+      margin-left: 30px;
+      margin-top: -2px;
+    }
+
+    .traveler-card__name::before {
+      width: 8px;
+      height: 8px;
+      margin-top: 11px;
+      margin-right: 0;
+      margin-left: 21px;
+    }
+
+    .traveler-card__name-limiter {
+      width: auto;
+    }
+
+    .traveler-card__avatar {
+      width: 190px;
+      height: 190px;
+      border-radius: 0;
+      margin-right: 11px;
+    }
+
+    .traveler-card__tags-cell {
+      grid-column: ~"2 / 3";
+      grid-row: ~"1 / 2";
+      align-self: flex-end;
+      margin-top: 0;
+      margin-bottom: 35px;
+      margin-left: 30px;
+    }
+
+    .traveler-card__tags {
+      font-size: 1.25em;
+      line-height: 1.438rem;
+      max-width: 226px;
+    }
+
+    .traveler-card__invite-button {
+      grid-column: ~"2 / 3";
+      grid-row: ~"2 / 3";
+      align-self: flex-end;
+      justify-self: flex-start;
+      font-size: 1.25em;
+      line-height: 1.25rem;
+      padding-top: 18px;
+      padding-left: 32px;
+      padding-bottom: 13px;
+      padding-right: 33px;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-left: 24px;
+    }
+
+    .traveler-card__like-button {
+      grid-column: ~"2 / 3";
+      grid-row: ~"2 / 3";
+      align-self: flex-end;
+      justify-self: flex-start;
+      margin-left: 175px;
+    }
+
+    .traveler-card__likes-count {
+      grid-column: ~"2 / 3";
+      grid-row: ~"2 / 3";
+      align-self: flex-end;
+      justify-self: flex-start;
+      font-size: 1.25em;
+      line-height: 1.25rem;
+      margin-left: 230px;
+      padding-bottom: 14px;
+    }
+
+    .traveler-card__transport-cell {
+      grid-column: ~"3 / -1";
+      grid-row: ~"1 / 2";
+      align-self: flex-start;
+      justify-self: flex-end;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .traveler-card__transports {
+      flex-direction: column;
+      margin-left: 0;
+      margin-right: 40px;
+    }
+
+    .traveler-card__transport {
+      background-color: transparent;
+    }
+
+    .traveler-card__transport:not(:last-of-type) {
+      margin-bottom: -1px;
+    }
+
+    .traveler-card__transport-icon--avia {
+      width: 23px;
+      height: 22px;
+    }
+
+    .traveler-card__transport-icon--auto {
+      width: 19px;
+      height: 20px;
+    }
+
+    .traveler-card__transport-icon--bike {
+      width: 26px;
+      height: 25px;
+    }
+
+    .traveler-card__transport-icon--hike {
+      width: 23px;
+      height: 24px;
+    }
+
+    .traveler-card__level-cell {
+      grid-row: ~"2 / 3";
+      align-self: flex-end;
+      justify-self: flex-end;
+      margin-top: 0;
+      margin-right: 25px;
+      margin-bottom: -3px;
+      padding-top: 0;
+    }
+
+    .traveler-card__visit-cell {
+      margin-top: 30px;
+    }
+
+    .visit-wish-list {
+      display: flex;
+      margin-left: 37px;
+    }
+  }
+
+  .traveler-card__transport-cell,
+  .traveler-card__level-cell {
+    border: none;
+  }
+
+  .traveler-card__transport-cell .traveler-card__term,
+  .traveler-card__level-cell .traveler-card__term {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+  }
+
+  .like-button {
+    width: 50px;
+    height: 50px;
+  }
+  .like-button__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .traveler-card__visit-cell .traveler-card__term {
+    left: 73px;
+  }
+
+  .traveler-card__visit-wish-list {
+    .visit-wish-list__item:not(:last-of-type) {
+      margin-right: 25px;
+    }
+    .visit-wish-list__item::before {
+      width: 35px;
+      height: 24px;
+    }
+
+    .visit-wish-list__country-name {
+      font-size: 1.25em;
+      line-height: 1.25rem;
+      margin-left: 12px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .traveler-card--dynamic {
+    grid-template-columns: 285px auto 276px;
+    grid-template-rows: 187px auto;
+    padding: 0;
+    margin-bottom: 31px;
+
+    &:nth-child(2) {
+      padding-top: 0;
+      margin-bottom: 31px;
+    }
+
+    .traveler-card__avatar {
+      width: 285px;
+      height: 285px;
+      margin-right: 0;
+    }
+
+    .traveler-card__name {
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-top: 46px;
+    }
+
+    .traveler-card__name::before {
+      margin-left: 0;
+      margin-right: 19px;
+    }
+
+    .traveler-card__tags-cell {
+      margin-bottom: 44px;
+      margin-left: 58px;
+    }
+
+    .traveler-card__visit-cell {
+      grid-column: ~"3 / -1";
+      grid-row: ~"1 / 2";
+      padding-top: 19px;
+    }
+
+    .traveler-card__transport-cell {
+      grid-row: ~"2 / 3";
+      justify-self: start;
+      margin-top: 10px;
+      margin-left: -5px;
+    }
+
+    .traveler-card__invite-button {
+      align-self: flex-start;
+      margin-left: 49px;
+    }
+
+    .traveler-card__like-button {
+      align-self: flex-start;
+      margin-left: 199px;
+    }
+
+    .traveler-card__likes-count {
+      align-self: flex-start;
+      padding-bottom: 0;
+      padding-top: 15px;
+      margin-left: 256px;
+    }
+
+    .traveler-card__transports {
+      flex-direction: row;
+      margin-right: 0;
+    }
+
+    .traveler-card__level-cell {
+      grid-row: ~"2 / 3";
+      align-self: flex-start;
+      margin-right: 44px;
+      margin-top: -3px;
+    }
+
+    .visit-wish-list {
+      display: block;
+      margin-left: 0;
+    }
+  }
+
+  .traveler-card__visit-cell {
+    border: none;
+  }
+
+  .traveler-card__visit-cell .traveler-card__term {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+  }
+
+  .traveler-card__visit-wish-list  {
+    .visit-wish-list__item:not(:last-of-type) {
+      margin-bottom: 13px;
+    }
+
+    .visit-wish-list__country-name {
+      margin-left: 18px;
     }
   }
 }

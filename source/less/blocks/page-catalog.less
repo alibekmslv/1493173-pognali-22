@@ -15,5 +15,36 @@
 @media (min-width: @tablet) {
   .page-catalog {
     background: linear-gradient(to bottom, transparent 0%, transparent 350px, @color-neutral-lighter 350px, @color-neutral-lighter 100%);
+    padding-bottom: 113px;
   }
+
+  .page-catalog__wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 43px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-catalog__wrapper {
+    display: grid;
+    grid-template-columns: auto 285px;
+    column-gap: 85px;
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-catalog__traveler-filter {
+    grid-column: ~"2 / -1";
+    align-self: flex-start;
+  }
+
+  .page-catalog__travelers {
+    grid-column: ~"1 / 2";
+    grid-row: ~"1 / 2";
+  }
+
 }
