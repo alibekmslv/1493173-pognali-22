@@ -14,19 +14,49 @@
   color: @color-primary-light;
 
   &:hover {
+    opacity: 0.6;
+
     .travelers__show-more-icon {
       opacity: 0.6;
     }
   }
 
   &:active {
+    opacity: 0.3;
+
     .travelers__show-more-icon {
       opacity: 0.3;
     }
   }
+}
+
+.travelers__show-more-icon {
+  margin-right: 15px;
+  fill: @color-primary-light;
+}
+
+@media (min-width: @tablet) {
+  .travelers__show-more {
+    width: 186px;
+    align-items: center;
+    font-size: 1.25em;
+    line-height: 1.25rem;
+    margin-top: 46px;
+    margin-bottom: 51px;
+  }
 
   .travelers__show-more-icon {
-    margin-right: 15px;
-    fill: @color-primary-light;
+    width: 26px;
+    height: 26px;
+    margin-right: 24px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .travelers__show-more {
+    width: auto;
+    margin-left: calc(33% + 32px);
+    margin-top: 62px;
+    margin-bottom: 71px;
   }
 }

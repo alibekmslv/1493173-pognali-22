@@ -8,7 +8,7 @@
   position: relative;
 }
 
-.textarea--country:last-of-type {
+.textarea--country:nth-last-of-type(2) {
   .textarea__line {
     display: none;
   }
@@ -102,4 +102,136 @@
   top: 10px;
   left: -14px;
   z-index: 1;
+}
+
+.textarea__line-tablet {
+  display: none;
+}
+
+
+@media (min-width: @tablet) {
+  .textarea {
+    row-gap: 30px;
+  }
+
+  .textarea:first-of-type {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: @table-border;
+    padding-top: 27px;
+  }
+
+  .textarea--country:first-of-type {
+    .textarea__line {
+      top: 58px;
+    }
+
+    &::before {
+      top: 45px;
+    }
+  }
+
+  .textarea--country::before {
+    top: 17px;
+    right: 0;
+    left: auto;
+    width: 14px;
+    height: 14px;
+  }
+
+  .textarea__label {
+    font-size: 1.875em;
+    line-height: 1.875rem;
+    letter-spacing: 0.01em;
+    padding-left: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .textarea__flag {
+    width: 70px;
+    height: 47px;
+    margin-right: 33px;
+    align-self: flex-end;
+  }
+
+  .textarea__input {
+    font-size: 1.25em;
+    line-height: 1.438rem;
+    height: 102px;
+    padding-top: 19px;
+    padding-right: 18px;
+    padding-bottom: 19px;
+    padding-left: 18px;
+    margin-left: 5px;
+    margin-right: 33px;
+  }
+
+  .textarea__line {
+    width: 2px;
+    top: 30px;
+    left: auto;
+    right: 6px;
+  }
+
+  .textarea__line-mobile {
+    display: none;
+  }
+
+  .textarea__line-tablet {
+    stroke: @color-primary-light;
+    display: block;
+  }
+}
+
+@media (min-width: @desktop) {
+  .textarea {
+    row-gap: 25px;
+  }
+
+  .textarea:first-of-type {
+    padding-top: 75px;
+  }
+
+  .textarea--country:first-of-type {
+    .textarea__line {
+      top: 101px;
+    }
+
+    &::before {
+      top: 89px;
+    }
+  }
+
+  .textarea--country::before {
+    top: 13px;
+    right: 219px;
+  }
+
+  .textarea__label {
+    padding-left: 0;
+    margin-top: 5px;
+    margin-bottom: 12px;
+  }
+
+  .textarea__flag {
+    margin-right: 115px;
+  }
+
+  .textarea__input {
+    box-sizing: border-box;
+    width: 730px;
+    height: 141px;
+    padding-top: 23px;
+    padding-right: 25px;
+    padding-bottom: 23px;
+    padding-left: 25px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .textarea__line {
+    top: 27px;
+    right: 225px;
+  }
 }

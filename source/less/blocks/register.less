@@ -14,16 +14,17 @@
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-
-  &:first-of-type {
-    max-width: 210px;
-    margin-bottom: 29px;
-  }
-
-  &:last-of-type {
-    max-width: 216px;
-  }
 }
+
+.register__text-before {
+  max-width: 210px;
+  margin-bottom: 29px;
+}
+
+.register__text-after {
+  max-width: 216px;
+}
+
 
 .register__signup-form {
   margin-bottom: 29px;
@@ -43,20 +44,23 @@
     margin-bottom: 59px;
   }
 
-  .register .paragraph {
-    &:first-of-type {
-      max-width: none;
-      width: calc(100% - 70px);
-      margin-bottom: 66px;
-      line-height: 2rem;
-    }
+  .register .register__text-before {
+    max-width: none;
+    width: calc(100% - 70px);
+    margin-bottom: 65px;
+    line-height: 2rem;
+  }
 
-    &:last-of-type {
-      max-width: none;
-      width: calc(100% - 70px);
-      margin-bottom: 36px;
-      letter-spacing: 0.01em;
-    }
+  .register .register__text-after {
+    max-width: none;
+    width: calc(100% - 70px);
+    margin-bottom: 40px;
+    line-height: 1.875rem;
+    letter-spacing: 0.01em;
+  }
+
+  .register__text-after br {
+    display: none;
   }
 
   .register__signup-form {
@@ -73,21 +77,20 @@
 @media (min-width: @desktop) {
   .register {
     padding-top: 109px;
-    padding-bottom: 103px;
+    padding-bottom: 104px;
   }
 
   .register__heading {
-    margin-bottom: 57px;
+    margin-bottom: 58px;
   }
 
-  .register .paragraph {
-    &:first-of-type {
-      margin-bottom: 58px;
-    }
+  .register .register__text-before {
+    line-height: 1.938rem;
+    margin-bottom: 60px;
+  }
 
-    &:last-of-type {
-      margin-bottom: 41px;
-    }
+  .register .register__text-after {
+    margin-bottom: 42px;
   }
 
   .register__signup-form {

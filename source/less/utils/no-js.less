@@ -27,3 +27,46 @@
     display: block;
   }
 }
+
+@media (min-width: @tablet) {
+  .no-js {
+    .country-filter__icon-expand {
+      width: 22px;
+      height: 24px;
+      margin-top: 0;
+      margin-left: 60px;
+    }
+
+    .country-filter__dropdown {
+      display: grid;
+    }
+
+    .country-filter--expanded + .page-catalog__wrapper {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .no-js {
+    .country-filter {
+      padding-bottom: 79px;
+    }
+
+    .country-filter__icon-expand {
+      margin-left: 20px;
+    }
+
+    .country-filter--expanded + .page-catalog__wrapper {
+      margin-top: 72px;
+    }
+  }
+}
+
+@media (min-width: @tablet) and (max-width: @desktop - 1px) {
+  .no-js {
+    .fieldset-dropdown__dropdown {
+      display: grid;
+    }
+  }
+}

@@ -29,7 +29,7 @@
 
 .page-header--on-scroll {
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   top: 0;
   width: 100%;
   background-color: @menu-background;
@@ -54,6 +54,12 @@
   .page-header {
     padding-top: 45px;
     padding-bottom: 45px;
+  }
+
+  .page-header--no-activity {
+    .menu__activity {
+      display: grid;
+    }
   }
 
   .page-header--on-scroll {

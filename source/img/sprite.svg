@@ -97,7 +97,7 @@
     <path d="M7.875 1.125L1.125 7.875" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M1.125 1.125L7.875 7.875" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
-  <symbol id="input-select-cross" width="9" height="10" viewBox="0 0 9 10">
+  <symbol id="input-select-cross" viewBox="0 0 9 10">
     <g clip-path="url(#clip0)">
       <path d="M7.875 1.80615L1.125 7.99365" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M1.125 1.80615L7.875 7.99365" stroke-linecap="round" stroke-linejoin="round"/>
@@ -112,8 +112,8 @@
     <path d="M3.64645 10.3536C3.84171 10.5488 4.15829 10.5488 4.35355 10.3536L7.53553 7.17157C7.7308 6.97631 7.7308 6.65973 7.53553 6.46447C7.34027 6.2692 7.02369 6.2692 6.82843 6.46447L4 9.29289L1.17157 6.46447C0.976311 6.2692 0.659728 6.2692 0.464466 6.46447C0.269204 6.65973 0.269204 6.97631 0.464466 7.17157L3.64645 10.3536ZM3.5 0L3.5 10H4.5L4.5 0L3.5 0Z" />
   </symbol>
   <symbol id="icon-plus" viewBox="0 0 14 14">
-    <line x1="7" x2="7" y2="14" stroke-width="2"/>
-    <line y1="7" x2="14" y2="7" stroke-width="2"/>
+    <line x1="7" x2="7" y2="14"/>
+    <line y1="7" x2="14" y2="7"/>
   </symbol>
   <symbol id="icon-plus-2" viewBox="0 0 26 26">
     <rect y="12" width="26" height="2" rx="1"/>
@@ -126,7 +126,10 @@
     <rect y="283" width="12" height="2"/>
     <rect y="285" width="283" height="2" transform="rotate(-90 0 285)"/>
   </symbol>
-  <symbol id="icon-filter" viewBox="0 0 16 10">
+  <symbol id="textarea-tablet" width="2" height="248" viewBox="0 0 2 248">
+    <line x1="1" x2="1" y2="248" stroke-width="2"/>
+  </symbol>
+  <symbol id="icon-filter" viewBox="0 0 16 10" fill="currentColor">
     <rect x="7.17395" width="7.82609" height="2"/>
     <rect x="7.17383" y="8" width="7.82609" height="2"/>
     <rect y="4" width="7.82609" height="2"/>
@@ -157,5 +160,15 @@
   <symbol id="icon-businessman" viewBox="0 0 28 28">
     <path d="M23.3758 23.2418V19.8933C23.3758 18.9558 23.2418 18.0182 22.7061 17.0806C22.1703 16.143 21.5006 15.3394 20.5631 14.8036C19.6255 14.1339 17.6164 14 16.6788 14L14.5358 16.277L15.3394 18.0182V22.0364L14 23.5097L12.6606 22.0364V18.0182L13.5982 16.277L11.3212 14C10.2497 14 8.24063 14.1339 7.30306 14.8036C6.36548 15.3394 5.82972 16.143 5.29396 17.0806C4.75821 18.0182 4.62427 18.8218 4.62427 19.8933V23.2418C4.62427 23.2418 8.10669 24.7151 14 24.7151C19.8934 24.7151 23.3758 23.2418 23.3758 23.2418Z" fill="#132576"/>
     <path d="M14 3.41895C11.4551 3.41895 9.98178 5.82985 10.3836 8.50864C10.7854 11.1874 12.1248 13.0626 14 13.0626C15.8751 13.0626 17.2145 11.1874 17.6163 8.50864C18.0181 5.69592 16.5448 3.41895 14 3.41895Z" fill="#132576"/>
+  </symbol>
+  <svg id="controller-plus" viewBox="0 0 14 14">
+    <path d="M0 6.7H14M6.7 14V0" stroke="currentColor" stroke-width="2"/>
+  </svg>
+  <symbol id="controller-minus" viewBox="0 0 14 2">
+    <path d="M0 1H14" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+  <symbol id="icon-arrow-bend" viewBox="0 0 32 16">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 16H28C30.2091 16 32 14.2091 32 12V7C32 4.79086 30.2091 3 28 3H4V5H28C29.1046 5 30 5.89543 30 7V12C30 13.1046 29.1046 14 28 14H4V16Z" fill="currentColor"/>
+    <path d="M0 4L9 0.535898V7.4641L0 4Z" fill="currentColor"/>
   </symbol>
 </svg>

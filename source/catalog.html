@@ -8,15 +8,20 @@
   <title>HTML Academy: Погнали</title>
 </head>
 
-<body class="page__body no-js">
+<body class="page__body">
   <header class="page-header page-header--no-activity">
-    <div class="container">
+    <div class="container page-header__wrapper">
       <a href="index.html" class="logo page-header__logo">
         <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
       </a>
       <nav class="menu">
         <button class="menu__toggle button" type="button" aria-expanded="false" aria-controls="menu__list"
-          aria-label="Открыть меню"></button>
+          aria-label="Открыть меню">
+          <svg class="menu__toggle-icon" width="25" height="11">
+            <use class="menu__menu-toggle" href="img/sprite.svg#menu-toggle"></use>
+            <use class="menu__menu-close" href="img/sprite.svg#menu-close"></use>
+          </svg>
+        </button>
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="index.html">
@@ -112,16 +117,21 @@
   <main class="page-main page-catalog">
     <div
       class="page__bar page__bar--filter stack stack--bottom-third-round stack--background-header stack--back-filter">
-      <div class="container">
+      <div class="container page__control">
         <h1 class="page__title">Попутчики</h1>
-        <a href="index.html" class="page__back-link hide-on-mobile">На главную</a>
+        <a href="index.html" class="page__back-link hide-on-mobile">На главную
+          <svg class="page__icon-back" width="32" height="16">
+            <use class="page__icon-arrow-bend" href="img/sprite.svg#icon-arrow-bend"></use>
+          </svg>
+        </a>
       </div>
     </div>
-    <section class="country-filter stack stack--bottom-third-round stack--background-filter">
+    <!--  country-filter--expanded -->
+    <section class="country-filter stack stack--bottom-third-round stack--background-filter country-filter--expanded">
       <div class="container country-filter__panel">
         <h2 class="country-filter__heading">
           <svg class="country-filter__heading-icon" width="16" height="10">
-            <use class="country-filter__icon-filter " href="img/sprite.svg#icon-filter"></use>
+            <use class="country-filter__icon-filter" href="img/sprite.svg#icon-filter"></use>
           </svg>
           Фильтрация по странам:
         </h2>
@@ -145,8 +155,8 @@
         </button>
       </div>
       <div class="container country-filter__dropdown">
-        <div class="alphabet-tablist country-filter__alphabet-tablist" role="tablist" aria-label="Список стран"
-          tabindex="0">
+        <div class="alphabet-tablist alphabet-tablist--large country-filter__alphabet-tablist" role="tablist"
+          aria-label="Список стран" tabindex="0">
           <span class="alphabet-tablist__tab alphabet-tablist__tab--active" role="tab" aria-selected="true"
             aria-controls="panel-007" id="tab-007" tabindex="0">А</span>
           <span class="alphabet-tablist__tab" role="tab" aria-selected="false" id="tab-008" tabindex="0">Б</span>
@@ -177,7 +187,7 @@
         <div class="country-filter__tabpanel-wrapper">
           <ul class="country-tabpanel country-tabpanel--active country-filter__country-tabpanel" id="panel-007"
             aria-labelledby="tab-007">
-            <li class="show-on-desktop">А</li>
+            <li class="country-tabpanel__capital-letter show-on-desktop">А</li>
             <li class="country-tabpanel__item"><a class="country-filter__link"
                 href="europe/australia.html">Австралия</a></li>
             <li class="country-tabpanel__item"><a class="country-filter__link" href="europe/australia.html">Австрия</a>
@@ -202,6 +212,347 @@
             <li class="country-tabpanel__item"><a class="country-filter__link"
                 href="europe/australia.html">Афганистан</a></li>
           </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-008" aria-labelledby="tab-008">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Б</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Багамские
+                Острова</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бангладеш</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Барбадос</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бахрейн</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Белоруссия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Белиз</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бельгия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бенин</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Болгария</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Боливия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Босния и
+                Герцеговина</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ботсвана</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бразилия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бруней</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html"
+                class="country-filter__link">Буркина-Фасо</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бурунди</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Бутан</a></li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-009" aria-labelledby="tab-009">
+            <li class="country-tabpanel__capital-letter show-on-desktop">В</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Вануату</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html"
+                class="country-filter__link">Великобритания</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Венгрия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Венесуэла</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Восточный
+                Тимор</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Вьетнам</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-010" aria-labelledby="tab-010">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Г</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Габон</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гаити</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гайана</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гамбия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гана</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гватемала</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гвинея</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html"
+                class="country-filter__link">Гвинея-Бисау</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Германия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гондурас</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Гренада</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Греция</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Грузия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-011" aria-labelledby="tab-011">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Д</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Дания</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Джибути</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Доминика</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Доминикана</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-012" aria-labelledby="tab-012">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Е</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Египет</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-013" aria-labelledby="tab-013">
+            <li class="country-tabpanel__capital-letter show-on-desktop">З</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Замбия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Зимбабве</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-014" aria-labelledby="tab-014">
+            <li class="country-tabpanel__capital-letter show-on-desktop">И</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Израиль</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Индия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Индонезия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Иордания</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ирак</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Иран</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ирландия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Исландия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Испания</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Италия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-015" aria-labelledby="tab-015">
+            <li class="country-tabpanel__capital-letter show-on-desktop">K</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Кабо-Верде</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Казахстан</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Камбоджа</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Камерун</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Канада</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Катар</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Кения</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Кипр</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Киргизия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Кирибати</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Китай</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Колумбия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-016" aria-labelledby="tab-016">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Л</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Лаос</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Латвия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Лесото</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Либерия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ливан</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ливия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Литва</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html"
+                class="country-filter__link">Лихтенштейн</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Люксембург</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-017" aria-labelledby="tab-017">
+            <li class="country-tabpanel__capital-letter show-on-desktop">М</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Маврикий</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Мавритания</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Мадагаскар</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Малави</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Малайзия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Мали</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Мальдивы</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Мальта</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Марокко</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-018" aria-labelledby="tab-018">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Н</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Намибия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Науру</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Непал</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Нигер</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Нигерия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Нидерланды</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Никарагуа</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Новая
+                Зеландия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Норвегия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-019" aria-labelledby="tab-019">
+            <li class="country-tabpanel__capital-letter show-on-desktop">О</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">ОАЭ</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Оман</a></li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-020" aria-labelledby="tab-020">
+            <li class="country-tabpanel__capital-letter show-on-desktop">П</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Пакистан</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Палау</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Панама</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Папуа - Новая
+                Гвинея</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Парагвай</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Перу</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Польша</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Португалия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-021" aria-labelledby="tab-021">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Р</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Руанда</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Румыния</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Россия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-022" aria-labelledby="tab-022">
+            <li class="country-tabpanel__capital-letter show-on-desktop">С</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сальвадор</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Самоа</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сан-Марино</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Саудовская
+                Аравия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сейшелы</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сенегал</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сербия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сингапур</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Сирия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Словакия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Словения</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">США</a></li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-023" aria-labelledby="tab-023">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Т</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html"
+                class="country-filter__link">Таджикистан</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Таиланд</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Танзания</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Того</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Тонга</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Тринидад и
+                Тобаго</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Тувалу</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Тунис</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Туркмения</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Турция</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-024" aria-labelledby="tab-024">
+            <li class="country-tabpanel__capital-letter show-on-desktop">У</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Уганда</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Узбекистан</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Украина</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Уругвай</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-025" aria-labelledby="tab-025">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Ф</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Фиджи</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Филиппины</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Финляндия</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Франция</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-026" aria-labelledby="tab-026">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Х</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Хорватия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-027" aria-labelledby="tab-027">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Ч</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Чад</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Черногория</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Чехия</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Чили</a></li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-028" aria-labelledby="tab-028">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Ш</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Швейцария</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Швеция</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Шри-Ланка</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-029" aria-labelledby="tab-029">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Э</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Эквадор</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Эритрея</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Эсватини</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Эстония</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Эфиопия</a>
+            </li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-030" aria-labelledby="tab-030">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Ю</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">ЮАР</a></li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Южный
+                Судан</a></li>
+          </ul>
+          <ul class="country-tabpanel country-filter__country-tabpanel" id="panel-031" aria-labelledby="tab-031">
+            <li class="country-tabpanel__capital-letter show-on-desktop">Я</li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Ямайка</a>
+            </li>
+            <li class="country-tabpanel__item"><a href="europe/bahamas.html" class="country-filter__link">Япония</a>
+            </li>
+          </ul>
         </div>
         <button class="button country-filter__collapse-button">
           <svg class="country-filter__collapse-icon" width="14" height="14">
@@ -212,8 +563,8 @@
       </div>
     </section>
     <div class="page-catalog__wrapper">
-      <aside class="traveler-filter">
-        <h2 class="heading traveler-filter__heading">Подберите идеального попутчика</h2>
+      <aside class="traveler-filter page-catalog__traveler-filter">
+        <h2 class="heading heading--aside traveler-filter__heading">Подберите идеального попутчика</h2>
         <form class="traveler-filter__form" action="https://echo.htmlacademy.ru/courses" method="post">
           <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off">
             <legend class="fieldset-dropdown__legend">Хобби<span class="show-on-tablet">:</span></legend>
@@ -302,7 +653,8 @@
               </label>
             </div>
           </fieldset>
-          <fieldset class="user-fieldset fieldset-dropdown fieldset-dropdown--tablet-off fieldset-dropdown--open">
+          <fieldset
+            class="user-fieldset fieldset-dropdown fieldset-dropdown--tablet-off fieldset-dropdown--custom-checkbox fieldset-dropdown--open">
             <legend class="fieldset-dropdown__legend">Транспорт<span class="show-on-tablet">:</span></legend>
             <div class="fieldset-dropdown__dropdown fieldset-dropdown__custom-checkbox-area">
               <label class="user-fieldset__checkbox tooltip">
@@ -339,7 +691,8 @@
               </label>
             </div>
           </fieldset>
-          <fieldset class="fieldset-dropdown fieldset-dropdown--tablet-off fieldset-dropdown--open">
+          <fieldset
+            class="fieldset-dropdown fieldset-dropdown--tablet-off fieldset-dropdown--range fieldset-dropdown--open">
             <legend class="fieldset-dropdown__legend">Левел<span class="show-on-tablet">:</span></legend>
             <div class="fieldset-dropdown__dropdown">
               <div class="range-filter">
@@ -365,7 +718,7 @@
           <button class="button button--white traveler-filter__submit" type="submit">Показать</button>
         </form>
       </aside>
-      <section class="travelers">
+      <section class="travelers page-catalog__travelers">
         <h2 class="visually-hidden">Список путешественников</h2>
         <ul class="travelers-list">
           <li class="travelers-list__item traveler-card traveler-card--dynamic">
@@ -409,25 +762,25 @@
               <dt class="traveler-card__term">Транспорт:</dt>
               <dd class="traveler-card__details traveler-card__transports">
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--avia" width="14" height="16">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
                   </svg>
                   <span class="tooltip__text">Авиаперелет</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--auto" width="20" height="18">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--bike" width="15" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Велосипед</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--hike" width="14" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
                   </svg>
                   <span class="tooltip__text">Пешком</span>
@@ -436,16 +789,9 @@
             </dl>
             <dl class="traveler-card__info traveler-card__info--legend traveler-card__level-cell">
               <dt class="traveler-card__term">Левел:</dt>
-              <!-- <dd class="traveler-card__details level level--small-on-mobile level--text traveler-card__level">
-                <svg class="level__progress-ring" width="45" height="45">
-                  <circle class="level__circle level__circle--99" r="20.5" cx="22.5" cy="22.5" stroke-width="4"
-                    stroke="#FF8D30" fill="transparent" />
-                </svg>
-                <span class="level__value">99</span>
-              </dd> -->
               <dd class="traveler-card__details progress-circle progress-circle--card traveler-card__level">
                 <svg class="progress-circle__svg" width="60" height="60" style="--progress-circle-percent: 99">
-                  <circle class="progress-circle__circle" />
+                  <circle class="progress-circle__circle" r="30" />
                 </svg>
                 <span class="progress-circle__value">99</span>
               </dd>
@@ -490,25 +836,25 @@
               <dt class="traveler-card__term">Транспорт:</dt>
               <dd class="traveler-card__details traveler-card__transports">
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--avia" width="14" height="16">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
                   </svg>
                   <span class="tooltip__text">Авиаперелет</span>
                 </div>
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--auto" width="20" height="18">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--bike" width="15" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Велосипед</span>
                 </div>
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--hike" width="14" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
                   </svg>
                   <span class="tooltip__text">Пешком</span>
@@ -519,7 +865,7 @@
               <dt class="traveler-card__term visually-hidden">Левел:</dt>
               <dd class="traveler-card__details progress-circle progress-circle--card traveler-card__level">
                 <svg class="progress-circle__svg" width="60" height="60" style="--progress-circle-percent: 80">
-                  <circle class="progress-circle__circle" />
+                  <circle class="progress-circle__circle" r="30" />
                 </svg>
                 <span class="progress-circle__value">80</span>
               </dd>
@@ -567,25 +913,25 @@
               <dt class="traveler-card__term">Транспорт:</dt>
               <dd class="traveler-card__details traveler-card__transports">
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--avia" width="14" height="16">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
                   </svg>
                   <span class="tooltip__text">Авиаперелет</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--auto" width="20" height="18">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--bike" width="15" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Велосипед</span>
                 </div>
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--hike" width="14" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
                   </svg>
                   <span class="tooltip__text">Пешком</span>
@@ -596,7 +942,7 @@
               <dt class="traveler-card__term">Левел:</dt>
               <dd class="traveler-card__details progress-circle progress-circle--card traveler-card__level">
                 <svg class="progress-circle__svg" width="60" height="60" style="--progress-circle-percent: 25">
-                  <circle class="progress-circle__circle" />
+                  <circle class="progress-circle__circle" r="30" />
                 </svg>
                 <span class="progress-circle__value">25</span>
               </dd>
@@ -641,25 +987,25 @@
               <dt class="traveler-card__term">Транспорт:</dt>
               <dd class="traveler-card__details traveler-card__transports">
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="14" height="16">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--avia" width="14" height="16">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-avia"></use>
                   </svg>
                   <span class="tooltip__text">Авиаперелет</span>
                 </div>
                 <div class="tooltip traveler-card__transport traveler-card__transport--active">
-                  <svg class="traveler-card__transport-icon" width="20" height="18">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--auto" width="20" height="18">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-auto"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Автотранспорт</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="15" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--bike" width="15" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-bike"></use>
                   </svg>
                   <span class="tooltip__text" aria-hidden="true">Велосипед</span>
                 </div>
                 <div class="tooltip traveler-card__transport">
-                  <svg class="traveler-card__transport-icon" width="14" height="17">
+                  <svg class="traveler-card__transport-icon traveler-card__transport-icon--hike" width="14" height="17">
                     <use class="traveler-card__icon-sprite" href="img/sprite.svg#icon-hike"></use>
                   </svg>
                   <span class="tooltip__text">Пешком</span>
@@ -670,7 +1016,7 @@
               <dt class="traveler-card__term">Левел:</dt>
               <dd class="traveler-card__details progress-circle progress-circle--card traveler-card__level">
                 <svg class="progress-circle__svg" width="60" height="60" style="--progress-circle-percent: 50">
-                  <circle class="progress-circle__circle" />
+                  <circle class="progress-circle__circle" r="30" />
                 </svg>
                 <span class="progress-circle__value">50</span>
               </dd>
@@ -684,6 +1030,20 @@
           </svg>
           Показать еще</a>
         <div class="pagination-controls">
+          <ul class="pagination-controls__list">
+            <li class="pagination-controls__item">
+              <a class="pagination-controls__link pagination-controls__link--current" href="catalog/1.html">1</a>
+            </li>
+            <li class="pagination-controls__item">
+              <a class="pagination-controls__link" href="catalog/1.html">2</a>
+            </li>
+            <li class="pagination-controls__item">
+              <a class="pagination-controls__link" href="catalog/1.html">3</a>
+            </li>
+            <li class="pagination-controls__item">
+              <a class="pagination-controls__link" href="catalog/1.html">4</a>
+            </li>
+          </ul>
           <a class="pagination-controls__button pagination-controls__button--prev" aria-label="На страницу назад"
             href="catalog/1.html">
             <svg class="pagination-controls__button-icon" width="13" height="20">
@@ -701,7 +1061,7 @@
     </div>
   </main>
   <footer class="page-footer page-footer--low-margin stack stack--top-round">
-    <div class="container">
+    <div class="container page-footer__wrapper">
       <a class="logo page-footer__logo" href="index.html">
         <img class="logo__image" src="img/logo-mobile.png" alt="Логотип компании «Погнали»" width="100" height="15">
       </a>

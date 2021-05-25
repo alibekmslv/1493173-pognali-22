@@ -21,3 +21,24 @@
 .country-tabpanel__item:active {
   color: rgba(@color-primary-light, 0.3);
 }
+
+@media (min-width: @tablet) {
+  .country-tabpanel__item {
+    font-size: 1.25em;
+    line-height: 1.25rem;
+  }
+}
+
+@media (min-width: @desktop) {
+  .country-tabpanel__capital-letter {
+    font-size: 3.75em;
+    font-weight: 700;
+    color: @menu-link;
+    margin-bottom: 32px;
+    margin-left: 2px;
+  }
+
+  .country-tabpanel {
+    display: block;
+  }
+}

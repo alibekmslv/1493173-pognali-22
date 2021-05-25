@@ -1,18 +1,41 @@
 .heading {
+  color: @color-primary-light;
+  font-weight: 700;
   font-size: 1.5em;
   line-height: 1.5rem;
-  font-weight: 700;
+
+  @media (min-width: @tablet) {
+    font-size: 2.25em;
+    line-height: 2.25rem;
+  }
 }
 
-.heading--medium {
-  font-size: 1.25em;
-  line-height: 1.25rem;
+.heading--accent {
+  color: @color-special-3;
 }
 
-
-@media (min-width: @tablet) {
-  .heading {
+.heading--section {
+  @media (min-width: @tablet) {
     font-size: 2.813em;
     line-height: 2.813rem;
+  }
+}
+
+.heading--sm-on-mobile {
+  @media (max-width: @mobile-only) {
+    font-size: 1.25em;
+    line-height: 1.25rem;
+  }
+}
+
+.heading--aside {
+  font-size: 1.375em;
+  line-height: 1.375rem;
+  letter-spacing: 0.02em;
+
+  @media (min-width: @tablet) {
+    font-size: 1.875em;
+    line-height: 1.875rem;
+    letter-spacing: normal;
   }
 }

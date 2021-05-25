@@ -63,3 +63,178 @@
 .fieldset-dropdown__custom-checkbox-area .user-fieldset__checkbox {
   margin-right: 1px;
 }
+
+@media (min-width: @tablet) and (max-width: @desktop - 1px) {
+  .fieldset-dropdown:not(:last-of-type) {
+    margin-bottom: 9px;
+  }
+
+  .fieldset-dropdown:last-of-type {
+    padding-bottom: 36px;
+    border-bottom-width: 1px;
+    border-bottom-color: @fieldset-border;
+    border-bottom-style: solid;
+  }
+
+  .fieldset-dropdown__legend {
+    display: block;
+    float: left;
+    width: 127px;
+    border: none;
+    font-size: 1.25em;
+    line-height: 1.25rem;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .fieldset-dropdown__dropdown {
+    display: grid;
+    grid-template-columns: 169px 172px min-content;
+    align-items: flex-start;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .fieldset-dropdown--open {
+    .fieldset-dropdown__dropdown {
+      display: grid;
+    }
+
+    .fieldset-dropdown__custom-checkbox-area {
+      display: flex;
+    }
+  }
+
+  .fieldset-dropdown__checkbox {
+    font-size: 1.25em;
+    line-height: 1.25rem;
+    align-items: flex-end;
+
+    .checkbox__icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .fieldset-dropdown__checkbox:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+
+  .fieldset-dropdown__custom-checkbox-area {
+    display: flex;
+    margin-top: 2px;
+  }
+
+  .fieldset-dropdown--custom-checkbox {
+    .fieldset-dropdown__legend {
+      padding-top: 18px;
+      margin-right: -3px;
+    }
+  }
+
+  .fieldset-dropdown--range {
+    .fieldset-dropdown__legend {
+      padding-top: 20px;
+    }
+
+    .fieldset-dropdown__dropdown {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .range-filter {
+      display: grid;
+      grid-template-columns: auto 148px;
+      column-gap: 66px;
+    }
+
+    .range-filter__number-inputs {
+      grid-column: ~"2 / -1";
+      margin-bottom: 0;
+    }
+
+    .range-filter__number-inputs::after {
+      width: 21px;
+    }
+
+    .range-filter__controls {
+      grid-column: ~"1 / 2";
+      margin-top: -24px;
+    }
+
+    .range-filter__toggle {
+      width: 13px;
+      height: 13px;
+      top: -6px;
+    }
+
+    .range-filter__input {
+      font-size: 1.25em;
+      line-height: 1.25rem;
+      padding-top: 12px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .fieldset-dropdown__legend {
+    font-size: 1.25em;
+    line-height: 1.375rem;
+    font-weight: 500;
+    padding-top: 10px;
+    border-color: transparent;
+
+    &::after {
+      margin-right: 1px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .fieldset-dropdown__dropdown {
+    margin-top: 15px;
+  }
+
+  .fieldset-dropdown .fieldset-dropdown__checkbox:not(:last-of-type) {
+    margin-bottom: 16px;
+  }
+
+  .fieldset-dropdown__custom-checkbox-area {
+    margin-top: 9px;
+    margin-bottom: 23px;
+  }
+
+  .fieldset-dropdown--range {
+    .fieldset-dropdown__dropdown {
+      margin-top: 9px;
+    }
+
+    .range-filter__input {
+      font-size: 1.25em;
+      line-height: 1.25rem;
+      padding-top: 12px;
+      padding-bottom: 10px;
+    }
+
+    .range-filter__number-inputs {
+      margin-bottom: 36px;
+    }
+
+    .range-filter__number-inputs::after {
+      width: 20px;
+      transform: translate(-60%, -50%);
+    }
+
+    .range-filter__scale {
+      height: 3px;
+    }
+
+    .range-filter__toggle {
+      top: -5px;
+      width: 13px;
+      height: 13px;
+    }
+  }
+}

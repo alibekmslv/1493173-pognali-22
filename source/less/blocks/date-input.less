@@ -100,8 +100,118 @@
   outline-color: rgb(255, 92, 35);
   outline-style: solid;
   outline-offset: -1px;
-  padding-top: 5px;
   border-width: 2px;
   border-style: solid;
   border-color: @calendar-weekend;
+}
+
+
+@media (min-width: @tablet) {
+  .date-input__month {
+    padding-top: 25px;
+    padding-bottom: 24px;
+    margin-bottom: 39px;
+  }
+
+  .date-input__month-name {
+    font-size: 2.25em;
+    line-height: 2.25rem;
+  }
+
+  .date-input__month-control {
+    line-height: 0;
+
+    .date-input__arrow {
+      width: 30px;
+      height: 36px;
+    }
+  }
+
+  .date-input__month-control--prev {
+    margin-left: 10px;
+  }
+
+  .date-input__month-control--next {
+    margin-right: 10px;
+  }
+
+  .date-input__weekday {
+    font-size: 1.125em;
+    line-height: 1.125rem;
+  }
+
+  .date-input__days {
+    grid-template-rows: repeat(6, 68px);
+  }
+
+  .date-input__day {
+    font-size: 1.125em;
+    padding-top: 25px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .date-input__month {
+    padding-top: 28px;
+    padding-bottom: 21px;
+    margin-bottom: 18px;
+  }
+
+  .date-input__month-control--prev {
+    margin-left: -5px;
+  }
+
+  .date-input__month-control--next {
+    margin-right: -5px;
+  }
+
+  .date-input__days {
+    grid-template-columns: 141px repeat(5, 142px) 141px;
+    grid-template-rows: repeat(6, 70px);
+  }
+
+  .date-input__day {
+    font-weight: 400;
+    padding-top: 14px;
+    padding-left: 15px;
+    text-align: left;
+  }
+
+  .date-input__week {
+    justify-content: flex-start;
+    margin-bottom: 19px;
+  }
+
+  .date-input__weekday {
+    margin-left: 17px;
+    margin-right: 108px;
+  }
+
+  .date-input__month-tag {
+    display: inline;
+  }
+
+  .date-input__day--checkin {
+    outline-width: 4px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .date-input__day--checkin::after {
+    content: "Заезд";
+    display: block;
+    position: absolute;
+    top: 38px;
+  }
+
+  .date-input__day--checkout {
+    position: relative;
+  }
+
+  .date-input__day--checkout::after {
+    content: "Выезд";
+    display: block;
+    position: absolute;
+    top: 38px;
+  }
 }
