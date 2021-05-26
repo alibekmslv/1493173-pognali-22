@@ -45,3 +45,52 @@
   padding-top: 21px;
   padding-bottom: 14px;
 }
+
+@media (min-width: @tablet) {
+  .modal {
+    width: calc(100% - 80px);
+    left: 40px;
+    padding-top: 54px;
+  }
+
+  .modal__heading {
+    margin-bottom: 47px;
+  }
+
+  .modal__price-list {
+    max-width: 506px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 52px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .price-list__item {
+      font-size: 1.375em;
+      line-height: 1.75rem;
+      padding-top: 14px;
+      padding-bottom: 12px;
+    }
+  }
+
+  .modal__button {
+    font-size: 1.5em;
+    line-height: 1.5rem;
+    text-transform: none;
+    padding-top: 41px;
+    padding-bottom: 41px;
+  }
+}
+
+
+@media (min-width: @desktop) {
+  .modal {
+    width: 750px;
+    left: calc(50vw - calc(714px / 2));
+    border-radius: 30px;
+  }
+  .modal__price-list {
+    max-width: 630px;
+  }
+}
