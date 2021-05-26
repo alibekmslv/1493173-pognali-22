@@ -242,8 +242,6 @@
   max-width: 270px;
   position: relative;
   transition: transform 0.3s;
-  overflow: hidden;
-  border-radius: 10px;
 
   &:hover {
     box-shadow: 0 4px 9px rgba(@black, 0.16);
@@ -256,6 +254,11 @@
 
   .traveler-card__avatar {
     grid-row: ~"1 / 2";
+  }
+
+  .traveler-card__avatar-image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 
   .traveler-card__name {
@@ -419,7 +422,7 @@
       width: 190px;
       height: 190px;
       border-radius: 0;
-      margin-right: 11px;
+      margin-right: 0;
     }
 
     .traveler-card__tags-cell {

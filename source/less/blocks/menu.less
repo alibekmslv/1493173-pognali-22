@@ -1,4 +1,4 @@
-.menu {
+// .menu {
   .menu__list {
     display: none;
   }
@@ -10,7 +10,7 @@
   .menu__social-list {
     display: none;
   }
-}
+// }
 
 .menu__toggle {
   position: absolute;
@@ -265,30 +265,11 @@
   .menu__toggle {
     display: none;
   }
-
   .menu,
   .menu--open {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
-
-    .menu__list {
-      display: flex;
-      padding-left: 0;
-      margin-top: 0;
-      margin-left: 40px;
-      align-items: center;
-
-      &::before {
-        content: "";
-        display: block;
-        width: 60px;
-        height: 2px;
-        background-color: @white;
-        margin-top: 3px;
-        margin-right: 45px;
-      }
-    }
 
     .menu__icon-button {
       display: flex;
@@ -318,6 +299,24 @@
 
     .menu__social-list {
       display: none;
+    }
+  }
+
+  .menu__list {
+    display: flex;
+    padding-left: 0;
+    margin-top: 0;
+    margin-left: 40px;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 2px;
+      background-color: @white;
+      margin-top: 3px;
+      margin-right: 45px;
     }
   }
 

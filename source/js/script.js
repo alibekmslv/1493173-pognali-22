@@ -4,6 +4,9 @@ const pageHeader = document.querySelector(".page-header");
 const modalTrigger = document.querySelector(".add-profile__link");
 const modalWindow = document.getElementById("business-rates");
 const modalCloseTrigger = document.querySelector(".modal__button");
+const noJs = document.querySelector(".no-js");
+
+noJs.classList.remove("no-js");
 
 if (menuToggle) {
   menuToggle.addEventListener("click", function () {
