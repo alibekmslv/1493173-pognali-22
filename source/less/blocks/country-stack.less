@@ -28,7 +28,6 @@
   left: 25px;
   z-index: 1;
   background-size: contain;
-  border-radius: 3px;
 }
 
 .country-stack__item:not(:last-of-type) {
@@ -43,10 +42,6 @@
   }
 }
 
-.country-stack__item--th::before {
-  background-image: url("../img/flag-th.jpg");
-}
-
 .country-stack__item--fr {
   background-image: url("../img/content/france-mobile.jpg");
 
@@ -55,20 +50,12 @@
   }
 }
 
-.country-stack__item--fr::before {
-  background-image: url("../img/flag-fr.jpg");
-}
-
 .country-stack__item--cz {
   background-image: url("../img/content/czech-mobile.jpg");
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/content/czech-mobile@2x.jpg");
   }
-}
-
-.country-stack__item--cz::before {
-  background-image: url("../img/flag-cz.jpg");
 }
 
 .country-stack__panel {
@@ -148,7 +135,6 @@
     top: 17px;
     right: 150px;
     left: auto;
-    border-radius: 7px;
   }
 
   .country-stack__item:not(:last-of-type) {

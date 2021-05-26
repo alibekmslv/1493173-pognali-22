@@ -5,6 +5,9 @@ const modalTrigger = document.querySelector(".add-profile__link");
 const modalWindow = document.getElementById("business-rates");
 const modalCloseTrigger = document.querySelector(".modal__button");
 const noJs = document.querySelector(".no-js");
+const countryFilter = document.querySelector(".country-filter");
+const countryFilterButton = document.querySelector(".country-filter__collapse-button");
+const countryFilterExpandButton = document.querySelector(".country-filter__expand-button");
 
 noJs.classList.remove("no-js");
 
@@ -34,5 +37,15 @@ if (modalTrigger) {
 if (modalCloseTrigger) {
   modalCloseTrigger.addEventListener("click", function () {
     modalWindow.classList.remove("modal--show");
+  })
+}
+
+if (countryFilterButton) {
+  countryFilterButton.addEventListener("click", function () {
+    countryFilter.classList.toggle("country-filter--expanded");
+  })
+
+  countryFilterExpandButton.addEventListener("click", function () {
+    countryFilter.classList.toggle("country-filter--expanded");
   })
 }

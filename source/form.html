@@ -8,7 +8,7 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Погнали</title>
 </head>
 <!-- no-js - вспомогательный класс для работы без JavaScript -->
@@ -409,7 +409,7 @@
                     <span class="input-select__item" role="checkbox" aria-checked="false">Чехия</span>
                   </div>
                 </div>
-                <div class="input-select__result input-select__result--ba">
+                <div class="input-select__result flag flag--ba">
                 </div>
                 <button class="input-select__delete-button button" type="button" aria-label="Удалить выбор">
                   <svg class="input-select__delete-icon" width="9" height="9">
@@ -453,7 +453,7 @@
                     <span class="input-select__item" role="checkbox" aria-checked="false">Чехия</span>
                   </div>
                 </div>
-                <div class="input-select__result input-select__result--cz">
+                <div class="input-select__result flag flag--cz">
                 </div>
                 <button class="input-select__delete-button button" type="button" aria-label="Удалить выбор">
                   <svg class="input-select__delete-icon" width="9" height="9">
@@ -465,7 +465,7 @@
                 </svg>
               </div>
               <!-- input-select--open -->
-              <div class="input-select input-select--decoration">
+              <div class="input-select input-select--decoration input-select--open">
                 <label class="input-select__label input-select__select">Выберите страну
                   <input class="input-select__input visually-hidden" type="button" name="country-select" value=" " />
                   <svg class="input-select__dropdown-button" width="12" height="16">
@@ -586,13 +586,14 @@
             <h3 class="heading heading--sm-on-mobile progress-form__heading">Шаг 3.
               <br>Развлечения
             </h3>
-            <p class="paragraph progress-form__paragraph">Наконец, расскажите о своих планах времяпровождения. <br>Можно
+            <p class="paragraph progress-form__paragraph">Наконец, расскажите о своих планах
+              времяпровождения.&emsp;emsp<br>Можно
               писать в свободной форме и ставить тэги.
             </p>
             <div class="textarea textarea--country progress-form__textarea">
               <label class="textarea__label" for="road-map-1">Босния и
                 Герцеговина</label>
-              <div class="textarea__flag textarea__flag--ba"></div>
+              <div class="textarea__flag flag flag flag--ba"></div>
               <textarea class="textarea__input" id="road-map-1" name="road-map" cols="30" rows="14"
                 placeholder="План действий"></textarea>
               <svg class="textarea__line" width="17" height="287">
@@ -602,7 +603,7 @@
             </div>
             <div class="textarea textarea--country progress-form__textarea">
               <label class="textarea__label" for="road-map-2">Чехия</label>
-              <div class="textarea__flag textarea__flag--cz"></div>
+              <div class="textarea__flag flag flag--cz"></div>
               <textarea class="textarea__input" id="road-map-2" name="road-map" cols="30" rows="14"
                 placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               <svg class="textarea__line" width="17" height="287">
@@ -680,7 +681,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

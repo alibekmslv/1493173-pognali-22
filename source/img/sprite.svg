@@ -126,7 +126,7 @@
     <rect y="283" width="12" height="2"/>
     <rect y="285" width="283" height="2" transform="rotate(-90 0 285)"/>
   </symbol>
-  <symbol id="textarea-tablet" width="2" height="248" viewBox="0 0 2 248">
+  <symbol id="textarea-tablet" width="2" height="248">
     <line x1="1" x2="1" y2="248" stroke-width="2"/>
   </symbol>
   <symbol id="icon-filter" viewBox="0 0 16 10" fill="currentColor">
