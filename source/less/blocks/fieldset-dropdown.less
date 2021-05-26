@@ -153,10 +153,15 @@
     .range-filter__number-inputs {
       grid-column: ~"2 / -1";
       margin-bottom: 0;
-    }
 
-    .range-filter__number-inputs::after {
-      width: 21px;
+      &::before {
+        left: 74px;
+      }
+
+      &::after {
+        width: 21px;
+        left: 74px;
+      }
     }
 
     .range-filter__controls {
@@ -175,6 +180,8 @@
       line-height: 1.25rem;
       padding-top: 12px;
       padding-bottom: 10px;
+      box-sizing: border-box;
+      width: 74px;
     }
   }
 }

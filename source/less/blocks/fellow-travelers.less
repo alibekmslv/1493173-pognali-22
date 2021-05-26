@@ -1,13 +1,19 @@
 .fellow-travelers {
   padding-top: 4.25em;
   padding-bottom: 31px;
-  background-image: url("../img/background-figure.svg"),
-    url("../img/rogovaya-background-mobile.png"),
-    url("../img/smolov-background-mobile.png");
+  background-image: url("../img/backgrounds/background-figure.svg"),
+    url("../img/backgrounds/rogovaya-background-mobile.png"),
+    url("../img/backgrounds/smolov-background-mobile.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position-x: -20px, left, calc(100% - 25px);
   background-position-y: 34px, 307px, 34px;
-  background-size: 132px 132px, auto, auto;
+  background-size: 132px 132px, 64px 71px, 143px 143px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/backgrounds/background-figure.svg"),
+      url("../img/backgrounds/rogovaya-background-mobile@2x.png"),
+      url("../img/backgrounds/smolov-background-mobile@2x.png");
+  }
 }
 
 .fellow-travelers__heading {
@@ -51,6 +57,8 @@
   padding-left: 23.1px;
   padding-right: 21px;
   padding-bottom: 20.52px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: @tablet) {
@@ -61,14 +69,20 @@
   }
 
   .fellow-travelers__wrapper {
-    background-image: url("../img/background-figure.svg"),
-      url("../img/rogovaya-background-tablet.png"),
-      url("../img/smolov-background-mobile.png");
+    background-image: url("../img/backgrounds/background-figure.svg"),
+      url("../img/backgrounds/rogovaya-background-tablet.png"),
+      url("../img/backgrounds/smolov-background-tablet.png");
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position-x: 40px, calc(100% - 74px), 40px;
     background-position-y: top, 9px, 355px;
-    background-size: 212px 212px, auto, auto;
+    background-size: 212px 212px, 285px 285px, 143px 143px;
     padding-top: 70px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/background-figure.svg"),
+        url("../img/backgrounds/rogovaya-background-tablet@2x.png"),
+        url("../img/backgrounds/smolov-background-tablet@2x.png");
+    }
   }
 
   .fellow-travelers__heading {
@@ -117,8 +131,6 @@
     padding-left: 31.73px;
     padding-right: 34.81px;
     padding-bottom: 28px;
-    margin-right: auto;
-    margin-left: auto;
   }
 }
 
@@ -131,14 +143,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, min-content);
-    background-image: url("../img/background-figure.svg"),
-      url("../img/rogovaya-background-tablet.png"),
-      url("../img/smolov-background-mobile.png");
+    background-image: url("../img/backgrounds/background-figure.svg"),
+      url("../img/backgrounds/rogovaya-background-tablet.png"),
+      url("../img/backgrounds/smolov-background-tablet.png");
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position-x: 60px, 190px, 547px;
     background-position-y: top, 316px, 64px;
     padding-top: 60px;
     padding-bottom: 133px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/background-figure.svg"),
+        url("../img/backgrounds/rogovaya-background-tablet@2x.png"),
+        url("../img/backgrounds/smolov-background-tablet@2x.png");
+    }
   }
 
   .fellow-travelers__travelers-list {

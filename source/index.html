@@ -4,15 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Погнали</title>
 </head>
+<!-- no-js - вспомогательный класс для работы без JavaScript -->
 
-<body class="page__body">
+<body class="page__body no-js">
   <header class="page-header">
     <div class="container page-header__wrapper">
       <a href="#" class="logo page-header__logo">
-        <img class="logo__image" src="img/logo-mobile-light.png" alt="Логотип компании «Погнали»">
+        <picture>
+          <source media="(min-width: 1440px)"
+            srcset="img/logo/logo-desktop-light.png 1x, img/logo/logo-desktop-light@2x.png 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/logo/logo-tablet-light.png 1x, img/logo/logo-tablet-light@2x.png 2x">
+          <img class="logo__image logo__image--light" src="img/logo/logo-mobile-light.png"
+            srcset="img/logo/logo-mobile-light@2x.png 2x" width="96" height="15" alt="Логотип компании «Погнали»">
+        </picture>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.png 1x, img/logo/logo-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.png 1x, img/logo/logo-tablet@2x.png 2x">
+          <img class="logo__image logo__image--dark" src="img/logo/logo-mobile.png"
+            srcset="img/logo/logo-mobile@2x.png 2x" width="96" height="15" alt="Логотип компании «Погнали»">
+        </picture>
       </a>
       <nav class="menu">
         <button class="menu__toggle button" type="button" aria-expanded="false" aria-controls="menu__list"
@@ -88,7 +106,7 @@
           </dd>
         </dl>
         <b class="visually-hidden">Наши социальные сети</b>
-        <ul class="social-list menu__social-list">
+        <ul class="social-list social-list--no-stream menu__social-list">
           <li class="social-list__item">
             <a class="social-list__button" href="#"><span class="visually-hidden">Facebook</span>
               <svg class="social-list__icon social-list__icon--fb" width="11" height="21">
@@ -155,7 +173,7 @@
         <p class="paragraph paragraph--section directions__paragraph">Мы не продаем туры и ничего не рекламируем. Люди
           сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         <ul class="country-stack directions__country-stack">
-          <li class="country-stack__item country-stack__item--th">
+          <li class="country-stack__item country-stack__item--th flag flag--th">
             <div class="country-stack__panel">
               <b class="country-stack__name">Таиланд</b>
               <span class="country-stack__slogan">Джунгли зовут!</span>
@@ -167,7 +185,7 @@
               </div>
             </div>
           </li>
-          <li class="country-stack__item country-stack__item--fr">
+          <li class="country-stack__item country-stack__item--fr flag flag--fr">
             <div class="country-stack__panel">
               <b class="country-stack__name">Франция</b>
               <span class="country-stack__slogan">Трэ бьен, манифик!</span>
@@ -180,7 +198,7 @@
               </div>
             </div>
           </li>
-          <li class="country-stack__item country-stack__item--cz">
+          <li class="country-stack__item country-stack__item--cz flag flag--cz">
             <div class="country-stack__panel">
               <b class="country-stack__name">Чехия</b>
               <span class="country-stack__slogan">Закоулки старой<br>Европы</span>
@@ -214,21 +232,26 @@
           <li class="travelers-list__item traveler-card traveler-card--static">
             <a class="traveler-card__name traveler-card__status traveler-card__status--offline" href="#">Таня
               Фирсова</a>
-            <img class="traveler-card__avatar-image" src="img/user-tanya.jpg" width="270" height="270"
-              alt="Аватар путешественника Таня Фирсова">
+            <picture class="traveler-card__avatar">
+              <source media="(min-width: 768px)"
+                srcset="img/travelers/firsova-tablet.jpg 1x, img/travelers/firsova-tablet@2x.jpg 2x">
+              <img class="traveler-card__avatar-image" src="img/travelers/firsova-mobile.jpg"
+                srcset="img/travelers/firsova-mobile@2x.jpg 2x" width="270" height="270"
+                alt="Аватар путешественника Таня Фирсова">
+            </picture>
             <dl class="traveler-card__info">
               <dt class="traveler-card__term visually-hidden">Тэги:</dt>
               <dd class="traveler-card__details traveler-card__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</dd>
               <dt class="traveler-card__term visually-hidden">Хочет посетить:</dt>
               <dd class="traveler-card__details">
                 <ul class="visit-wish-list">
-                  <li class="visit-wish-list__item visit-wish-list__item--lk tooltip">
-                    <span class="tooltip__text">Шри-Ланка</span>
+                  <li class="visit-wish-list__item flag flag--lk tooltip">
+                    <span class="tooltip__text">Шри&#8209;Ланка</span>
                   </li>
-                  <li class="visit-wish-list__item visit-wish-list__item--th tooltip">
+                  <li class="visit-wish-list__item flag flag--th tooltip">
                     <span class="tooltip__text">Таиланд</span>
                   </li>
-                  <li class="visit-wish-list__item visit-wish-list__item--sc tooltip">
+                  <li class="visit-wish-list__item flag flag--sc tooltip">
                     <span class="tooltip__text">Сейшелы</span>
                   </li>
                 </ul>
@@ -271,18 +294,23 @@
           </li>
           <li class="travelers-list__item traveler-card traveler-card--static">
             <a class="traveler-card__name traveler-card__status traveler-card__status--online" href="#">Петя Демин</a>
-            <img class="traveler-card__avatar-image" src="img/user-petya.jpg" width="270" height="270"
-              alt="Аватар путешественника Петя Демин">
+            <picture class="traveler-card__avatar">
+              <source media="(min-width: 768px)"
+                srcset="img/travelers/demin-tablet.jpg 1x, img/travelers/demin-tablet@2x.jpg 2x">
+              <img class="traveler-card__avatar-image" src="img/travelers/demin-mobile.jpg"
+                srcset="img/travelers/demin-mobile@2x.jpg 2x" width="270" height="270"
+                alt="Аватар путешественника Петя Демин">
+            </picture>
             <dl class="traveler-card__info">
               <dt class="traveler-card__term visually-hidden">Тэги:</dt>
               <dd class="traveler-card__details traveler-card__tags">#бургер #бар #футбол #концерт #крафт</dd>
               <dt class="traveler-card__term visually-hidden">Хочет посетить:</dt>
               <dd class="traveler-card__details">
                 <ul class="visit-wish-list">
-                  <li class="visit-wish-list__item visit-wish-list__item--be tooltip">
+                  <li class="visit-wish-list__item flag flag--be tooltip">
                     <span class="visit-wish-list__country-name tooltip__text">Бельгия</span>
                   </li>
-                  <li class="visit-wish-list__item visit-wish-list__item--cz tooltip">
+                  <li class="visit-wish-list__item flag flag--cz tooltip">
                     <span class="visit-wish-list__country-name tooltip__text">Чехия</span>
                   </li>
                 </ul>
@@ -442,7 +470,12 @@
   <footer class="page-footer stack stack--top-round">
     <div class="container page-footer__wrapper">
       <a class="logo page-footer__logo" href="#">
-        <img class="logo__image" src="img/logo-mobile.png" alt="Логотип компании «Погнали»" width="100" height="15">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop.png 1x, img/logo/logo-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.png 1x, img/logo/logo-tablet@2x.png 2x">
+          <img class="logo__image" src="img/logo/logo-mobile.png" srcset="img/logo/logo-mobile@2x.png 2x" width="96"
+            height="15" alt="Логотип компании «Погнали»">
+        </picture>
       </a>
       <ul class="social-list social-list--colored page-footer__social-list">
         <li class="social-list__item">
@@ -498,7 +531,7 @@
     </dl>
     <button class="button modal__button" aria-label="Закрыть окно Бизнес-тарифы">Закрыть окно</button>
   </section>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

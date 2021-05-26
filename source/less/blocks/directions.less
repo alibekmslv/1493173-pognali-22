@@ -47,11 +47,15 @@
   }
 
   .directions__wrapper {
-    background-image: url("../img/directions-tablet.png");
+    background-image: url("../img/backgrounds/directions-tablet.png");
     background-repeat: no-repeat;
     background-position-x: calc(100% - 40px);
     background-position-y: 7px;
-    background-size: auto;
+    background-size: 288px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/directions-tablet@2x.png");
+    }
   }
 
   .directions__heading {

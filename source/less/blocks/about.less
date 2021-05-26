@@ -1,12 +1,17 @@
 .about {
-  background-image: url("../img/about-mobile.png"),
-    url("../img/background-figure.svg");
+  background-image: url("../img/backgrounds/about-mobile.png"),
+    url("../img/backgrounds/background-figure.svg");
   background-repeat: no-repeat, no-repeat;
   background-position-x: 70%, -20px;
   background-position-y: bottom, top;
   background-size: contain, 133px 132px;
   padding-top: 33px;
   padding-bottom: 81px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/backgrounds/about-mobile@2x.png"),
+      url("../img/backgrounds/background-figure.svg");
+  }
 }
 
 .about__heading {
@@ -36,13 +41,18 @@
 
 @media (min-width: @tablet) {
   .about {
-    background-image: url("../img/about-tablet.png"),
-      url("../img/background-figure.svg");
+    background-image: url("../img/backgrounds/about-tablet.png"),
+      url("../img/backgrounds/background-figure.svg");
     background-position-x: 98%, center;
     background-position-y: 48px, top;
     background-size: 376px, calc(100% - 80px) 212px;
-    padding-top: 41px;
     padding-bottom: 89px;
+    padding-top: 41px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/about-tablet@2x.png"),
+        url("../img/backgrounds/background-figure.svg");
+    }
   }
 
   .about__heading {
@@ -92,14 +102,19 @@
   }
 
   .about__wrapper {
-    background-image: url("../img/about-desktop.png"),
-      url("../img/background-figure.svg");
+    background-image: url("../img/backgrounds/about-desktop.png"),
+      url("../img/backgrounds/background-figure.svg");
     background-repeat: no-repeat, no-repeat;
     background-position-x: calc(100% - 60px), 60px;
     background-position-y: bottom, top;
     background-size: 630px, 212px 212px;
     padding-top: 62px;
     padding-bottom: 161px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/about-desktop@2x.png"),
+        url("../img/backgrounds/background-figure.svg");
+    }
   }
 
   .about__heading {
