@@ -29,18 +29,18 @@
   }
 
   &::after {
-    border-color: @cello;
-    background-color: @cello;
+    border-color: @color-cello;
+    background-color: @color-cello;
   }
 }
 
 .input-select--open {
   .input-select__select {
     letter-spacing: 0.02em;
-    color: @white;
-    background-color: @cello;
+    color: @color-white;
+    background-color: @color-cello;
     padding-left: 1rem;
-    border-color: @cello;
+    border-color: @color-cello;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -73,7 +73,7 @@
   }
 
   &::after {
-    border-color: @cello;
+    border-color: @color-cello;
   }
 }
 
@@ -87,7 +87,7 @@
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: @cello;
+  color: @color-cello;
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
@@ -112,7 +112,7 @@
   top: -10px;
   right: 0;
   bottom: -10px;
-  box-shadow: inset -20px 0 8px 20px rgb(@white);
+  box-shadow: inset -20px 0 8px 20px rgb(@color-white);
 }
 
 .input-select__label:hover {
@@ -121,7 +121,7 @@
 
 .input-select__input:focus + .input-select__dropdown-button {
   transform: scale(1.3);
-  outline-color: @cello;
+  outline-color: @color-cello;
   outline-offset: 2px;
   outline-width: 2px;
   outline-style: double;
@@ -135,7 +135,7 @@
 
 .input-select__arrow-down {
   opacity: 0.3;
-  fill: @black;
+  fill: @color-black;
 }
 
 .input-select__arrow-down--wide {
@@ -144,7 +144,7 @@
 
 .input-select__icon-cross {
   display: none;
-  stroke: @white;
+  stroke: @color-white;
 }
 
 .input-select__dropdown {
@@ -175,10 +175,10 @@
   font-size: 0.875em;
   line-height: 1.125rem;
   font-weight: 500;
-  color: @cello;
+  color: @color-cello;
   text-align: center;
   padding-top: 10px;
-  background-color: @white;
+  background-color: @color-white;
   cursor: pointer;
   border-width: 1px;
   border-style: solid;
@@ -194,11 +194,11 @@
 }
 
 .input-select__tab:active {
-  background-color: @whisper;
+  background-color: @color-whisper;
 }
 
 .input-select__tab--active {
-  background-color: @whisper;
+  background-color: @color-whisper;
   margin-bottom: -1px;
 }
 
@@ -206,7 +206,7 @@
   padding-left: 19px;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: @white;
+  background-color: @color-white;
   border-left-width: 1px;
   border-top-width: 0;
   border-right-width: 1px;
@@ -257,7 +257,7 @@
   top: -10px;
   width: 21px;
   height: 21px;
-  background-color: @whisper;
+  background-color: @color-whisper;
   border-radius: 50%;
 }
 
@@ -286,7 +286,7 @@
   }
 
   .input-select--decoration:not(.input-select--selected)::after {
-    background-color: @white;
+    background-color: @color-white;
   }
 
   .input-select__select {
@@ -384,7 +384,7 @@
 
   .input-select__dropdown {
     width: calc(100% + 10px);
-    background-color: @white;
+    background-color: @color-white;
     top: 70px;
     padding-top: 35px;
     padding-bottom: 33px;

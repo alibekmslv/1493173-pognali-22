@@ -16,7 +16,7 @@
 
 .checkbox__icon-checkmark {
   display: none;
-  fill: @big-stone;
+  fill: @color-big-stone;
 }
 
 .checkbox:hover,
@@ -35,7 +35,7 @@
 
 .checkbox:active .checkbox__input:checked + .checkbox__icon {
   .checkbox__icon-checkmark {
-    fill: rgba(@big-stone, 0.3);
+    fill: rgba(@color-big-stone, 0.3);
   }
 }
 
@@ -52,7 +52,7 @@
   }
 
   .checkbox__icon-checkmark {
-    fill: rgba(@big-stone, 0.3);
+    fill: rgba(@color-big-stone, 0.3);
   }
 }
 
@@ -64,7 +64,7 @@
 }
 
 .checkbox__input:focus + .checkbox__icon {
-  outline-color: @cello;
+  outline-color: @color-cello;
   outline-offset: 2px;
   outline-width: 2px;
   outline-style: double;
@@ -79,8 +79,8 @@
   }
 
   .checkbox__icon-checkbox {
-    fill: @white;
-    stroke: @white;
+    fill: @color-white;
+    stroke: @color-white;
   }
 
   .checkbox__icon-checkmark {
@@ -90,52 +90,52 @@
 }
 
 .checkbox--right-filter:hover {
-  color: rgba(@black, 0.6);
+  color: rgba(@color-black, 0.6);
 
   .checkbox__icon-checkbox {
-    stroke: @white;
+    stroke: @color-white;
     opacity: 0.6;
   }
 }
 
 .checkbox--right-filter .checkbox__input:focus + .checkbox__icon {
   .checkbox__icon-checkbox {
-    stroke: @white;
+    stroke: @color-white;
   }
 }
 
 .checkbox--right-filter:active {
-  color: rgba(@black, 0.3);
+  color: rgba(@color-black, 0.3);
 
   .checkbox__icon-checkbox {
-    fill: @white;
-    stroke: @white;
+    fill: @color-white;
+    stroke: @color-white;
     opacity: 0.3;
   }
 }
 
 .checkbox--right-filter:active .checkbox__input:checked + .checkbox__icon {
   .checkbox__icon-checkmark {
-    fill: @big-stone;
+    fill: @color-big-stone;
   }
 }
 
 .checkbox--right-filter .checkbox__input:checked:active + .checkbox__icon {
   .checkbox__icon-checkbox {
-    fill: @white;
-    stroke: @white;
+    fill: @color-white;
+    stroke: @color-white;
     opacity: 0.3;
   }
 
   .checkbox__icon-checkmark {
-    fill: rgba(@big-stone, 0.2);
+    fill: rgba(@color-big-stone, 0.2);
   }
 }
 
 .checkbox--right-filter .checkbox__input:active + .checkbox__icon {
   .checkbox__icon-checkbox {
-    fill: @white;
-    stroke: @white;
+    fill: @color-white;
+    stroke: @color-white;
     opacity: 0.3;
   }
 }

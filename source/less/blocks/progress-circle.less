@@ -24,18 +24,18 @@
   @radius: (@size / 2 - @progress-circle-stroke-width / 2) / 1px;
   width: @size;
   height: @size;
-  background-color: rgba(@black, 0.6);
+  background-color: rgba(@color-black, 0.6);
 
   &::before {
     width: 30px;
     height: 1px;
-    background-color: rgba(@white, 0.3);
+    background-color: rgba(@color-white, 0.3);
     top: 36px;
   }
 
   &::after {
     font-size: 14px;
-    color: @white;
+    color: @color-white;
     top: 39px;
   }
 
@@ -59,7 +59,7 @@
     font-size: 24px;
     top: 14px;
     left: 50%;
-    color: @white;
+    color: @color-white;
     transform: translateX(-50%);
   }
 }
@@ -74,13 +74,13 @@
   &::before {
     width: 51px;
     height: 1px;
-    background-color: rgba(@tundora, 0.3);
+    background-color: rgba(@color-tundora, 0.3);
     top: 55px;
   }
 
   &::after {
     font-size: 18px;
-    color: @tundora;
+    color: @color-tundora;
     top: 62px;
   }
 
@@ -104,7 +104,7 @@
     font-size: 38px;
     top: 17px;
     left: 50%;
-    color: @big-stone;
+    color: @color-big-stone;
     transform: translateX(-50%);
   }
 }
@@ -139,7 +139,7 @@
   .progress-circle__value {
     font-size: 24px;
     top: 12px;
-    color: @cello;
+    color: @color-cello;
   }
 }
 
@@ -205,7 +205,7 @@
     &::before {
       width: 31px;
       height: 1px;
-      background-color: rgba(@black, 0.1);
+      background-color: rgba(@color-black, 0.1);
       top: 33px;
     }
 
@@ -213,7 +213,7 @@
       display: block;
       font-size: 14px;
       top: 34px;
-      color: rgba(@black, 0.4);
+      color: rgba(@color-black, 0.4);
     }
 
     .progress-circle__svg {
@@ -250,12 +250,12 @@
     &::before {
       width: 50px;
       height: 2px;
-      background-color: rgba(@white, 0.3);
+      background-color: rgba(@color-white, 0.3);
       top: 57px;
     }
 
     &::after {
-      color: @white;
+      color: @color-white;
       top: 63px;
     }
 
@@ -276,7 +276,7 @@
     }
 
     .progress-circle__value {
-      color: @white;
+      color: @color-white;
       top: 22px;
     }
   }
