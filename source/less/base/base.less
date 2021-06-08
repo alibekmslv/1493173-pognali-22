@@ -1,0 +1,60 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+}
+
+.container {
+  width: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 1320px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.hide-on-mobile {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: initial;
+  }
+}
+
+.show-on-desktop {
+  display: none;
+
+  @media (min-width: @desktop) {
+    display: block;
+  }
+}
+
+.show-on-tablet {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: inline;
+  }
+
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}
+
+.hide-on-desktop {
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}

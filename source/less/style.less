@@ -1,22 +1,26 @@
 //Abstracts
 @import "abstracts/colors.less";
+@import "abstracts/mixins.less";
+@import "abstracts/viewports.less";
 
-// Globals
-@import "utils/global.less";
-@import "utils/mixins.less";
-@import "utils/no-js.less";
-@import "utils/viewports.less";
+//Base
+@import "base/animation.less";
+@import "base/base.less";
+@import "base/typography.less";
+
+//Components
+@import "components/add-select-button.less";
+@import "components/alphabet-tablist.less";
+@import "components/blockquote.less";
+@import "components/button.less";
+@import "components/checkbox.less";
+
+//Layout
+@import "layout/about.less";
+@import "layout/add-profile.less";
+@import "layout/add-road-map.less";
 
 // Blocks
-@import "blocks/about.less";
-@import "blocks/add-profile.less";
-@import "blocks/add-road-map.less";
-@import "blocks/add-select-button.less";
-@import "blocks/alphabet-tablist.less";
-@import "blocks/animation.less";
-@import "blocks/blockquote.less";
-@import "blocks/button.less";
-@import "blocks/checkbox.less";
 @import "blocks/contact-list.less";
 @import "blocks/copyright.less";
 @import "blocks/country-filter.less";
@@ -64,3 +68,6 @@
 @import "blocks/travelers.less";
 @import "blocks/user-fieldset.less";
 @import "blocks/visit-wish-list.less";
+
+//State
+@import "state/no-js.less";
