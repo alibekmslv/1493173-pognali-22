@@ -22,8 +22,6 @@ export const setModal = (modalOpenElement, modalCloseElement, modalWindow) => {
     document.addEventListener('keydown', modalKeydownHandler)
   }
 
-  if (modalOpenElement && modalCloseElement && modalWindow) {
-    modalOpenElement.addEventListener('click', modalOpenHandler);
-    modalCloseElement.addEventListener('click', modalCloseHandler);
-  }
+  modalOpenElement.addEventListener('click', modalOpenHandler);
+  modalCloseElement.addEventListener('click', modalCloseHandler);
 }

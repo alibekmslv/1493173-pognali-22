@@ -1,9 +1,8 @@
 import { removeNoJs } from "./modules/no-js.js";
-import { setModal } from "./modules/modal.js";
-
-const addProfileLinkElement = document.querySelector('.add-profile__link');
-const businessRatesModalElement = document.querySelector('#business-rates');
-const closeModalButtonElement = businessRatesModalElement.querySelector('.modal__button');
+import { setRoute } from "./router.js";
+import { indexPage } from "./pages/index.js";
+import { formPage } from "./pages/form.js";
 
 removeNoJs();
-setModal(addProfileLinkElement, closeModalButtonElement, businessRatesModalElement);
+setRoute('/index.html', indexPage);
+setRoute('/form.html', formPage);
